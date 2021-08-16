@@ -1,0 +1,70 @@
+import streamlit as st
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib as plt
+
+st.set_page_config(layout="wide")
+sns.set_style('darkgrid')
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
+st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros com base em dados geoeconômicos')
+
+st.header("Variáveis Categóricas")
+
+
+df = pd.read_excel('C:/Users/cpf /Desktop/01PREMIOTESOURONACIONAL/dados_tratados.xlsx')
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.header('NOME_GRAN_REG')
+    sns.countplot(data = df, x = "NOME_GRAN_REG")
+    st.pyplot()
+    
+with col2:
+    st.header('HIER_URB')
+    sns.countplot(data = df, x = "HIER_URB")
+    st.pyplot()
+
+with col3:
+    st.header('REG_RURAL')
+    ax = sns.countplot(data = df, x = "REG_RURAL")
+    ax.set_xticklabels(ax.get_xticklabels(),rotation = 90)
+    st.pyplot()
+    
+st.header("Variáveis Quantitativas")
+
+col4, col5, col6 = st.columns(3)
+
+with col4:
+    st.header('VAB_AGR')
+    sns.boxplot(data = df, x = "VAB_AGR")
+    st.pyplot()
+
+with col5:
+    st.header('VAB_IND')
+    sns.boxplot(data = df, x = "VAB_IND")
+    st.pyplot()
+
+with col6:
+    st.header('VAB_SERV')
+    sns.boxplot(data = df, x = "VAB_SERV")
+    st.pyplot()
+    
+col7, col8, col9 = st.columns(3)
+
+with col7:
+    st.header('IMP_PROD')
+    sns.boxplot(data = df, x = "IMP_PROD")
+    st.pyplot()
+
+with col8:
+    st.header('PIB_PERCAP')
+    sns.boxplot(data = df, x = "PIB_PERCAP")
+    st.pyplot()
+
+with col9:
+    st.header('POP')
+    sns.boxplot(data = df, x = "POP")
+    st.pyplot()
