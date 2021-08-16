@@ -13,7 +13,7 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 st.header("Variáveis Categóricas")
 
 
-df = pd.read_excel('C:/Users/cpf /Desktop/01PREMIOTESOURONACIONAL/dados_tratados.xlsx')
+df = pd.read_excel('D:\PremioTesouroNacional/dados_tratados.xlsx')
 
 col1, col2, col3 = st.columns(3)
 
