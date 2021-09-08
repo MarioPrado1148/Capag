@@ -116,9 +116,8 @@ elif select_event == 'Análise das Variáveis Quantitativas':
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Pib Percentual'</h1>", unsafe_allow_html=True)
-            fig, ax = plt.subplots()
-            fig = ax.boxplot(df['PIB_PERC'], clear_figure = False)
-            st.pyplot(fig)
+            plt.boxplot(df['PIB_PERC'], clear_figure = False)
+            st.pyplot()
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
