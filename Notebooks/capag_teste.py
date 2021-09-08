@@ -22,3 +22,5 @@ pd.options.display.float_format = "{:,.2f}".format
 st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros com base em dados geoeconômicos')
 
 st.markdown('Uma nova visão sobre a capacidade de pagamento de nossos municípios')
+
+df = pd.read_excel('D:/PremioTesouroNacional/df_streamlit_com_previsao.xlsx')
