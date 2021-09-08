@@ -16,4 +16,4 @@ import matplotlib as plt
 
 st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros com base em dados geoeconômicos')
 
-st.subtitle('Uma nova visão sobre a capacidade de pagamento de nossos municípios')
+st.markdown('Uma nova visão sobre a capacidade de pagamento de nossos municípios')
