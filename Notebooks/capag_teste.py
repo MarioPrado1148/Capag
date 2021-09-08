@@ -111,15 +111,22 @@ elif select_event == 'Análise das Variáveis Categóricas':
                   
 # Análise Exploratória de dados das Variáveis Quantitativas                 
 elif select_event == 'Análise das Variáveis Quantitativas':
-    select_radio = st.sidebar.radio('Selecione a variável',['PIB_percentual'])
+    select_radio = st.sidebar.radio('Selecione a variável',['PIB_percentual', 'VAB_Indústria/Total'])
     if select_radio == 'Pib_percentual':
         col1, col2 = st.columns(2)
-        
         with col1:
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Pib Percentual'</h1>", unsafe_allow_html=True)
             sns.countplot(data = df, x = "PIB_PERC")
             st.pyplot()
-            
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
+    if select_radio == 'Pib_percentual':
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Indústria/Total'</h1>", unsafe_allow_html=True)
+            sns.countplot(data = df, x = "VAB_Indústria/Total")
+            st.pyplot()
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
