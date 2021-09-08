@@ -13,7 +13,6 @@ import numpy as np
 import seaborn as sns
 import matplotlib as plt
 import math
-%matplotlib inline  
 
 # Configuração da página
 st.set_page_config(layout="wide")
