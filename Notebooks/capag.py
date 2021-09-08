@@ -25,7 +25,7 @@ data_url =('https://github.com/MarioPrado1148/Capag/blob/main/Datasets/df_stream
 @st.cache(persist=True)
 
 def load_data():
-    data=pd.read_excel(data_url, engine = “openpyxl”, sheet_name='Sheet1')
+    data=pd.read_excel(data_url, engine = 'openpyxl', sheet_name='Sheet1')
     return data
 
 df =load_data()
