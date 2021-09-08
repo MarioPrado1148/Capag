@@ -22,7 +22,7 @@ pd.options.display.float_format = "{:,.2f}".format
 st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros com base em dados geoeconômicos')
 
 st.markdown('Uma nova visão sobre a capacidade de pagamento de nossos municípios')
-
-df = pd.read_csv('https://github.com/MarioPrado1148/Capag/blob/main/Datasets/df_streamlit_com_previsao.csv',error_bad_lines=False)
+# https://github.com/MarioPrado1148/Capag/blob/main/Datasets/df_streamlit_com_previsao.csv',error_bad_lines=False
+df = pd.read_csv('D:/PremioTesouroNacional/df_streamlit_com_previsao.csv')
 
 st.dataframe(df)
