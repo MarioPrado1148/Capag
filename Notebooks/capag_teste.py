@@ -25,4 +25,20 @@ st.markdown('Uma nova visão sobre a capacidade de pagamento de nossos municípi
 # https://github.com/MarioPrado1148/Capag/blob/main/Datasets/df_streamlit_com_previsao.csv',error_bad_lines=False
 df = pd.read_csv('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv', sep = ';', index_col = 0)
 
-st.dataframe(df)
+# Preparação do sidebar (barra lateral)
+st.sidebar.title('Seletor de Visualizações')
+st.sidebar.markdown('Selecione os gráficos/dataframes que deseja visualizar')
+
+st.sidebar.checkbox("Visualizar análises por município", True, key=1)
+lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
+select = st.sidebar.selectbox('município', lista_municipios)
+
+#st.table(df)
+
+#df = df.drop(['Unnamed'],axis = 1)
+df = df.set_index('Município')
+df['CLASS_CAPAG_real'] = df['CLASS_CAPAG_real'].astype('Int64')
+df_municipio = df[df.index==(select)]
+
+
+st.write(df_municipio)
