@@ -3,6 +3,7 @@
 
 # Referências:
 # https://www.analyticsvidhya.com/blog/2020/10/create-interactive-dashboards-with-streamlit-and-python/
+# https://towardsdatascience.com/build-your-first-data-visualization-web-app-in-python-using-streamlit-37e4c83a85db
 
 # !pip install streamlit --upgrade
 
@@ -116,7 +117,7 @@ elif select_event == 'Análise das Variáveis Quantitativas':
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Pib Percentual'</h1>", unsafe_allow_html=True)
-            plt.boxplot(df['PIB_PERC'], clear_figure = False)
+            fig = sns.boxplot(x = 'PIB_PERC', y = 'CLASS_CAPAG', data = df)
             st.pyplot()
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
