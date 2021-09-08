@@ -71,7 +71,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
         
         with col1:
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Unidade da Federação'</h1>", unsafe_allow_html=True)
-            sns.countplot(data = df, x = "Unidade da Federação")
+            sns.countplot(data = df, x = "UF")
             st.pyplot()
             
         with col2: 
