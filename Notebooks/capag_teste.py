@@ -118,7 +118,8 @@ elif select_event == 'Análise das Variáveis Quantitativas':
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Pib Percentual'</h1>", unsafe_allow_html=True)
             fig1, ax1 = plt.subplots()
             #ax1.set_title('Basic Plot')
-            ax1.boxplot(df['PIB_PERC'])
+            fig = ax1.boxplot(df['PIB_PERC'])
+            st.pyplot(fig)
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
@@ -126,7 +127,7 @@ elif select_event == 'Análise das Variáveis Quantitativas':
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Indústria/Total'</h1>", unsafe_allow_html=True)
-            fig = sns.boxplot(x = 'CLASS_CAPAG_real', y='VAB_Indústria/Total', data = df)
+            fig = ax1.boxplot(df['VAB_Indústria/Total'])
             st.pyplot(fig)
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
