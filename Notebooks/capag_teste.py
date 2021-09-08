@@ -42,6 +42,8 @@ select_event = st.sidebar.selectbox('Que informações você gostaria de visuali
 
 if select_event == 'Contextualização':
     st.markdown('Colocar explicação sobre o projeto aqui')
+    
+# Análise Exploratória de dados das Variáveis Categóricas
 elif select_event == 'Análise das Variáveis Categóricas':
     select_radio = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana','Unidade da Federação', 'Mun_Reg_Geof_Imediata','Hierarquia Urbana','Região Rural'])
     if select_radio == 'Região':
@@ -106,11 +108,24 @@ elif select_event == 'Análise das Variáveis Categóricas':
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
-        
-    
-                 
+                  
+# Análise Exploratória de dados das Variáveis Quantitativas                 
 elif select_event == 'Análise das Variáveis Quantitativas':
-    st.markdown('quanti')
+    select_radio = st.sidebar.radio('Selecione a variável',['PIB_percentual'])
+    if select_radio == 'Pib_percentual':
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Pib Percentual'</h1>", unsafe_allow_html=True)
+            sns.countplot(data = df, x = "PIB_PERC")
+            st.pyplot()
+            
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
+    
+    
+    
 elif select_event == 'Dataframe completo':
     st.table(df)
 else:
