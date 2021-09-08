@@ -116,7 +116,7 @@ elif select_event == 'Análise das Variáveis Quantitativas':
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Pib Percentual'</h1>", unsafe_allow_html=True)
-            fig = sns.boxplot(y='PIB_PERC', data = df)
+            fig = sns.boxplot(x='PIB_PERC', data = df)
             st.pyplot(fig)
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
@@ -125,7 +125,7 @@ elif select_event == 'Análise das Variáveis Quantitativas':
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Indústria/Total'</h1>", unsafe_allow_html=True)
-            fig = sns.boxplot(y='VAB_Indústria/Total', data = df)
+            fig = sns.boxplot(x='VAB_Indústria/Total', data = df)
             st.pyplot(fig)
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
