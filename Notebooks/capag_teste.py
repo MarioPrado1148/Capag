@@ -23,4 +23,4 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 
 st.markdown('Uma nova visão sobre a capacidade de pagamento de nossos municípios')
 
-df = pd.read_excel('D:/PremioTesouroNacional/df_streamlit_com_previsao.xlsx')
+df = pd.read_csv('D:/PremioTesouroNacional/df_streamlit_com_previsao.csv')
