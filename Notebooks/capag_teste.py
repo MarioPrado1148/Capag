@@ -23,6 +23,6 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 
 st.markdown('Uma nova visão sobre a capacidade de pagamento de nossos municípios')
 # https://github.com/MarioPrado1148/Capag/blob/main/Datasets/df_streamlit_com_previsao.csv',error_bad_lines=False
-df = pd.read_excel('D:/PremioTesouroNacional/df_streamlit_com_previsao.xlsx')
+df = pd.read_csv('https://github.com/MarioPrado1148/Capag/blob/main/Datasets/df_streamlit_com_previsao.csv', sep = ';', index_col = 0)
 
 st.dataframe(df)
