@@ -43,7 +43,7 @@ select_event = st.sidebar.selectbox('Que informações você gostaria de visuali
 if select_event == 'Contextualização':
     st.markdown('Colocar explicação sobre o projeto aqui')
 elif select_event == 'Análise das Variáveis Categóricas':
-    select_radio = st.sidebar.radio('Selecione a variável',['Região','Reg_Metropolitana','Unidade da Federação'])
+    select_radio = st.sidebar.radio('Selecione a variável',['Região','Reg_Metropolitana','Unidade da Federação', 'Mun_Reg_Geof_Imediata'])
     if select_radio == 'Região':
         col1, col2 = st.columns(2)
         
@@ -74,6 +74,16 @@ elif select_event == 'Análise das Variáveis Categóricas':
             sns.countplot(data = df, x = "UF")
             st.pyplot()
             
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
+    
+    elif select_radio == 'Mun_Reg_Geof_Imediata':
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Mun_Reg_Geof_Imediata'</h1>", unsafe_allow_html=True)
+            sns.countplot(data = df, x = "UF")
+            st.pyplot()
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
