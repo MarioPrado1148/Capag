@@ -13,6 +13,11 @@ import numpy as np
 import seaborn as sns
 import matplotlib as plt
 
+# Configuração da página
+st.set_page_config(layout="wide")
+sns.set_style('darkgrid')
+st.set_option('deprecation.showPyplotGlobalUse', False)
+pd.options.display.float_format = "{:,.2f}".format
 
 st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros com base em dados geoeconômicos')
 
