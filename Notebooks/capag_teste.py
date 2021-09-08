@@ -21,7 +21,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 pd.options.display.float_format = "{:,.2f}".format
 
 # Carregamento dos dados
-data_url =('data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')')
+data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')
 @st.cache(persist=True)
 
 def load_data():
