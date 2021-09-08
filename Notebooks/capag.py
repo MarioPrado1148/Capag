@@ -21,7 +21,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 pd.options.display.float_format = "{:,.2f}".format
 
 # Carregamento dos dados
-data_url =('D:/PremioTesouroNacional/df_streamlit_com_previsao.xlsx')
+data_url =('https://github.com/MarioPrado1148/Capag/blob/main/Datasets/df_streamlit_com_previsao.xlsx')
 @st.cache(persist=True)
 
 def load_data():
