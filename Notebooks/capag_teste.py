@@ -12,6 +12,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib as plt
+import math
 
 # Configuração da página
 st.set_page_config(layout="wide")
@@ -19,44 +20,61 @@ sns.set_style('darkgrid')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 pd.options.display.float_format = "{:,.2f}".format
 
+# Carregamento dos dados
+data_url =('D:/PremioTesouroNacional/df_streamlit_com_previsao.xlsx')
+@st.cache(persist=True)
+
+def load_data():
+    data=pd.read_excel(data_url)
+    return data
+
+df =load_data()
+
+# Página Principal
 st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros com base em dados geoeconômicos')
 
-st.markdown('Uma nova visão sobre a capacidade de pagamento de nossos municípios')
-
-#@st.cache(persist=True)
-df = pd.read_csv('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv', sep = ';', index_col = 0)
-
 # Preparação do sidebar (barra lateral)
-st.sidebar.title('Seletor de Visualizações')
-st.sidebar.markdown('Selecione os gráficos/dataframes que deseja visualizar')
+st.sidebar.title('Seletor de Análises e Gráficos')
+#st.sidebar.markdown('Que informações você gostaria de visualizar?')
 
-st.sidebar.checkbox("Visualizar análises por município", True, key=1)
-lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
-select = st.sidebar.selectbox('município', lista_municipios)
+lista_eventos = ['Contextualização','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo', 'Visão por Município']
+select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
-#st.table(df)
-
-#df = df.drop(['Unnamed'],axis = 1)
-df = df.set_index('Município')
-df['CLASS_CAPAG_real'] = df['CLASS_CAPAG_real'].astype('Int64')
-df_municipio = df[df.index==(select)]
-st.write(df_municipio)
-
-if st.sidebar.checkbox("Análise Exploratória de Dados", True, key=2):
-    tipo_variaveis = ['Variáveis Categóricas', 'Variáveis Quantitativas']
-    select = st.sidebar.selectbox('Tipo de Variável', tipo_variaveis)
-
-     
-if select == 'Variáveis Categóricas':
-    select_status = st.sidebar.radio("Covid-19 patient's status", ('Confirmed',
-                                                                   'Active', 'Recovered', 'Deceased'))
-    col1, col2 = st.columns(2)
-    with col1:
-        st.header('Região')
-        sns.countplot(data = df, x = "Região")
-        st.pyplot() 
-    with col2: 
-        st.header('Reg_Metropolitana')
-        sns.countplot(data = df, x = "Reg_Metropolitana")
-        st.pyplot()
-
+if select_event == 'Contextualização':
+    st.markdown('Colocar explicação sobre o projeto aqui')
+elif select_event == 'Análise das Variáveis Categóricas':
+    select_radio = st.sidebar.radio('Selecione a variável',['Região','Reg_Metropolitana'])
+    if select_radio == 'Região':
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região'</h1>", unsafe_allow_html=True)
+            sns.countplot(data = df, x = "Região")
+            st.pyplot()
+            
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
+    elif select_radio == 'Reg_Metropolitana':
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Metropolitana'</h1>", unsafe_allow_html=True)
+            sns.countplot(data = df, x = "Reg_Metropolitana")
+            st.pyplot()
+            
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
+elif select_event == 'Análise das Variáveis Quantitativas':
+    st.markdown('quanti')
+elif select_event == 'Dataframe completo':
+    st.table(df)
+else:
+    st.sidebar.checkbox("Visualizar análises por município", True, key=1)
+    lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
+    select = st.sidebar.selectbox('município', lista_municipios)
+    df = df.set_index('Município')
+    df['CLASS_CAPAG_real'] = df['CLASS_CAPAG_real'].astype('Int64')
+    df_municipio = df[df.index==(select)]
+    st.write(df_municipio)
