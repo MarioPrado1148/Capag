@@ -13,7 +13,6 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib as plt
-matplotlib.use('Agg')
 import math
 
 # Configuração da página
