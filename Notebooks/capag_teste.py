@@ -37,13 +37,13 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 st.sidebar.title('Seletor de Análises e Gráficos')
 #st.sidebar.markdown('Que informações você gostaria de visualizar?')
 
-lista_eventos = ['Contextualização','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo', 'Visão por Município','Hierarquia Urbana','Região Rural ]
+lista_eventos = ['Contextualização','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo', 'Visão por Município']
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
 if select_event == 'Contextualização':
     st.markdown('Colocar explicação sobre o projeto aqui')
 elif select_event == 'Análise das Variáveis Categóricas':
-    select_radio = st.sidebar.radio('Selecione a variável',['Região','Reg_Metropolitana','Unidade da Federação', 'Mun_Reg_Geof_Imediata','Hierarquia Urbana','Região Rural'])
+    select_radio = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana','Unidade da Federação', 'Mun_Reg_Geof_Imediata','Hierarquia Urbana','Região Rural'])
     if select_radio == 'Região':
         col1, col2 = st.columns(2)
         
@@ -55,7 +55,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
-    elif select_radio == 'Reg_Metropolitana':
+    elif select_radio == 'Região Metropolitana':
         col1, col2 = st.columns(2)
         
         with col1:
