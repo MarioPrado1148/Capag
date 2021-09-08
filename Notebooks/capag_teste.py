@@ -25,4 +25,4 @@ st.markdown('Uma nova visão sobre a capacidade de pagamento de nossos municípi
 
 df = pd.read_csv('https://github.com/MarioPrado1148/Capag/blob/main/Datasets/df_streamlit_com_previsao.csv', sep = 'delimiter')
 
-st.datatable(df)
+st.dataframe(df)
