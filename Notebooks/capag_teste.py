@@ -21,11 +21,11 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 pd.options.display.float_format = "{:,.2f}".format
 
 # Carregamento dos dados
-data_url =('D:/PremioTesouroNacional/df_streamlit_com_previsao.xlsx')
+data_url =('data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')')
 @st.cache(persist=True)
 
 def load_data():
-    data=pd.read_excel(data_url)
+    data=pd.read_csv(data_url, sep = ';')
     return data
 
 df =load_data()
