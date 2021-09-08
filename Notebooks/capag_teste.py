@@ -23,7 +23,7 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 
 st.markdown('Uma nova visão sobre a capacidade de pagamento de nossos municípios')
 
-@st.cache(persist=True)
+#@st.cache(persist=True)
 df = pd.read_csv('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv', sep = ';', index_col = 0)
 
 # Preparação do sidebar (barra lateral)
