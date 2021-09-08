@@ -38,7 +38,7 @@ select = st.sidebar.selectbox('município', lista_municipios)
 #df = df.drop(['Unnamed'],axis = 1)
 df = df.set_index('Município')
 df['CLASS_CAPAG_real'] = df['CLASS_CAPAG_real'].astype('Int64')
-df_municipio = df[df.index==(select)].transpose()
-
+df_municipio = df[df.index==(select)]
+df_municipio = df_municipio.transpose()
 
 st.write(df_municipio)
