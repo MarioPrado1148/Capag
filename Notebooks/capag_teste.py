@@ -43,7 +43,7 @@ select_event = st.sidebar.selectbox('Que informações você gostaria de visuali
 if select_event == 'Contextualização':
     st.markdown('Colocar explicação sobre o projeto aqui')
 elif select_event == 'Análise das Variáveis Categóricas':
-    select_radio = st.sidebar.radio('Selecione a variável',['Região','Reg_Metropolitana','Unidade da Federação', 'Mun_Reg_Geof_Imediata','Hierarquia Urbana','Região Rural ])
+    select_radio = st.sidebar.radio('Selecione a variável',['Região','Reg_Metropolitana','Unidade da Federação'])
     if select_radio == 'Região':
         col1, col2 = st.columns(2)
         
