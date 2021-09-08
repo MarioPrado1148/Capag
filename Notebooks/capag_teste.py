@@ -37,7 +37,7 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 st.sidebar.title('Seletor de Análises e Gráficos')
 #st.sidebar.markdown('Que informações você gostaria de visualizar?')
 
-lista_eventos = ['Contextualização','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo', 'Visão por Município']
+lista_eventos = ['Contextualização','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo', 'Visão por Município','Hierarquia Urbana','Região Rural ]
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
 if select_event == 'Contextualização':
@@ -82,11 +82,31 @@ elif select_event == 'Análise das Variáveis Categóricas':
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Mun_Reg_Geof_Imediata'</h1>", unsafe_allow_html=True)
-            sns.countplot(data = df, x = "UF")
+            sns.countplot(data = df, x = "Mun_Reg_Geof_Imediata")
             st.pyplot()
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
+    elif select_radio == 'Hierarquia Urbana':
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Hierarquia Urbana'</h1>", unsafe_allow_html=True)
+            sns.countplot(data = df, x = "Hierarquia_Urbana")
+            st.pyplot()
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
+    elif select_radio == 'Região Rural':
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Rural'</h1>", unsafe_allow_html=True)
+            sns.countplot(data = df, x = "Região_rural")
+            st.pyplot()
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
+    
+                 
 elif select_event == 'Análise das Variáveis Quantitativas':
     st.markdown('quanti')
 elif select_event == 'Dataframe completo':
