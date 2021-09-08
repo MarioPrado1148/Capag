@@ -48,6 +48,10 @@ if st.sidebar.checkbox("Análise Exploratória de Dados", True, key=2):
 
      
 if select == 'Variáveis Categóricas':
+    if st.button('Say hello'):
+        st.write('Why hello there')
+    else:
+        st.write('Goodbye')
     col1, col2 = st.columns(2)
     with col1:
         st.header('Região')
