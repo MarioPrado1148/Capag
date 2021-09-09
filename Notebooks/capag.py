@@ -47,8 +47,8 @@ select_event = st.sidebar.selectbox('Que informações você gostaria de visuali
 if select_event == 'Apresentação':
 	st.write('teste')
 	#image = Image.open('sunrise.jpg')
-	upload = file_uploader('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
-	data = upload.read()
+	#upload = file_uploader('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
+	#data = upload.read()
 		
 elif select_event == 'Contextualização':
     st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
