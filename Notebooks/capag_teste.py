@@ -113,7 +113,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
                   
 # Análise Exploratória de dados das Variáveis Quantitativas                 
 elif select_event == 'Análise das Variáveis Quantitativas':
-    select_radio = st.sidebar.radio('Selecione a variável',['PIB percentual', 'VAB_Indústria/Total'])
+    select_radio = st.sidebar.radio('Selecione a variável',['PIB percentual', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total')]
     if select_radio == 'PIB percentual':
         col1, col2 = st.columns(2)
         with col1:
