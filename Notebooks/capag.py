@@ -50,7 +50,7 @@ if select_event == 'Apresentação':
 	url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
 	response = requests.get(url)
 	img = Image.open(BytesIO(response.content))
-	st.image(img)
+	st.image(img, caption = 'teste')
 		
 elif select_event == 'Contextualização':
     st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
