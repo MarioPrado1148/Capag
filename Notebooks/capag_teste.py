@@ -129,10 +129,7 @@ elif select_event == 'Análise das Variáveis Quantitativas':
             st.plotly_chart(fig)        
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
-            st.markdown('.
-                        
-                        
-                        Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
+            st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
     
     
     
