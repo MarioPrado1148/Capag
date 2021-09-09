@@ -130,7 +130,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
             st.pyplot()
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
-            st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
+            st.markdown('Verifica-se que a maior parte dos municípios não faz parte de Regiões Metropolitanas.')
     
 		
 
