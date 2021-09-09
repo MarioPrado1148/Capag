@@ -45,6 +45,7 @@ lista_eventos = ['Apresentação','Contextualização','Análise das Variáveis 
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
 if select_event == 'Apresentação':
+	st.write('teste')
 	#image = Image.open('sunrise.jpg')
 		
 elif select_event == 'Contextualização':
