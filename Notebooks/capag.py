@@ -47,8 +47,6 @@ lista_eventos = ['Apresentação','Contextualização','Análise das Variáveis 
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
 if select_event == 'Apresentação':
-	st.write('teste')
-	#image = Image.open('sunrise.jpg')
 	url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
 	response = requests.get(url)
 	img = Image.open(BytesIO(response.content))
