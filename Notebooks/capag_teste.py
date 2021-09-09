@@ -43,7 +43,7 @@ lista_eventos = ['Contextualização','Análise das Variáveis Categóricas','An
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
 if select_event == 'Contextualização':
-    st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem
+    st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
 		contrair novos empréstimos com garantia da União. Esta classificação é um indicador de saúde econômica e fiscal dos municípios.')
     
 # Análise Exploratória de dados das Variáveis Categóricas
