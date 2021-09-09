@@ -52,9 +52,9 @@ if select_event == 'Apresentação':
 	url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
 	response = requests.get(url)
 	img = Image.open(BytesIO(response.content))
-	st.image(img, caption = 'Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.\
+	st.text(img, caption = 'Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.\
 		 Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
-	st.image(caption = 'teste')
+	
 		
 elif select_event == 'Contextualização':
     st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
