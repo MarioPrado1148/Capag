@@ -47,7 +47,7 @@ select_event = st.sidebar.selectbox('Que informações você gostaria de visuali
 if select_event == 'Apresentação':
 	st.write('teste')
 	#image = Image.open('sunrise.jpg')
-	upload = file_uploader('C://Users/90521463734/Downloads/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
+	upload = file_uploader('https://github.com/MarioPrado1148/Capag/tree/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
 	data = upload.read()
 		
 elif select_event == 'Contextualização':
