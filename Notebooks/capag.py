@@ -48,7 +48,7 @@ select_event = st.sidebar.selectbox('Que informações você gostaria de visuali
 
 if select_event == 'Apresentação':
 	st.header('Venha conhecer a saúde financeira dos municípios brasileiros conosco !')
-	st.text('Selecione um dos itens ao lado e veja os dados como um cientista de dados!')
+	st.subheader('Selecione um dos itens ao lado e veja os dados como um cientista de dados!')
 	url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
 	response = requests.get(url)
 	img = Image.open(BytesIO(response.content))
