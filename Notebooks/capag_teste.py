@@ -100,8 +100,8 @@ elif select_event == 'Análise das Variáveis Categóricas':
     elif select_radio == 'Mun_Reg_Geog_Imediata':
         col1, col2 = st.columns(2)
         with col1:
-            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Mun_Reg_Geof_Imediata'</h1>", unsafe_allow_html=True)
-            sns.countplot(data = df, x = "Mun_Reg_Geof_Imediata")
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Mun_Reg_Geog_Imediata'</h1>", unsafe_allow_html=True)
+            sns.countplot(data = df, x = "Mun_Reg_Geog_Imediata")
             st.pyplot()
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
