@@ -62,7 +62,7 @@ if select_event == 'Contextualização':
     
 # Análise Exploratória de dados das Variáveis Categóricas
 elif select_event == 'Análise das Variáveis Categóricas':
-    select_radio = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana','Unidade da Federação', 'Mun_Reg_Geof_Imediata','Hierarquia Urbana','Região Rural'])
+    select_radio = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana','Unidade da Federação', 'Mun_Reg_Geog_Imediata','Hierarquia Urbana','Região Rural'])
     if select_radio == 'Região':
         col1, col2 = st.columns(2)
         
