@@ -43,22 +43,8 @@ lista_eventos = ['Contextualização','Análise das Variáveis Categóricas','An
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
 if select_event == 'Contextualização':
-    st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem contrair novos empréstimos com garantia da União. Esta classificação é um indicador de saúde econômica e fiscal dos municípios. 
-O intuito da CAPAG é apresentar de forma simples e transparente se um novo endividamento representa risco de crédito para o Tesouro Nacional 1. Assim, um ente bem avaliado pelo Tesouro Nacional poderá acessar empréstimos com juros mais baixos, por contar com a União como seu garantidor. Se, por algum motivo, o ente não puder honrar o pagamento da dívida, a União é quem terá que assumir o pagamento. A metodologia da CAPAG, fruto de um aprimoramento da metodologia já usada anteriormente, foi elaborada pelo Tesouro Nacional, com apoio do Banco Mundial 2. O cálculo da CAPAG, além de sintetizar essa situação fiscal em uma simples nota, possibilita a comparação entre os entes, com base em metodologia e informações conhecidas e padronizadas. Corresponde a um serviço similar ao prestado pelas agências de classificação de risco de crédito. A própria STN passou a calcular e divulgar as notas de modo regular, independentemente da existência de pedidos de aval ou garantia para operações de crédito. Enfim, trata-se de uma informação bastante útil para os que buscam melhor compreender as finanças dos entes subnacionais. 3
-A metodologia do cálculo utiliza os seguintes indicadores:
-a.	Endividamento 
-	Este indicador tem como fonte de informação o Relatório de Gestão Fiscal do Poder Executivo referente ao 3º quadrimestre do último exercício 4,5; o indicador de endividamento será calculado pela relação entre dívida consolidada bruta e receita corrente líquida 2. 
-b.	Poupança corrente 
-	Este indicador tem como fonte de informação os Balanços anuais dos três últimos exercícios 4,5. A poupança corrente busca verificar se o ente está poupando o suficiente para absorver um eventual crescimento das suas despesas correntes acima do aumento das receitas correntes 2.
-
-c.	Índice de liquidez 
-	Este indicador tem como fonte de informação o Relatório de Gestão Fiscal do Poder Executivo referente ao 3º quadrimestre do último exercício 4,5. Verifica se o ente tem um volume de recursos em caixa suficiente para honrar as obrigações financeiras já contraídas 2.
-Ou seja, avaliando o grau de solvência, a relação entre receitas e despesa correntes e a situação de caixa, faz-se diagnóstico da saúde fiscal do Estado ou Município.1 A classificação CAPAG é baseada nos conceitos A, B, C e D. 2 Os conceitos A e B indicam boa situação fiscal, enquanto os conceitos C e D sinalizam o contrário.
-	Na prática, qual é a importância, para o município, de ter uma boa classificação da CAPAG? 
-•	ao obter este reconhecimento por parte do Tesouro Nacional, o município obtém a garantia da União para contrair empréstimos; tendo a União como garantidor, o município pode obter melhores condições de financiamento.
-•	licitações a preços mais vantajosos: empresas privadas podem utilizar a classificação CAPAG como um dos indicadores na tomada de decisão sobre participar ou não de um certame. O município, tendo uma boa capacidade de pagamento, pode atrair mais participantes para suas licitações e, consequentemente, propostas mais vantajosas economicamente.
-•	a boa classificação de risco facilita a atração de empreendimentos e de investimentos privados para o município, pois reflete a boa saúde econômica e fiscal do ente. A classificação CAPAG pode ser um indicador a ser considerado pelos empresários e pelos investidores na tomada de decisão sobre onde abrir negócios ou investir dinheiro.
-')
+    st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem
+		contrair novos empréstimos com garantia da União. Esta classificação é um indicador de saúde econômica e fiscal dos municípios.')
     
 # Análise Exploratória de dados das Variáveis Categóricas
 elif select_event == 'Análise das Variáveis Categóricas':
