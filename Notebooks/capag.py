@@ -5,8 +5,9 @@
 # https://www.analyticsvidhya.com/blog/2020/10/create-interactive-dashboards-with-streamlit-and-python/
 # https://towardsdatascience.com/build-your-first-data-visualization-web-app-in-python-using-streamlit-37e4c83a85db
 # https://www.analyticsvidhya.com/blog/2020/12/deploying-machine-learning-models-using-streamlit-an-introductory-guide-to-model-deployment/
-# Testar vários modelos em um app streamlit
-# https://www.analyticsvidhya.com/blog/2021/05/a-brief-introduction-to-building-interactive-ml-webapps-with-streamlit/
+# https://towardsdatascience.com/interactive-machine-learning-and-data-visualization-with-streamlit-7108c5032144
+# https://www.coursera.org/projects/interactive-dashboards-streamlit-python
+#### https://www.analyticsvidhya.com/blog/2021/05/a-brief-introduction-to-building-interactive-ml-webapps-with-streamlit/ ####
 
 # !pip install streamlit --upgrade
 
