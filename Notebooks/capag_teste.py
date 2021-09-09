@@ -124,6 +124,16 @@ elif select_event == 'Análise das Variáveis Quantitativas':
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
+    
+    elif select_radio == 'VAB_Agricultura/Total':
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Agricultura/Total'</h1>", unsafe_allow_html=True)
+            fig = px.box(df, y = 'VAB_Agricultura/Total')
+            st.plotly_chart(fig)        
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
     elif select_radio == 'VAB_Indústria/Total':
         col1, col2 = st.columns(2)
         with col1:
@@ -132,8 +142,25 @@ elif select_event == 'Análise das Variáveis Quantitativas':
             st.plotly_chart(fig)        
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')    
+    elif select_radio == 'VAB_Serviço/Total':
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Serviço/Total'</h1>", unsafe_allow_html=True)
+            fig = px.box(df, y = 'VAB_Serviço/Total')
+            st.plotly_chart(fig)        
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste'
+    elif select_radio == 'VAB_Adm/Total':
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Adm/Total'</h1>", unsafe_allow_html=True)
+            fig = px.box(df, y = 'VAB_Adm/Total')
+            st.plotly_chart(fig)        
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
-    
     
     
 elif select_event == 'Dataframe completo':
