@@ -89,7 +89,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
             
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
-            st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
+            st.markdown('Verifica-se que a região Nordeste possui a maior quantidade de municípios do Brasil, seguida de perto pela Região Sudeste')
     elif select_radio == 'Região Metropolitana':
         col1, col2 = st.columns(2)
         
