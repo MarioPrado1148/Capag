@@ -16,8 +16,6 @@ import seaborn as sns
 import matplotlib as plt
 import plotly.express as px
 import math
-#import PIL
-#from PIL import Image
 
 
 # Configuração da página
