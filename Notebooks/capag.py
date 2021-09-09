@@ -54,6 +54,7 @@ if select_event == 'Apresentação':
 	img = Image.open(BytesIO(response.content))
 	st.image(img, caption = 'Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.\
 		 Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
+	st.image(caption = 'teste')
 		
 elif select_event == 'Contextualização':
     st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
