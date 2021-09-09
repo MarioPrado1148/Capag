@@ -137,7 +137,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
         with col1:
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Rural'</h1>", unsafe_allow_html=True)
             ax = sns.countplot(data = df, x = "Região_rural")
-		 ax.set_xticklabels(ax.get_xticklabels(),rotation = 30)
+	    ax.set_xticklabels(ax.get_xticklabels(),rotation = 30)
             st.pyplot()
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
