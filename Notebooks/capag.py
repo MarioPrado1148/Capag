@@ -45,7 +45,7 @@ lista_eventos = ['Apresentação','Contextualização','Análise das Variáveis 
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
 if select_event == 'Apresentação':
-    st.markdown('Colocar figura aqui')
+	image = Image.open('sunrise.jpg')
 		
 elif select_event == 'Contextualização':
     st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
