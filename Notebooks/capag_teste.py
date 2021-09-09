@@ -121,6 +121,9 @@ elif select_event == 'Análise das Variáveis Quantitativas':
             fig = px.box(df, y = 'PIB_PERC')
             fig.update_layout(height=400, width = 400)
             st.plotly_chart(fig,height=400)        
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
     elif select_radio == 'VAB_Indústria/Total':
         col1, col2 = st.columns(2)
         with col1:
