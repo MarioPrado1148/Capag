@@ -17,6 +17,8 @@ import matplotlib as plt
 import plotly.express as px
 import math
 from PIL import Image
+import requests
+#from io import BytesIO
 
 # Configuração da página
 st.set_page_config(layout="wide")
