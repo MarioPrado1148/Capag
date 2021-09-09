@@ -138,10 +138,10 @@ elif select_event == 'Análise das Variáveis Categóricas':
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Rural'</h1>", unsafe_allow_html=True)
             ax = sns.countplot(data = df, x = "Região_rural")
 	    ax.set_xticklabels(ax.get_xticklabels(),rotation = 30)
-            st.pyplot(ax)
+            st.pyplot()
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
-            st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
+            st.markdown('Verifica-se que a maior parte dos municípios não faz parte de Regiões Metropolitanas.')
                   
 # Análise Exploratória de dados das Variáveis Quantitativas                 
 elif select_event == 'Análise das Variáveis Quantitativas':
