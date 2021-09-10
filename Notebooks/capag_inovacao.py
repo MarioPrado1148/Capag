@@ -121,6 +121,8 @@ if radio == 'Visão cientista de dados':
 		st.text('Arquivo com 5569 linhas e 11 colunas, disponível no formato csv.')
 		st.text('Os dados foram coletados no website da Transparência do Tesouro Nacional 1, em janeiro de 2021.')
 		st.text('Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios')
+		
+		st.markdown('2.	PIB e outros indicadores econômicos')
 
 	elif select_event_cientista == 'Análise das variáveis qualitativas':
 		st.write('Análise das variáveis qualitativas')
