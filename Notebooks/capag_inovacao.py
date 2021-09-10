@@ -43,6 +43,9 @@ st.sidebar.title('Conheça o Projeto Capag')
 lista_eventos_radio = ['Visão cidadão', 'Visão cientista de dados']
 radio = st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
 
+if radio == 'Visão cidadão':
+	st.write('cidadao funciona')
+
 
 	
 
