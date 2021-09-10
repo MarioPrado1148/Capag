@@ -127,8 +127,24 @@ if radio == 'Visão cientista de dados':
 		st.text('Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.')
 		st.text('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
 
-	elif select_event_cientista == 'Análise das variáveis qualitativas':
-		st.write('Análise das variáveis qualitativas')
+	elif select_event_cientista == 'Análise das variáveis qualitativas':	
+		 select_radio = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana','Unidade da Federação', 'Mun_Reg_Geog_Imediata','Hierarquia Urbana','Região Rural'])
+			
+	
+	
+	    if select_radio == 'Região':
+		col1, col2 = st.columns(2)
+
+		with col1:
+		    st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região'</h1>", unsafe_allow_html=True)
+		    sns.countplot(data = df, x = "Região")
+		    st.pyplot()
+
+		with col2: 
+		    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+		    st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
+	 
+
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
 		st.write('Análise das variáveis quantitativas')
 	elif select_event_cientista == 'Análise bivariada':
