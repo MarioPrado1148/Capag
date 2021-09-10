@@ -140,7 +140,18 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			    st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
+		
+		if select_radio_cientista == 'Região Metropolitana':
+			col1, col2 = st.columns(2)
 
+			with col1:
+			    st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Metropolitana'</h1>", unsafe_allow_html=True)
+			    sns.countplot(data = df, x = "Reg_metropolitana")
+			    st.pyplot()
+
+			with col2: 
+			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+			    st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
 
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
 		st.write('Análise das variáveis quantitativas')
