@@ -64,7 +64,7 @@ if radio == 'Visão cidadão':
 		st.markdown('Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado Gradient Boosting com o objetivo de, utilizando as informações disponíveis \
 		sobre os municípios brasileiros, estimar a capacidade de pagamento (Capag) dos municípios e compará-las com a Capag constante do site da Secretaria do Tesouro Nacional\
 		(STN), quando disponível.')	
-	elif select_event_cidadao == 'Capag - Visão detalhada por município':
+	elif select_event_cidadao == 'Capag - Visão detalhada':
 		# st.sidebar.checkbox("Visualizar análises por município", True, key=1)
 		lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
 		select = st.sidebar.selectbox('município', lista_municipios)
