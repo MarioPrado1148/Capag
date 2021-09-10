@@ -86,7 +86,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
 							    #'Unidade da Federação',
 							    'Mun_Reg_Geog_Imediata',
 							    #'Hierarquia Urbana',
-							    'Região Rural'])
+							 #   'Região Rural'])
     if select_radio == 'Região':
         col1, col2 = st.columns(2)
         
