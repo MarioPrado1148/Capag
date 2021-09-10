@@ -54,8 +54,6 @@ if radio == 'Visão cidadão':
 		lista_eventos_cidadao)
 	
 	if select_event_cidadao == 'Apresentação':
-	st.header('Conheça a saúde financeira de seu município')
-	st.subheader('Acesse o menu ao lado e analise os dados como um cientista de dados!')
 	url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
 	response = requests.get(url)
 	img = Image.open(BytesIO(response.content))
