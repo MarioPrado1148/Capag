@@ -80,6 +80,7 @@ if radio == 'Visão cidadão':
 		st.markdown('O valor da CAPAG varia de 1 a 4. Para fins de análise de dados, consideramos os valores 1 e 2 como sendo 0, o que mostra que o município não tem capacidade de pagamento. Também juntamos os valores 3 e 4 como sendo 1, o que indica que o município possui capacidade de pagamento')
         elif select_event_cidadao == 'Objetivos':
 		st.write('teste')
+		
 if radio == 'Visão cientista de dados':
 	lista_eventos_cientista = ['Coleta de Dados',
 				   'Análise das variáveis qualitativas',
