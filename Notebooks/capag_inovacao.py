@@ -72,7 +72,8 @@ if radio == 'Visão cidadão':
 		df['CLASS_CAPAG_real'] = df['CLASS_CAPAG_real'].astype('Int64')
 		df_municipio = df[df.index==(select)]
 		st.write(df_municipio)
-		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem, o que permitirá que você visualize todas as variáveis')
+		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem.')
+		st.text('Dessa forma, você conseguirá visualizar todas as variáveis')
 		
 	elif select_event_cidadao == 'Contextualização':
 		st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
