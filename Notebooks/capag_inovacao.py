@@ -51,7 +51,8 @@ if radio == 'Visão Cidadão':
 	select_event = st.sidebar.selectbox(
 		'Que informações você gostaria de visualizar?',
 		lista_eventos_cidadao)
-	select_event
+	if select_event == 'Apresentação':
+		st.write('apresentacao')
 	
 if radio == 'Visão Cientista de Dados':
 	st.write('conteúdo visão cientista dados')
