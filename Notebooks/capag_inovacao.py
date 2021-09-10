@@ -40,25 +40,19 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 
 st.sidebar.title('Conheça o Projeto Capag')
 
-lista_eventos = ['Visão Cidadão', 'Visão Cientista de Dados']
-st.sidebar.radio('Escolha sua Visão',lista_eventos)
+lista_eventos_radio = ['Visão Cidadão', 'Visão Cientista de Dados']
+st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
+
+if lista_eventos_radio = 'Visão Cidadão':
+	print('teste')
 			   
-lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Quem somos nós']
-select_event_capag = st.sidebar.selectbox('Selecione um evento.', lista_eventos_projeto_capag)
+#lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Quem somos nós']
+#select_event_capag = st.sidebar.selectbox('Selecione um evento.', lista_eventos_projeto_capag)
 
-url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
-response = requests.get(url)
-img = Image.open(BytesIO(response.content))
-st.sidebar.image(img, use_column_width = True)
+#url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
+#response = requests.get(url)
+#img = Image.open(BytesIO(response.content))
+#st.sidebar.image(img, use_column_width = True)
 
-if select_event_capag == 'Apresentação':
-	st.header('Conheça a saúde financeira de seu município')
-	st.subheader('Acesse o menu ao lado e analise os dados como um cientista de dados!')
-	url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
-	response = requests.get(url)
-	img = Image.open(BytesIO(response.content))
-	st.image(img)
-	st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
-	st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
 
 
