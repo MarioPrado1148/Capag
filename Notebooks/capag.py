@@ -81,7 +81,12 @@ elif select_event == 'Contextualização':
     
 # Análise Exploratória de dados das Variáveis Categóricas
 elif select_event == 'Análise das Variáveis Categóricas':
-    select_radio = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana','Unidade da Federação', 'Mun_Reg_Geog_Imediata','Hierarquia Urbana','Região Rural'])
+    select_radio = st.sidebar.radio('Selecione a variável',['Região',
+							    'Região Metropolitana',
+							    #'Unidade da Federação',
+							    'Mun_Reg_Geog_Imediata',
+							    #'Hierarquia Urbana',
+							    'Região Rural'])
     if select_radio == 'Região':
         col1, col2 = st.columns(2)
         
@@ -125,7 +130,8 @@ elif select_event == 'Análise das Variáveis Categóricas':
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
-    elif select_radio == 'Hierarquia Urbana':
+''' 
+elif select_radio == 'Hierarquia Urbana':
         col1, col2 = st.columns(2)
         with col1:
             st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Hierarquia Urbana'</h1>", unsafe_allow_html=True)
@@ -134,7 +140,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que a maior parte dos municípios não faz parte de Regiões Metropolitanas.')
-    
+ '''  
 		
 
                   
