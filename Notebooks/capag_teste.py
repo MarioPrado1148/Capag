@@ -40,19 +40,7 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 st.sidebar.title('Seletor de Análises e Gráficos')
 #st.sidebar.markdown('Que informações você gostaria de visualizar?')
 
-lista_eventos = ['Apresentação',
-		 'Contextualização',
-		 'Capag - Visão resumida por município',
-		 'Capag - Visão detalhada por município',
-		 'Objetivos',
-		 'Coleta de Dados',
-		 'Análise das variáveis qualitativas',
-		 'Análise das variáveis quantitativas',
-		 'Análise bivariada',
-		 'Matriz de correlação'
-		 'Dataframe completo',
-		  'Aspectos técnicos',
-		 'Quem somos nós']
+lista_eventos = ['Contextualização','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo', 'Visão por Município']
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
 if select_event == 'Contextualização':
