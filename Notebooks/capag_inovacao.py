@@ -44,7 +44,7 @@ lista_eventos_radio = ['Visão Cidadão', 'Visão Cientista de Dados']
 radio = st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
 
 if radio == 'Visão Cidadão':
-	sr.write('teste')
+	st.write('teste')
 	
 
 			   
