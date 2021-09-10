@@ -48,6 +48,8 @@ st.sidebar.title('Seletor de Análises e Gráficos')
 
 lista_eventos = ['Apresentação',
 		 'Contextualização',
+		 'Objetivos',
+		 'Coleta de Dados',
 		 'Análise das variáveis qualitativas',
 		 'Análise das variáveis quantitativas',
 		 'Análise bivariada',
