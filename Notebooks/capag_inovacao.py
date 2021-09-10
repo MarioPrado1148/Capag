@@ -38,7 +38,7 @@ df =load_data()
 # Página Principal
 st.title('Classificação da capacidade de pagamento dos municípios brasileiros com base em dados geoeconômicos')
 
-st.sidebar.title('Conheça o Projeto Capag')
+st.sidebar.title('Estimação da Capag com Ciências de Dados')
 
 lista_eventos_radio = ['Visão cidadão', 'Visão cientista de dados']
 radio = st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
@@ -52,6 +52,16 @@ if radio == 'Visão cidadão':
 	select_event_cidadao = st.sidebar.selectbox(
 		'Que informações você gostaria de visualizar?',
 		lista_eventos_cidadao)
+	
+	if select_event_cidadao == 'Apresentação':
+	st.header('Conheça a saúde financeira de seu município')
+	st.subheader('Acesse o menu ao lado e analise os dados como um cientista de dados!')
+	url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
+	response = requests.get(url)
+	img = Image.open(BytesIO(response.content))
+	st.image(img)
+	st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
+	st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
 	
 if radio == 'Visão cientista de dados':
 	lista_eventos_cientista = ['Coleta de Dados',
