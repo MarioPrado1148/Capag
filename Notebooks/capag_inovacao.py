@@ -165,6 +165,18 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			    st.markdown('Verifica-se que há maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
+				
+		elif select_radio_cientista == 'Hierarquia Urbana':
+			col1, col2 = st.columns(2)
+
+			with col1:
+			    st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Hierarquia Urbana'</h1>", unsafe_allow_html=True)
+			    sns.countplot(data = df, x = "Hierarquia_Urbana")
+			    st.pyplot()
+
+			with col2: 
+			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+			    st.markdown('Verifica-se que há maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
 			    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
 		st.write('Análise das variáveis quantitativas')
