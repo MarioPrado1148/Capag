@@ -38,7 +38,7 @@ df =load_data()
 # Página Principal
 st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros com base em dados geoeconômicos')
 
-st.sidebar.title('Conheça o Projeto Capag.')
+st.sidebar.title('Conheça o Projeto Capag')
 
 lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo']
 select_event_capag = st.sidebar.selectbox('Selecione um evento.', lista_eventos_projeto_capag)
@@ -58,5 +58,10 @@ if select_event_capag == 'Apresentação':
 	st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
 	st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
 
+st.sidebar.title('Seja um cientista de dados!')
 lista_eventos_cientista_de_dados = ['Como utilizar','Regressão Logística', 'Árvore de Decisão', 'Random Forest', 'Gradient Boosting']
-select_event = st.sidebar.selectbox('Seja um cientista de dados!', lista_eventos_cientista_de_dados)
+select_event = st.sidebar.selectbox('Escolha algo divertido para fazer', lista_eventos_cientista_de_dados)
+
+response = requests.get(url)
+img = Image.open(BytesIO(response.content))
+st.sidebar.image(img, use_column_width = True)
