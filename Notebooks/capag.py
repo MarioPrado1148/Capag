@@ -46,7 +46,16 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 st.sidebar.title('Seletor de Análises e Gráficos')
 #st.sidebar.markdown('Que informações você gostaria de visualizar?')
 
-lista_eventos = ['Apresentação','Contextualização','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo', 'Visão por Município','Quem somos nós']
+lista_eventos = ['Apresentação',
+		 'Contextualização',
+		 'Análise das Variáveis Categóricas',
+		 'Análise das Variáveis Quantitativas',
+		 'Análise bivariada',
+		 'Matriz de Correlação'
+		 'Dataframe completo',
+		 'Visão por Município',
+		 'Aspectos Técnicos',
+		 'Quem somos nós']
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
 if select_event == 'Apresentação':
