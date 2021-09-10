@@ -105,6 +105,9 @@ if radio == 'Visão cientista de dados':
 	select_event_cientista = st.sidebar.selectbox(
 		'Que informações você gostaria de visualizar?',
 		lista_eventos_cientista)
+	
+	if select_event_cientista == 'Coleta de Dados':
+		st.write('Coleta')
 
 
 	
