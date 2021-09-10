@@ -100,7 +100,7 @@ if radio == 'Visão cidadão':
 		st.markdown('3) a boa classificação de risco facilita a atração de empreendimentos e de investimentos privados para o município, pois reflete a boa saúde econômica e fiscal do ente. A classificação CAPAG pode ser um indicador a ser considerado pelos empresários e pelos investidores na tomada de decisão sobre onde abrir negócios ou investir dinheiro.')
 		st.markdown('O objetivo da CAPAG é apresentar, de forma simples e transparente, os dados sobre a saúde financeira e fiscal dos municípios e é, conforme descrito acima, de grande interesse público e privado.')
 		st.markdown('A CAPAG pode ter os valores A, B, C e D, sendo que as notas A e B indica que o município possui capacidade de pagamento e C e D indicam o contrário')
-		st.markdown('Para possibilitar a utilização de algoritmos de inteligência artificial, as notas C e D foram convertidas no valor '1' e as notas A e B foram convertidas no valor '0'')
+		st.markdown('Para possibilitar a utilização de algoritmos de inteligência artificial, as notas C e D foram convertidas no valor 1 e as notas A e B foram convertidas no valor 0')
 		st.markdown('Dessa forma, o valor 1 indica que o município é mau pagador e o valor 0 indica que é bom pagador.')
 
 if radio == 'Visão cientista de dados':
