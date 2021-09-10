@@ -38,10 +38,10 @@ df =load_data()
 # Página Principal
 st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros com base em dados geoeconômicos')
 
-st.sidebar.title('Conheça os municípios brasileiros.')
+st.sidebar.title('Conheça o Projeto Capag.')
 
 lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo']
-select_event_capag = st.sidebar.selectbox('Conheça o Projeto Capag', lista_eventos_projeto_capag)
+select_event_capag = st.sidebar.selectbox('Selecione um evento.', lista_eventos_projeto_capag)
 
 url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
 response = requests.get(url)
