@@ -44,7 +44,9 @@ lista_eventos_radio = ['Visão Cidadão', 'Visão Cientista de Dados']
 radio = st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
 
 if radio == 'Visão Cidadão':
-	print('teste')
+	sr.write('teste')
+	
+
 			   
 #lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Quem somos nós']
 #select_event_capag = st.sidebar.selectbox('Selecione um evento.', lista_eventos_projeto_capag)
