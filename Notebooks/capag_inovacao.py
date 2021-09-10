@@ -47,8 +47,8 @@ if radio == 'Visão cidadão':
 	lista_eventos_cidadao = ['Apresentação',
 				 'Contextualização',
 				 'Objetivos',
-				 'Capag - Visão resumida por município',
-				 'Capag - Visão detalhada por município']
+				 'Capag - Visão resumida',
+				 'Capag - Visão detalhada']
 	select_event_cidadao = st.sidebar.selectbox(
 		'Que informações você gostaria de visualizar?',
 		lista_eventos_cidadao)
