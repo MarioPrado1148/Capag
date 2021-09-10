@@ -48,7 +48,8 @@ st.sidebar.title('Seletor de Análises e Gráficos')
 
 lista_eventos = ['Apresentação',
 		 'Contextualização',
-		 'Capag',
+		 'Capag - Visão resumida por município',
+		 'Capag - Visão detalhada por município',
 		 'Objetivos',
 		 'Coleta de Dados',
 		 'Análise das variáveis qualitativas',
@@ -56,8 +57,7 @@ lista_eventos = ['Apresentação',
 		 'Análise bivariada',
 		 'Matriz de correlação'
 		 'Dataframe completo',
-		 'Visão por município',
-		 'Aspectos técnicos',
+		  'Aspectos técnicos',
 		 'Quem somos nós']
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
@@ -89,6 +89,13 @@ elif select_event == 'Contextualização':
     st.markdown('2) licitações a preços mais vantajosos: empresas privadas podem utilizar a classificação CAPAG como um dos indicadores na tomada de decisão sobre participar ou não de um certame. O município, tendo uma boa capacidade de pagamento, pode atrair mais participantes para suas licitações e, consequentemente, propostas mais vantajosas economicamente.')
     st.markdown('3) a boa classificação de risco facilita a atração de empreendimentos e de investimentos privados para o município, pois reflete a boa saúde econômica e fiscal do ente. A classificação CAPAG pode ser um indicador a ser considerado pelos empresários e pelos investidores na tomada de decisão sobre onde abrir negócios ou investir dinheiro.')
     st.markdown('O objetivo da CAPAG é apresentar, de forma simples e transparente, os dados sobre a saúde financeira e fiscal dos municípios e é, conforme descrito acima, de grande interesse público e privado.')
+    st.markdown('O valor da CAPAG varia de 1 a 4. Para fins de análise de dados, consideramos os valores 1 e 2 como sendo 0, o que mostra que o município não tem capacidade de pagamento. Também juntamos os valores 3 e 4 como sendo 1, o que indica que o município possui capacidade de pagamento')
+
+elif select_event == 'Capag':
+   # Colocar seletor de município
+   # Aparecer CAPAG real e estimada
+   # área e população
+	
 
     
 # Análise Exploratória de dados das Variáveis Categóricas
@@ -212,7 +219,7 @@ elif select_event == 'Análise das Variáveis Quantitativas':
 # Apresentação do Dataframe completo
 elif select_event == 'Dataframe completo':
     st.table(df)
-elif select_event == 'Visão por Município':
+elif select_event == 'Capag - Visão Detalhada por Município':
   # st.sidebar.checkbox("Visualizar análises por município", True, key=1)
     lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
     select = st.sidebar.selectbox('município', lista_municipios)
