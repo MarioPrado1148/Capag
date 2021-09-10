@@ -99,16 +99,9 @@ elif select_event == 'Capag':
 
     
 # Análise Exploratória de dados das Variáveis Categóricas
-
 elif select_event == 'Análise das Variáveis Categóricas':
-	select_radio = st.sidebar.radio('Selecione a variável',['Região',
-								'Região Metropolitana',
-								#'Unidade da Federação',
-								'Mun_Reg_Geog_Imediata'
-								#'Hierarquia Urbana',
-								#   'Região Rural'
-							       ])
-        if select_radio == 'Região':
+    select_radio = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana','Unidade da Federação', 'Mun_Reg_Geog_Imediata','Hierarquia Urbana','Região Rural'])
+    if select_radio == 'Região':
         col1, col2 = st.columns(2)
         
         with col1:
@@ -118,7 +111,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
             
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
-            st.markdown('Verifica-se que a região Nordeste possui a maior quantidade de municípios do Brasil, seguida de perto pela Região Sudeste')
+            st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
     elif select_radio == 'Região Metropolitana':
         col1, col2 = st.columns(2)
         
@@ -129,7 +122,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
             
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
-            st.markdown('Verifica-se que a maior parte dos municípios não está localizada em Regiões Metropolitanas.')
+            st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
     elif select_radio == 'Unidade da Federação':
         col1, col2 = st.columns(2)
         
@@ -151,16 +144,26 @@ elif select_event == 'Análise das Variáveis Categóricas':
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
+    elif select_radio == 'Hierarquia Urbana':
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Hierarquia Urbana'</h1>", unsafe_allow_html=True)
+            sns.countplot(data = df, x = "Hierarquia_Urbana")
+            st.pyplot()
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
+    
+    elif select_radio == 'Região Rural':
+        col1, col2 = st.columns(2)
+        with col1:
+            st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Rural'</h1>", unsafe_allow_html=True)
+            sns.countplot(data = df, x = "Região_rural")
+            st.pyplot()
+        with col2: 
+            st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+            st.markdown('Verifica-se que há maior parte dos municípios não faz parte de Regiões Metropolitanas.')
 
-		#elif select_radio == 'Hierarquia Urbana':
-       # col1, col2 = st.columns(2)
-      #  with col1:
-     #       st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Hierarquia Urbana'</h1>", unsafe_allow_html=True)
-    #        sns.countplot(data = df, x = "Hierarquia_Urbana")
-   #         st.pyplot()
-  #      with col2: 
- #           st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
-#            st.markdown('Verifica-se que a maior parte dos municípios não faz parte de Regiões Metropolitanas.')
 # Análise Exploratória de dados das Variáveis Quantitativas       
                   
           
