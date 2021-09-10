@@ -99,6 +99,7 @@ elif select_event == 'Capag':
 
     
 # Análise Exploratória de dados das Variáveis Categóricas
+
 elif select_event == 'Análise das Variáveis Categóricas':
 	select_radio = st.sidebar.radio('Selecione a variável',['Região',
 								'Região Metropolitana',
@@ -107,7 +108,7 @@ elif select_event == 'Análise das Variáveis Categóricas':
 								#'Hierarquia Urbana',
 								#   'Região Rural'
 							       ])
-    if select_radio == 'Região':
+        if select_radio == 'Região':
         col1, col2 = st.columns(2)
         
         with col1:
