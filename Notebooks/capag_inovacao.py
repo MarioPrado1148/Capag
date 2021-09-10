@@ -41,7 +41,7 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 st.sidebar.title('Conheça o Projeto Capag')
 
 lista_eventos = ['Visão Cidadão', 'Visão Cientista de Dados']
-evento = st.sidebar.button('Escolha sua Visão', lista_eventos']
+st.sidebar.button('Escolha sua Visão']
 			   
 lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Quem somos nós']
 select_event_capag = st.sidebar.selectbox('Selecione um evento.', lista_eventos_projeto_capag)
