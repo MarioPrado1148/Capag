@@ -65,3 +65,6 @@ select_event = st.sidebar.selectbox('Escolha algo divertido para fazer', lista_e
 response = requests.get(url)
 img = Image.open(BytesIO(response.content))
 st.sidebar.image(img, use_column_width = True)
+
+if lista_eventos_cientista_de_dados == 'Regressão Logística':
+	print('teste')
