@@ -210,6 +210,6 @@ elif select_event == 'Visão por Município':
     st.write(df_municipio)
 
 elif select_event == 'Quem somos nós':
-	st.markdown('Camila Maia Fátima Marques ...'
+	st.text('Camila Maia Fátima Marques ...'
 		    'Mario José Calvão Monnerat do Prado é pai, auditor-fiscal da Receita Federal, formado no MBA em Analytics e Inteligência Artificial da Fundação FIA de São Paulo'
 		   'Reinaldo da Cruz Castro...')
