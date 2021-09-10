@@ -40,7 +40,7 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 
 st.sidebar.title('Conheça o Projeto Capag')
 
-lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo']
+lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Quem somos nós']
 select_event_capag = st.sidebar.selectbox('Selecione um evento.', lista_eventos_projeto_capag)
 
 url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
@@ -59,7 +59,7 @@ if select_event_capag == 'Apresentação':
 	st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
 
 st.sidebar.title('Seja um cientista de dados!')
-lista_eventos_cientista_de_dados = ['Como utilizar','Regressão Logística', 'Árvore de Decisão', 'Random Forest', 'Gradient Boosting']
+lista_eventos_cientista_de_dados = ['Como utilizar','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo','Regressão Logística', 'Árvore de Decisão', 'Random Forest', 'Gradient Boosting']
 select_event = st.sidebar.selectbox('Escolha algo divertido para fazer', lista_eventos_cientista_de_dados)
 
 response = requests.get(url)
