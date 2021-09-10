@@ -153,8 +153,7 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			    st.markdown('Verifica-se que há maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
-			    st.markdown("<h1 style='text-align: center; color: red;'>Gostou deste gráfico, Cruz?</h1>", unsafe_allow_html=True)
-
+			    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
 		st.write('Análise das variáveis quantitativas')
 	elif select_event_cientista == 'Análise bivariada':
