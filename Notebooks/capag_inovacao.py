@@ -43,7 +43,7 @@ st.sidebar.title('Conheça o Projeto Capag')
 lista_eventos_radio = ['Visão Cidadão', 'Visão Cientista de Dados']
 st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
 
-if lista_eventos_radio = 'Visão Cidadão':
+if lista_eventos_radio == 'Visão Cidadão':
 	print('teste')
 			   
 #lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Quem somos nós']
