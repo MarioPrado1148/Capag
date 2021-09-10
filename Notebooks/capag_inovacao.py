@@ -98,7 +98,7 @@ if radio == 'Visão cientista de dados':
 				   'Análise das variáveis qualitativas',
 				   'Análise das variáveis quantitativas',
 				   'Análise bivariada',
-				   'Matriz de correlação'
+				   'Matriz de correlação',
 				   'Dataframe completo',
 				   'Aspectos técnicos',
 				   'Quem somos nós']
