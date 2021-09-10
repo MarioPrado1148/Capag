@@ -48,6 +48,9 @@ if radio == 'Visão Cidadão':
 				 'Contextualização',
 				 'Capag - Visão resumida por município',
 				 'Capag - Visão detalhada por município']
+	select_event = st.sidebar.selectbox(
+		'Que informações você gostaria de visualizar?',
+		lista_eventos_cidadao)
 	
 if radio == 'Visão Cientista de Dados':
 	st.write('conteúdo visão cientista dados')
