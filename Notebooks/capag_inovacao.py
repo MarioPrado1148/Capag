@@ -48,9 +48,23 @@ if radio == 'Visão cidadão':
 				 'Contextualização',
 				 'Capag - Visão resumida por município',
 				 'Capag - Visão detalhada por município']
-	select_event = st.sidebar.selectbox(
+	select_event_cidadao = st.sidebar.selectbox(
 		'Que informações você gostaria de visualizar?',
 		lista_eventos_cidadao)
+	
+if radio == 'Visão cientista de dados':
+	lista_eventos_cientista = ['Objetivos',
+					    'Coleta de Dados',
+					    'Análise das variáveis qualitativas',
+					    'Análise das variáveis quantitativas',
+					    'Análise bivariada',
+					    'Matriz de correlação'
+					    'Dataframe completo',
+					    'Aspectos técnicos',
+					    'Quem somos nós']
+	select_event_cientista = st.sidebar.selectbox(
+		'Que informações você gostaria de visualizar?',
+		lista_eventos_cientista)
 
 
 	
