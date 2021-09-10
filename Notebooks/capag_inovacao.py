@@ -71,7 +71,7 @@ if radio == 'Visão cidadão':
 		df = df.set_index('Município')
 		df['CLASS_CAPAG_real'] = df['CLASS_CAPAG_real'].astype('Int64')
 		df_municipio = df[df.index==(select)]
-		st.write(df_municipio)
+		st.frame(df_municipio)
 		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem.')
 		st.text('Dessa forma, você conseguirá visualizar todas as variáveis')
 		
