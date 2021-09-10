@@ -60,11 +60,11 @@ if select_event_capag == 'Apresentação':
 
 st.sidebar.title('Seja um cientista de dados!')
 lista_eventos_cientista_de_dados = ['Como utilizar','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo','Regressão Logística', 'Árvore de Decisão', 'Random Forest', 'Gradient Boosting']
-select_event = st.sidebar.selectbox('Escolha algo divertido para fazer', lista_eventos_cientista_de_dados)
+select_event_cientista_de_dados = st.sidebar.selectbox('Escolha algo divertido para fazer', lista_eventos_cientista_de_dados)
 
 response = requests.get(url)
 img = Image.open(BytesIO(response.content))
 st.sidebar.image(img, use_column_width = True)
 
-if lista_eventos_cientista_de_dados == 'Regressão Logística':
+if select_event_cientista_de_dados == 'Regressão Logística':
 	print('teste')
