@@ -64,6 +64,15 @@ if radio == 'Visão cidadão':
 		st.markdown('Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado Gradient Boosting com o objetivo de, utilizando as informações disponíveis \
 		sobre os municípios brasileiros, estimar a capacidade de pagamento (Capag) dos municípios e compará-las com a Capag constante do site da Secretaria do Tesouro Nacional\
 		(STN), quando disponível.')	
+	elif select_event == 'Capag - Visão detalhada por município':
+		# st.sidebar.checkbox("Visualizar análises por município", True, key=1)
+		lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
+		select = st.sidebar.selectbox('município', lista_municipios)
+		df = df.set_index('Município')
+		df['CLASS_CAPAG_real'] = df['CLASS_CAPAG_real'].astype('Int64')
+		df_municipio = df[df.index==(select)]
+		st.write(df_municipio)
+		
 	elif select_event_cidadao == 'Contextualização':
 		st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
 		contrair novos empréstimos com garantia da União. Esta classificação é um indicador de saúde econômica e fiscal dos municípios.')
