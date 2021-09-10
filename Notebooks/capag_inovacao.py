@@ -44,7 +44,10 @@ lista_eventos_radio = ['Visão cidadão', 'Visão cientista de dados']
 radio = st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
 
 if radio == 'Visão Cidadão':
-	st.write('teste')
+	lista_eventos_cidadao = ['Apresentação',
+				 'Contextualização',
+				 'Capag - Visão resumida por município',
+				 'Capag - Visão detalhada por município']
 	
 if radio == 'Visão Cientista de Dados':
 	st.write('conteúdo visão cientista dados')
