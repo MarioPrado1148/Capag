@@ -36,11 +36,11 @@ def load_data():
 df =load_data()
 
 # Página Principal
-st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros com base em dados geoeconômicos')
+st.title('Classificação da capacidade de pagamento dos municípios brasileiros com base em dados geoeconômicos')
 
 st.sidebar.title('Conheça o Projeto Capag')
 
-lista_eventos_radio = ['Visão Cidadão', 'Visão Cientista de Dados']
+lista_eventos_radio = ['Visão cidadão', 'Visão cientista de dados']
 radio = st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
 
 if radio == 'Visão Cidadão':
