@@ -44,4 +44,4 @@ lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos'
 select_event = st.sidebar.selectbox('Conheça o Projeto Capag', lista_eventos_projeto_capag)
 
 lista_eventos_cientista_de_dados = ['Como utilizar','Regressão Logística', 'Árvore de Decisão', 'Random Forest', 'Gradient Boosting']
-select_event = st.sidebar.selectbox('Conheça o Projeto Capag', lista_eventos_cientista_de_dados)
+select_event = st.sidebar.selectbox('Seja um cientista de dados!', lista_eventos_cientista_de_dados)
