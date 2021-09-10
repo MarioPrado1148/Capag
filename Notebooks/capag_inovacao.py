@@ -44,9 +44,9 @@ lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos'
 select_event_capag = st.sidebar.selectbox('Conheça o Projeto Capag', lista_eventos_projeto_capag)
 
 url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
-	response = requests.get(url)
-	img = Image.open(BytesIO(response.content))
-	st.sidebar.image(img)
+response = requests.get(url)
+img = Image.open(BytesIO(response.content))
+st.sidebar.image(img)
 
 if select_event_capag == 'Apresentação':
 	st.header('Conheça a saúde financeira de seu município')
