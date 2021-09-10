@@ -197,7 +197,7 @@ elif select_event == 'Análise das Variáveis Quantitativas':
 # Apresentação do Dataframe completo
 elif select_event == 'Dataframe completo':
     st.table(df)
-else:
+elif:
   # st.sidebar.checkbox("Visualizar análises por município", True, key=1)
     lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
     select = st.sidebar.selectbox('município', lista_municipios)
