@@ -210,6 +210,8 @@ elif select_event == 'Visão por Município':
     st.write(df_municipio)
 
 elif select_event == 'Quem somos nós':
-	st.text('Camila Maia Fátima Marques ...')
+	st.markdown('Camila Maia Fátima Marques ...')
 	st.markdown('Mario José Calvão Monnerat do Prado é pai, auditor-fiscal da Receita Federal, formado no MBA em Analytics e Inteligência Artificial da Fundação FIA de São Paulo')
 	st.markdown('Reinaldo da Cruz Castro...')
+	st.markdown('Este trabalho foi feito, originariamente, como códigos e dissertação para o Trabalho de Conclusão de Curso de Camila em sua pós-graduação de Big Data/Data Science.')
+	st.markdown('Para participar do Prêmio Tesouro Nacional, nós adaptamos os códigos para a plataforma streamlit, o que proporcionou que mais pessoas tivessem acesso a este conhecimento tão importante sobre os municípios brasileiros.)
