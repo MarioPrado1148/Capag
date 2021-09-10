@@ -48,13 +48,13 @@ st.sidebar.title('Seletor de Análises e Gráficos')
 
 lista_eventos = ['Apresentação',
 		 'Contextualização',
-		 'Análise das Variáveis Categóricas',
-		 'Análise das Variáveis Quantitativas',
+		 'Análise das variáveis qualitativas',
+		 'Análise das variáveis quantitativas',
 		 'Análise bivariada',
-		 'Matriz de Correlação'
+		 'Matriz de correlação'
 		 'Dataframe completo',
-		 'Visão por Município',
-		 'Aspectos Técnicos',
+		 'Visão por município',
+		 'Aspectos técnicos',
 		 'Quem somos nós']
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
