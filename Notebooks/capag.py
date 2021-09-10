@@ -140,11 +140,12 @@ elif select_radio == 'Hierarquia Urbana':
         with col2: 
             st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
             st.markdown('Verifica-se que a maior parte dos municípios não faz parte de Regiões Metropolitanas.')
- '''  
+# Análise Exploratória de dados das Variáveis Quantitativas       
+'''  
 		
 
                   
-# Análise Exploratória de dados das Variáveis Quantitativas                 
+          
 elif select_event == 'Análise das Variáveis Quantitativas':
     select_radio = st.sidebar.radio('Selecione a variável',['PIB percentual', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total'])
     if select_radio == 'PIB percentual':
