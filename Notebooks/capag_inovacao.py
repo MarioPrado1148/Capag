@@ -40,6 +40,9 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 
 st.sidebar.title('Conheça o Projeto Capag')
 
+lista_eventos = ['Visão Cidadão', 'Visão Cientista de Dados']
+evento = st.sidebar.button('Escolha sua Visão', lista_eventos']
+			   
 lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Quem somos nós']
 select_event_capag = st.sidebar.selectbox('Selecione um evento.', lista_eventos_projeto_capag)
 
@@ -58,13 +61,4 @@ if select_event_capag == 'Apresentação':
 	st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
 	st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
 
-st.sidebar.title('Seja um cientista de dados!')
-lista_eventos_cientista_de_dados = ['Como utilizar','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo','Regressão Logística', 'Árvore de Decisão', 'Random Forest', 'Gradient Boosting']
-select_event_cientista_de_dados = st.sidebar.selectbox('Escolha algo divertido para fazer', lista_eventos_cientista_de_dados)
 
-response = requests.get(url)
-img = Image.open(BytesIO(response.content))
-st.sidebar.image(img, use_column_width = True)
-
-if select_event_cientista_de_dados == 'Regressão Logística':
-	print('teste')
