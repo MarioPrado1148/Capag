@@ -154,11 +154,11 @@ if radio == 'Visão cientista de dados':
 			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			    st.markdown('Verifica-se que há maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
 				
-		elif select_radio_cientista == 'Região Metropolitana':
+		elif select_radio_cientista == 'Mun_Reg_Geog_Imediata':
 			col1, col2 = st.columns(2)
 
 			with col1:
-			    st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Metropolitana'</h1>", unsafe_allow_html=True)
+			    st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Mun_Reg_Geog_Imediata'</h1>", unsafe_allow_html=True)
 			    sns.countplot(data = df, x = "Mun_Reg_Geog_Imediata")
 			    st.pyplot()
 
