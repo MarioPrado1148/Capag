@@ -47,7 +47,7 @@ if radio == 'Visão Cidadão':
 	st.write('teste')
 	
 if radio == 'Visão Cientista de Dados':
-	st.write('conteúdo visão cientista dados)
+	st.write('conteúdo visão cientista dados')
 
 	
 
