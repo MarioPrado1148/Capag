@@ -128,9 +128,8 @@ if radio == 'Visão cientista de dados':
 		st.text('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
 
 	elif select_event_cientista == 'Análise das variáveis qualitativas':	
-		select_radio = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana','Unidade da Federação', 'Mun_Reg_Geog_Imediata','Hierarquia Urbana','Região Rural'])
-		
-		    if select_radio == 'Região':
+		select_radio_cientista = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana','Unidade da Federação', 'Mun_Reg_Geog_Imediata','Hierarquia Urbana','Região Rural'])
+		if select_radio_cientista == 'Região':
 			col1, col2 = st.columns(2)
 
 			with col1:
