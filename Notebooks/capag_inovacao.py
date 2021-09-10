@@ -135,7 +135,7 @@ if radio == 'Visão cientista de dados':
 
 			with col1:
 			    st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região'</h1>", unsafe_allow_html=True)
-			    sns.countplot(data = df, x = "Região")
+			    sns.countplot(x = "Região", data = df).set_ylabel('Quantidade')
 			    st.pyplot()
 
 			with col2: 
@@ -148,10 +148,6 @@ if radio == 'Visão cientista de dados':
 			with col1:
 			    st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Metropolitana'</h1>", unsafe_allow_html=True)
 			    sns.countplot(data = df, x = "Reg_Metropolitana")
-			    #regiao = sns.countplot(x = "Região", data = df_streamlit)
-			    #regiao.set_xlabel('Nome da Região')
-		            #regiao.set_ylabel('Quantidade')
-			    #print()    
 			    st.pyplot()
 
 			with col2: 
