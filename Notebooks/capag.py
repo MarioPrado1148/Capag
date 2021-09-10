@@ -46,7 +46,7 @@ st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros
 st.sidebar.title('Seletor de Análises e Gráficos')
 #st.sidebar.markdown('Que informações você gostaria de visualizar?')
 
-lista_eventos = ['Apresentação','Contextualização','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo', 'Visão por Município']
+lista_eventos = ['Apresentação','Contextualização','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo', 'Visão por Município','Quem somos nós']
 select_event = st.sidebar.selectbox('Que informações você gostaria de visualizar?', lista_eventos)
 
 if select_event == 'Apresentação':
@@ -200,7 +200,7 @@ elif select_event == 'Análise das Variáveis Quantitativas':
 # Apresentação do Dataframe completo
 elif select_event == 'Dataframe completo':
     st.table(df)
-else:
+elif:
   # st.sidebar.checkbox("Visualizar análises por município", True, key=1)
     lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
     select = st.sidebar.selectbox('município', lista_municipios)
@@ -208,3 +208,7 @@ else:
     df['CLASS_CAPAG_real'] = df['CLASS_CAPAG_real'].astype('Int64')
     df_municipio = df[df.index==(select)]
     st.write(df_municipio)
+elif select_event == 'Quem somos nós':
+	st.markdown('Camila Maia Fátima Marques ...'
+		    'Mario José Calvão Monnerat do Prado é pai, auditor-fiscal da Receita Federal, formado no MBA em Analytics e Inteligência Artificial da Fundação FIA de São Paulo'
+		   'Reinaldo da Cruz Castro...')
