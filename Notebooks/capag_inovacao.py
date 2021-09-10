@@ -60,7 +60,8 @@ if radio == 'Visão cidadão':
 		st.image(img)
 		st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
 		st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
-		
+	elif select_event_cidadao == 'Objetivos':
+		st.write('objetivos')	
 	elif select_event_cidadao == 'Contextualização':
 		st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
 		contrair novos empréstimos com garantia da União. Esta classificação é um indicador de saúde econômica e fiscal dos municípios.')
