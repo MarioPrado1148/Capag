@@ -37,3 +37,11 @@ df =load_data()
 
 # Página Principal
 st.title('Classificação da Capacidade de Pagamento dos Municípios brasileiros com base em dados geoeconômicos')
+
+st.sidebar.title('Conheça os municípios brasileiros.')
+
+lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Análise das Variáveis Categóricas','Análise das Variáveis Quantitativas', 'Dataframe completo']
+select_event = st.sidebar.selectbox('Conheça o Projeto Capag', lista_eventos_projeto_capag)
+
+lista_eventos_cientista_de_dados = ['Como utilizar','Regressão Logística', 'Árvore de Decisão', 'Random Forest', 'Gradient Boosting']
+select_event = st.sidebar.selectbox('Conheça o Projeto Capag', lista_eventos_cientista_de_dados)
