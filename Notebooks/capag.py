@@ -84,9 +84,10 @@ elif select_event == 'Análise das Variáveis Categóricas':
     select_radio = st.sidebar.radio('Selecione a variável',['Região',
 							    'Região Metropolitana',
 							    #'Unidade da Federação',
-							    'Mun_Reg_Geog_Imediata',
+							    'Mun_Reg_Geog_Imediata'
 							    #'Hierarquia Urbana',
-							 #   'Região Rural'])
+							 #   'Região Rural'
+							   ])
     if select_radio == 'Região':
         col1, col2 = st.columns(2)
         
