@@ -108,6 +108,19 @@ if radio == 'Visão cientista de dados':
 	
 	if select_event_cientista == 'Coleta de Dados':
 		st.write('Coleta')
+	elif select_event_cientista == 'Análise das variáveis qualitativas':
+		st.write('Análise das variáveis qualitativas')
+	elif select_event_cientista == 'Análise das variáveis quantitativas':
+		st.write('Análise das variáveis quantitativas')
+	elif select_event_cientista == 'Análise bivariada':
+		st.write('Análise bivariada')
+	elif select_event_cientista == 'Matriz de correlação':
+		st.write('Matriz de correlação')
+	elif select_event_cientista == 'Dataframe completo':
+		st.write('Coleta')
+	elif select_event_cientista == 'Aspectos técnicos':
+		st.write('Coleta')
+	
 
 
 	
