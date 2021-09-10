@@ -54,12 +54,12 @@ if radio == 'Visão cidadão':
 		lista_eventos_cidadao)
 	
 	if select_event_cidadao == 'Apresentação':
-	url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
-	response = requests.get(url)
-	img = Image.open(BytesIO(response.content))
-	st.image(img)
-	st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
-	st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
+		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
+		response = requests.get(url)
+		img = Image.open(BytesIO(response.content))
+		st.image(img)
+		st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
+		st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
 	
 if radio == 'Visão cientista de dados':
 	lista_eventos_cientista = ['Coleta de Dados',
