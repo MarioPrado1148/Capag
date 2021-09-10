@@ -42,8 +42,8 @@ st.sidebar.title('Seletor de Análises e Gráficos')
 
 lista_eventos = ['Apresentação',
 		 'Contextualização',
-		 'Capag - Visão resumida por município',
-		 'Capag - Visão detalhada por município',
+		 'Capag - visão resumida por município',
+		 'Capag - visão detalhada por município',
 		 'Objetivos',
 		 'Coleta de Dados',
 		 'Análise das variáveis qualitativas',
@@ -197,7 +197,7 @@ elif select_event == 'Análise das Variáveis Quantitativas':
 # Apresentação do Dataframe completo
 elif select_event == 'Dataframe completo':
     st.table(df)
-elif select_event == 'Capag - Visão Detalhada por Município':
+elif select_event == 'Capag - visão detalhada por município':
   # st.sidebar.checkbox("Visualizar análises por município", True, key=1)
     lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
     select = st.sidebar.selectbox('município', lista_municipios)
