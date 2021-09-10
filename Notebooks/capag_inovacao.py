@@ -123,6 +123,9 @@ if radio == 'Visão cientista de dados':
 		st.text('Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios')
 		
 		st.markdown('2.	PIB e outros indicadores econômicos')
+		st.text('Arquivo com 50115 linhas e 43 colunas, disponível no formato xls.')
+		st.text('Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE 6, em janeiro de 2021.')
+		st.text('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
 
 	elif select_event_cientista == 'Análise das variáveis qualitativas':
 		st.write('Análise das variáveis qualitativas')
