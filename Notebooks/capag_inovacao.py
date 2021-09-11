@@ -168,8 +168,8 @@ if radio == 'Visão cientista de dados':
 				
 					    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
-		 select_radio = st.sidebar.radio('Selecione a variável',['PIB percentual', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total'])
-    		 if select_radio == 'PIB percentual':
+		select_radio = st.sidebar.radio('Selecione a variável',['PIB percentual', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total'])
+    		if select_radio == 'PIB percentual':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Pib Percentual'</h1>", unsafe_allow_html=True)
