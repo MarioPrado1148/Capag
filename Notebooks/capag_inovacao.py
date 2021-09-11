@@ -129,8 +129,8 @@ if radio == 'Visão cientista de dados':
 		st.text('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
 
 	elif select_event_cientista == 'Análise das variáveis qualitativas':	
-		select_radio_cientista = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana', 'Mun_Reg_Geog_Imediata'])
-		if select_radio_cientista == 'Região':
+		select_radio_quali = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana', 'Mun_Reg_Geog_Imediata'])
+		if select_radio_quali == 'Região':
 			col1, col2 = st.columns(2)
 
 			with col1:
@@ -142,7 +142,7 @@ if radio == 'Visão cientista de dados':
 			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			    st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
 		
-		elif select_radio_cientista == 'Região Metropolitana':
+		elif select_radio_quali == 'Região Metropolitana':
 			col1, col2 = st.columns(2)
 
 			with col1:
@@ -154,7 +154,7 @@ if radio == 'Visão cientista de dados':
 			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			    st.markdown('Verifica-se que há maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
 				
-		elif select_radio_cientista == 'Mun_Reg_Geog_Imediata':
+		elif select_radio_quali == 'Mun_Reg_Geog_Imediata':
 			col1, col2 = st.columns(2)
 
 			with col1:
@@ -169,7 +169,7 @@ if radio == 'Visão cientista de dados':
 					    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
 		select_radio_quanti = st.sidebar.radio('Selecione a variável',['PIB percentual', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total'])
-    		if select_radio_quanti == 'PIB percentual':
+		#if select_radio_quanti == 'PIB percentual':
 		#	col1, col2 = st.columns(2)
 		#	with col1:
 		#		st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Pib Percentual'</h1>", unsafe_allow_html=True)
