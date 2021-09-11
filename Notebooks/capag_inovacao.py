@@ -225,7 +225,7 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Dataframe completo':
 		st.dataframe(df)
 	elif select_event_cientista == 'Aspectos técnicos':
-		st.write('Aspectos técnicos')
+		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
 	
 
 
