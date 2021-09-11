@@ -176,7 +176,46 @@ if radio == 'Visão cientista de dados':
 				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Pib Percentual'</h1>", unsafe_allow_html=True)
 				fig = px.box(df, y = 'PIB_PERC')
 				fig.update_layout(height=400, width = 400)
-				st.plotly_chart(fig,height=400)        
+				st.plotly_chart(fig,height=400) 
+		
+		if select_radio_quanti == 'VAB_Agricultura/Total':
+			#st.write('teste')
+			col1, col2 = st.columns(2)
+			with col1:
+				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Agricultura/Total'</h1>", unsafe_allow_html=True)
+				fig = px.box(df, y = 'VAB_Agricultura/Total')
+				fig.update_layout(height=400, width = 400)
+				st.plotly_chart(fig,height=400)
+				
+		
+		if select_radio_quanti == 'VAB_Indústria/Total':
+			#st.write('teste')
+			col1, col2 = st.columns(2)
+			with col1:
+				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Indústria/Total'</h1>", unsafe_allow_html=True)
+				fig = px.box(df, y = 'VAB_Indústria/Total')
+				fig.update_layout(height=400, width = 400)
+				st.plotly_chart(fig,height=400)
+				
+		
+		if select_radio_quanti == 'VAB_Serviço/Total':
+			#st.write('teste')
+			col1, col2 = st.columns(2)
+			with col1:
+				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Serviço/Total'</h1>", unsafe_allow_html=True)
+				fig = px.box(df, y = 'VAB_Serviço/Total')
+				fig.update_layout(height=400, width = 400)
+				st.plotly_chart(fig,height=400)
+				
+		
+		if select_radio_quanti == 'VAB_Adm/Total':
+			#st.write('teste')
+			col1, col2 = st.columns(2)
+			with col1:
+				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Adm/Total'</h1>", unsafe_allow_html=True)
+				fig = px.box(df, y = 'VAB_Adm/Total')
+				fig.update_layout(height=400, width = 400)
+				st.plotly_chart(fig,height=400)
 		
 		
 	elif select_event_cientista == 'Análise bivariada':
