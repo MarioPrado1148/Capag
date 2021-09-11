@@ -223,7 +223,7 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Matriz de correlação':
 		st.write('Matriz de correlação')
 	elif select_event_cientista == 'Dataframe completo':
-		st.write('Dataframe completo')
+		st.table(df)
 	elif select_event_cientista == 'Aspectos técnicos':
 		st.write('Aspectos técnicos')
 	
