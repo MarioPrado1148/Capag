@@ -164,7 +164,7 @@ if radio == 'Visão cientista de dados':
 
 			with col2: 
 			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
-			    st.markdown('Verifica-se que há maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
+			    st.markdown('Verifica-se que apenas uma pequena parte dos municípios brasileiros constitui Polos. A grande maioria está no entorno dos polos.')
 				
 					    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
