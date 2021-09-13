@@ -37,7 +37,7 @@ df =load_data()
 
 # Página Principal
 texto = 'Classificação da capacidade de pagamento dos municípios brasileiros com base em dados geoeconômicos'
-st.write(<title>{texto}</title>)
+st.write(<head><title>{texto}</title></head>)
 #st.title('Classificação da capacidade de pagamento dos municípios brasileiros com base em dados geoeconômicos')
 #st.title(f"<h2 style='text-align: justify;'><b>{texto}</b></h2>", unsafe_allow_html=True)
 
