@@ -37,7 +37,7 @@ df =load_data()
 
 # Página Principal
 st.title('Classificação da capacidade de pagamento dos municípios brasileiros com base em dados geoeconômicos')
-st.title(f"<h1 style='text-align: justify;'><b>{titulo}</b></h1>", unsafe_allow_html=True)
+st.title(f"<h1 style='text-align: justify;'><b></b></h1>", unsafe_allow_html=True)
 #st.title("<h1 style='text-align: justify; color: black;'>{titulo}</h1>", unsafe_allow_html=True)
 
 st.sidebar.title('Estimação da Capag com Ciências de Dados')
