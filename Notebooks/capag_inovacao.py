@@ -78,7 +78,7 @@ if radio == 'Visão cidadão':
 		st.text('Dessa forma, você conseguirá visualizar todas as variáveis')
 	elif select_event_cidadao == 'Quem somos':
 		st.markdown('Camila Fátima Maia Marques é mãe da Malu e da Bebela, médica, analista-tributário da Receita Federal, pós graduada em Ciência de Dados e Big Data pela PUC Minas.')
-		st.markdown('Mario José Calvão Monnerat do Prado é pai da Nicole, auditor-fiscal da Receita Federal, formado em Data Mining pela FIA/USP e no MBA em Analytics e Inteligência Artificial também pela FIA/USP, estudante na pós-graduação em Direito Tributário e Compliance pela Universidade Católica de Brasília. Atualmente é supervisor do Laboratório de Inovação da SRRF08 da Receita Federal do Brasil')
+		st.markdown('Mario José Calvão Monnerat do Prado é pai da Nicole, auditor-fiscal da Receita Federal, formado pela FIA/USP nos cursos de Data Mining e MBA em Analytics e Inteligência Artificial, estudante na pós-graduação em Direito Tributário e Compliance pela Universidade Católica de Brasília. Atualmente é supervisor do Laboratório de Inovação da SRRF08 da Receita Federal do Brasil')
 		st.markdown('Reinaldo da Cruz Castro é pai de João Pedro e Luís Felipe; auditor-fiscal da Receita Federal, especialista em Direito Tributário pelo IBET, formado em Data Mining pela FIA/USP, especialista em Big Data e Ciência de Dados pela Puc Minas e estudante de Teologia pela Uninter. Atualmente é supervisor do Laboratório de Inovação da SRRF08 da Receita Federal do Brasil')
 		
 		
