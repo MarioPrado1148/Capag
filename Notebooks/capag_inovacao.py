@@ -76,7 +76,7 @@ if radio == 'Visão cidadão':
 		st.dataframe(df_municipio)
 		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem.')
 		st.text('Dessa forma, você conseguirá visualizar todas as variáveis')
-	elif select_event_cidadao == 'Quem somos nós':
+	elif select_event_cidadao == 'Quem somos:
 		st.markdown('Camila Maia Fátima Marques ...')
 		st.markdown('Mario José Calvão Monnerat do Prado é pai, auditor-fiscal da Receita Federal, formado no MBA em Analytics e Inteligência Artificial da Fundação FIA de São Paulo')
 		st.markdown('Reinaldo da Cruz Castro...')
