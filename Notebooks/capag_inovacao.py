@@ -63,9 +63,9 @@ if radio == 'Visão cidadão':
 		st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
 		st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
 	elif select_event_cidadao == 'Objetivos':
-		st.markdown('Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado Gradient Boosting com o objetivo de, utilizando as informações disponíveis \
+		st.markdown(f"<h2 style='text-align: justify;'><b>{Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado Gradient Boosting com o objetivo de, utilizando as informações disponíveis \
 		sobre os municípios brasileiros, estimar a capacidade de pagamento (Capag) dos municípios e compará-las com a Capag constante do site da Secretaria do Tesouro Nacional\
-		(STN), quando disponível.')	
+		(STN), quando disponível.}</b></h2>", unsafe_allow_html=True)	
 	elif select_event_cidadao == 'Capag - Visão detalhada':
 		# st.sidebar.checkbox("Visualizar análises por município", True, key=1)
 		lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
