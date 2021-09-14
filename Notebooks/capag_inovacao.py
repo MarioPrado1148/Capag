@@ -71,6 +71,7 @@ if radio == 'Visão cidadão':
 		st.markdown('Cruz, acima disto é a formatação padrão do streamlit. Abaixo é a formatação em html. O que vc acha?')
 		st.markdown(f"<h2 style='text-align: justify;'><b>{texto}</b></h2>", unsafe_allow_html=True)
 		st.markdown(f"<h5 style='text-align: justify;'>{texto1}</h5>", unsafe_allow_html=True)
+		st.markdown(f"<p style='text-align: justify;'>{texto1}</p>", unsafe_allow_html=True)
 		
 	elif select_event_cidadao == 'Capag - Visão detalhada':
 		# st.sidebar.checkbox("Visualizar análises por município", True, key=1)
