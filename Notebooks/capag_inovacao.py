@@ -115,7 +115,7 @@ if radio == 'Visão cientista de dados':
 				   'Análise das variáveis qualitativas',
 				   'Análise das variáveis quantitativas',
 				   'Análise bivariada',
-				   'Matriz de correlação',
+			#	   'Matriz de correlação',
 				   'Dataframe completo',
 				   'Aspectos técnicos']
 	select_event_cientista = st.sidebar.selectbox(
@@ -232,15 +232,7 @@ if radio == 'Visão cientista de dados':
 		#st.pyplot(fig)
 		matriz_correlacao = df_quanti.corr()
 		st.write(matriz_correlacao)
-		#sns.set_context("notebook", font_scale=1.0, rc={"lines.linewidth": 2.5})
-		#plt.figure(figsize=(35,30))
-		#mask = np.zeros_like(corr)
-		#mask[np.triu_indices_from(mask, 1)] = True
-		#st.write(mask)
-		#a = sns.heatmap(corr,mask=mask, annot=True, fmt='.2f')
-		#rotx = a.set_xticklabels(a.get_xticklabels(), rotation=90)
-		#roty = a.set_yticklabels(a.get_yticklabels(), rotation=30)
-		#st.pyplot(a)
+		
 	elif select_event_cientista == 'Dataframe completo':
 		st.dataframe(df)
 	elif select_event_cientista == 'Aspectos técnicos':
