@@ -230,7 +230,7 @@ if radio == 'Visão cientista de dados':
 		st.write('Matriz de correlação')
 		df_quanti = df[['PIB_PERC', 'VAB_Indústria/Total', 'VAB_Serviço/Total', 'VAB_Adm/Total','VAB_Agricultura/Total']]
 		correlacao = df_quanti.corr()
-		st.write(correlacao)
+		st.dataframe(correlacao)
 		#sns.set_context("notebook", font_scale=1.0, rc={"lines.linewidth": 2.5})
 		#plt.figure(figsize=(35,30))
 		#mask = np.zeros_like(corr)
