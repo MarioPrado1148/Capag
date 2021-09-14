@@ -115,7 +115,7 @@ if radio == 'Visão cientista de dados':
 				   'Análise das variáveis qualitativas',
 				   'Análise das variáveis quantitativas',
 				   'Análise bivariada',
-				   'Matriz de correlação',
+				#   'Matriz de correlação',
 				   'Dataframe completo',
 				   'Aspectos técnicos']
 	select_event_cientista = st.sidebar.selectbox(
@@ -237,7 +237,7 @@ if radio == 'Visão cientista de dados':
 		rotx = a.set_xticklabels(a.get_xticklabels(), rotation=90)
 		roty = a.set_yticklabels(a.get_yticklabels(), rotation=30)
 	elif select_event_cientista == 'Dataframe completo':
-		st.dataframe(df.select_dtypes('float64'))
+		st.dataframe(df)
 	elif select_event_cientista == 'Aspectos técnicos':
 		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
 	
