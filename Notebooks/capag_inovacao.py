@@ -228,7 +228,7 @@ if radio == 'Visão cientista de dados':
 		st.write('Análise bivariada')
 	elif select_event_cientista == 'Matriz de correlação':
 		st.write('Matriz de correlação')
-		corr = pd.merge(df_streamlit['PIB_PERC'],df_streamlit.select_dtypes('float64'), on = 'Município').corr()
+		corr = pd.merge(df_streamlit['PIB_PERC'],df_streamlit.select_dtypes('float64'), how = 'left', on = 'Município').corr()
 		sns.set_context("notebook", font_scale=1.0, rc={"lines.linewidth": 2.5})
 		plt.figure(figsize=(35,30))
 		mask = np.zeros_like(corr)
