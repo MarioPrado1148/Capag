@@ -115,7 +115,7 @@ if radio == 'Visão cientista de dados':
 				   'Análise das variáveis qualitativas',
 				   'Análise das variáveis quantitativas',
 				   'Análise bivariada',
-				#   'Matriz de correlação',
+				   'Matriz de correlação',
 				   'Dataframe completo',
 				   'Aspectos técnicos']
 	select_event_cientista = st.sidebar.selectbox(
@@ -228,7 +228,7 @@ if radio == 'Visão cientista de dados':
 		st.write('Análise bivariada')
 	elif select_event_cientista == 'Matriz de correlação':
 		st.write('Matriz de correlação')
-		corr = pd.merge(df['PIB_PERC'],df.select_dtypes('float64'), how = 'left', on = 'Município').corr()
+		corr = df[['PIB_PERC', 'VAB_Indústria/Total', 'VAB_Serviço/Total', 'VAB_Adm/Total','VAB_Agricultura/Total']]
 		sns.set_context("notebook", font_scale=1.0, rc={"lines.linewidth": 2.5})
 		plt.figure(figsize=(35,30))
 		mask = np.zeros_like(corr)
