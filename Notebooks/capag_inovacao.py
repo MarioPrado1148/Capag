@@ -237,7 +237,7 @@ if radio == 'Visão cientista de dados':
 		rotx = a.set_xticklabels(a.get_xticklabels(), rotation=90)
 		roty = a.set_yticklabels(a.get_yticklabels(), rotation=30)
 	elif select_event_cientista == 'Dataframe completo':
-		st.dataframe(df)
+		st.dataframe(df['PIB_PERC'])
 	elif select_event_cientista == 'Aspectos técnicos':
 		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
 	
