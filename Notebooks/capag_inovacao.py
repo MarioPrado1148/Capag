@@ -232,11 +232,12 @@ if radio == 'Visão cientista de dados':
 		sns.set_context("notebook", font_scale=1.0, rc={"lines.linewidth": 2.5})
 		#plt.figure(figsize=(35,30))
 		mask = np.zeros_like(corr)
-		mask[np.triu_indices_from(mask, 1)] = True
-		a = sns.heatmap(corr,mask=mask, annot=True, fmt='.2f')
-		rotx = a.set_xticklabels(a.get_xticklabels(), rotation=90)
-		roty = a.set_yticklabels(a.get_yticklabels(), rotation=30)
-		st.pyplot(a)
+		st.write(mask)
+		#mask[np.triu_indices_from(mask, 1)] = True
+		#a = sns.heatmap(corr,mask=mask, annot=True, fmt='.2f')
+		#rotx = a.set_xticklabels(a.get_xticklabels(), rotation=90)
+		#roty = a.set_yticklabels(a.get_yticklabels(), rotation=30)
+		#st.pyplot(a)
 	elif select_event_cientista == 'Dataframe completo':
 		st.dataframe(df)
 	elif select_event_cientista == 'Aspectos técnicos':
