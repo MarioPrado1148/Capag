@@ -228,8 +228,9 @@ if radio == 'Visão cientista de dados':
 		st.write('Análise bivariada')
 	elif select_event_cientista == 'Matriz de correlação':
 		st.write('Matriz de correlação')
-		corr = df[['PIB_PERC', 'VAB_Indústria/Total', 'VAB_Serviço/Total', 'VAB_Adm/Total','VAB_Agricultura/Total']]
-		sns.set_context("notebook", font_scale=1.0, rc={"lines.linewidth": 2.5})
+		df_quanti = df[['PIB_PERC', 'VAB_Indústria/Total', 'VAB_Serviço/Total', 'VAB_Adm/Total','VAB_Agricultura/Total']]
+		st.write(df_quanti.corr())
+		#sns.set_context("notebook", font_scale=1.0, rc={"lines.linewidth": 2.5})
 		#plt.figure(figsize=(35,30))
 		mask = np.zeros_like(corr)
 		mask[np.triu_indices_from(mask, 1)] = True
