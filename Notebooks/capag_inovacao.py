@@ -236,6 +236,7 @@ if radio == 'Visão cientista de dados':
 		a = sns.heatmap(corr,mask=mask, annot=True, fmt='.2f')
 		rotx = a.set_xticklabels(a.get_xticklabels(), rotation=90)
 		roty = a.set_yticklabels(a.get_yticklabels(), rotation=30)
+		st.pyplot(a)
 	elif select_event_cientista == 'Dataframe completo':
 		st.dataframe(df)
 	elif select_event_cientista == 'Aspectos técnicos':
