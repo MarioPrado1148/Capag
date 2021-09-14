@@ -69,7 +69,7 @@ if radio == 'Visão cidadão':
 		sobre os municípios brasileiros, estimar a capacidade de pagamento (Capag) dos municípios e compará-las com a Capag constante do site da Secretaria do Tesouro Nacional\
 		(STN), quando disponível.'
 		st.markdown(texto1)
-		st.markdown('Cruz, acima disto é a formatação padrão do stremlit. Abaixo é a formatação em html. O que vc acha?')
+		st.markdown('Cruz, acima disto é a formatação padrão do straemlit. Abaixo é a formatação em html. O que vc acha?')
 		st.markdown(f"<h2 style='text-align: justify;'><b>{texto}</b></h2>", unsafe_allow_html=True)
 		st.markdown(f"<h5 style='text-align: justify;'>{texto1}</h5>", unsafe_allow_html=True)
 		
