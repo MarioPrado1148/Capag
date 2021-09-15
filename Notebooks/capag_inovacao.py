@@ -198,7 +198,7 @@ if radio == 'Visão cientista de dados':
 				st.header('Análise') 
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pela Agricultura e o total dos Valores Agregados pela Economia.')
 				st.markdown('Até 50 % dos municípios possuem VAB_Agricultura/Total inferior a 20 % do total.')
-				st.markdown('Constata-se a presença de outliers, que são valores disprepantes e relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
+				st.markdown('Constata-se a presença de outliers, que são valores disprepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
 				
 		
 		if select_radio_quanti == 'VAB_Indústria/Total':
