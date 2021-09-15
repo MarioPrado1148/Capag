@@ -228,7 +228,7 @@ if radio == 'Visão cientista de dados':
 		st.write('Análise bivariada')
 	elif select_event_cientista == 'Matriz de correlação':
 		df_quanti = df[['PIB_PERC', 'VAB_Indústria/Total', 'VAB_Serviço/Total', 'VAB_Adm/Total','VAB_Agricultura/Total']]
-		fig = sns.heatmap(df_quanti.corr(), ax=ax)
+		fig = sns.heatmap(df_quanti.corr())
 		st.write(fig)
 		
 	elif select_event_cientista == 'Dataframe completo':
