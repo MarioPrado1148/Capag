@@ -196,7 +196,7 @@ if radio == 'Visão cientista de dados':
 
 			with col2: 
 				st.header('Análise') 
-				st.markdown('')
+				st.markdown('Esta variável expressa a relação entre o Valor Agregado pela Agricultura e o total dos Valores Agregados pelos diversos setores da Economia.')
 				
 		
 		if select_radio_quanti == 'VAB_Indústria/Total':
