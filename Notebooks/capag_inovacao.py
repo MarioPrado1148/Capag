@@ -227,7 +227,7 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Análise bivariada':
 		st.write('Análise bivariada')
 	elif select_event_cientista == 'Matriz de correlação':
-		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix.jpg')
+		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix3.jpg')
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
 		st.image(img)
