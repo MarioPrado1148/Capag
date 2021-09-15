@@ -229,7 +229,7 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Matriz de correlação':
 		df_quanti = df[['PIB_PERC', 'VAB_Indústria/Total', 'VAB_Serviço/Total', 'VAB_Adm/Total','VAB_Agricultura/Total']]
 		fig = sns.heatmap(df_quanti.corr())
-		st.write(fig)
+		st.pyplot(fig)
 		
 	elif select_event_cientista == 'Dataframe completo':
 		st.dataframe(df)
