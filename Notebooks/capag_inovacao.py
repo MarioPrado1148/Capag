@@ -141,23 +141,27 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 
 			with col1:
-			    st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região'</h1>", unsafe_allow_html=True)
+			    st.header('Variável 'Região'')
+			    #st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região'</h1>", unsafe_allow_html=True)
 			    sns.countplot(x = "Região", data = df).set_ylabel('Quantidade')
 			    st.pyplot()
 
 			with col2: 
-			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+			 st.header('Análise') 
+			#st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			    st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
 		
 		elif select_radio_quali == 'Região Metropolitana':
 			col1, col2 = st.columns(2)
 
 			with col1:
-			    st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Metropolitana'</h1>", unsafe_allow_html=True)
+			    st.header('Variável 'Região Metropolitana'')  
+			#st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Metropolitana'</h1>", unsafe_allow_html=True)
 			    sns.countplot(data = df, x = "Reg_Metropolitana")
 			    st.pyplot()
 
 			with col2: 
+			    st.header('Análise') 
 			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			    st.markdown('Verifica-se que há maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
 				
@@ -165,12 +169,14 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 
 			with col1:
-			    st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Mun_Reg_Geog_Imediata'</h1>", unsafe_allow_html=True)
+			    st.header('Variável 'Mun_Reg_Geog_Imediata'')
+			    #st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Mun_Reg_Geog_Imediata'</h1>", unsafe_allow_html=True)
 			    sns.countplot(data = df, x = "Mun_Reg_Geog_Imediata")
 			    st.pyplot()
 
 			with col2: 
-			    st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+			    st.header('Análise') 
+			    #st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			    st.markdown('Verifica-se que apenas uma pequena parte dos municípios brasileiros constitui Polos. A grande maioria está no entorno dos polos.')
 				
 					    
