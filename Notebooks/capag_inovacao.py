@@ -85,9 +85,7 @@ if radio == 'Visão cidadão':
 		st.markdown('Camila Fátima Maia Marques é esposa do Breno, mãe da Malu e da Bebela, médica, analista-tributário da Receita Federal, especialista em Ciência de Dados e Big Data pela Puc Minas.')
 		st.markdown('Mario José Calvão Monnerat do Prado é esposo de Roxana, pai da Nicole, auditor-fiscal da Receita Federal, formado pela FIA/USP nos cursos de Data Mining e MBA em Analytics e Inteligência Artificial, estudante na pós-graduação em Direito Tributário e Compliance pela Universidade Católica de Brasília. Atualmente é supervisor do Laboratório de Inovação da SRRF08 da Receita Federal do Brasil')
 		st.markdown('Reinaldo da Cruz Castro é esposo de Elízia; pai de João Pedro e Luís Felipe; auditor-fiscal da Receita Federal, especialista em Direito Tributário pelo IBET, formado em Data Mining pela FIA/USP, especialista em Big Data e Ciência de Dados pela Puc Minas e estudante de Teologia pela Uninter. Atualmente é supervisor do Laboratório de Inovação da SRRF08 da Receita Federal do Brasil.')
-    
-
-		
+    		
 	elif select_event_cidadao == 'Contextualização':
 		st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
 		contrair novos empréstimos com garantia da União. Esta classificação é um indicador de saúde econômica e fiscal dos municípios.')
@@ -139,39 +137,33 @@ if radio == 'Visão cientista de dados':
 		select_radio_quali = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana', 'Mun_Reg_Geog_Imediata'])
 		if select_radio_quali == 'Região':
 			col1, col2 = st.columns(2)
-
 			with col1:
 				st.header('Variável Região')
 				sns.countplot(x = "Região", data = df).set_ylabel('Quantidade')
 				st.pyplot()
-
 			with col2: 
 				st.header('Análise') 			
 				st.markdown('Verifica-se que há mais municípios na Região Nordeste, seguida de perto pela Região Sudeste.')
 		
 		elif select_radio_quali == 'Região Metropolitana':
 			col1, col2 = st.columns(2)
-
 			with col1:
 				st.header('Variável Região Metropolitana')  				
 				sns.countplot(data = df, x = "Reg_Metropolitana")
-				st.pyplot()
-
+			st.pyplot()
 			with col2:
 				st.header('Análise') 
 				st.markdown('Verifica-se que a maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
 				
 		elif select_radio_quali == 'Mun_Reg_Geog_Imediata':
 			col1, col2 = st.columns(2)
-
 			with col1:
 				st.header('Variável Mun_Reg_Geog_Imediata')
 				sns.countplot(data = df, x = "Mun_Reg_Geog_Imediata")
 				st.pyplot()
-
 			with col2: 
-				st.header('Análise') 
-				st.texto('  ')
+				st.header('Análise                                                    ') 
+
 				st.markdown('Verifica-se que apenas uma pequena parte dos municípios brasileiros constitui polos. A grande maioria está no entorno dos polos.')
 				
 					    
