@@ -114,6 +114,7 @@ if radio == 'Visão cientista de dados':
 	lista_eventos_cientista = ['Coleta de Dados',
 				   'Análise das variáveis qualitativas',
 				   'Análise das variáveis quantitativas',
+				   'Variável CLASS_CAPAG (alvo)',
 				   'Análise bivariada',
 				   'Matriz de correlação',
 				   'Dataframe completo',
@@ -222,7 +223,16 @@ if radio == 'Visão cientista de dados':
 				fig = px.box(df, y = 'VAB_Adm/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
-		
+	elif select_event_cientista == 'Variável CLASS_CAPAG (alvo)':
+		col1, col2 = st.columns(2)
+		with col1:
+			st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região'</h1>", unsafe_allow_html=True)
+			sns.countplot(x = "Região", data = df).set_ylabel('Quantidade')
+			st.pyplot()
+
+		with col2: 
+			st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
+			st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')	
 		
 	elif select_event_cientista == 'Análise bivariada':
 		st.write('Análise bivariada')
