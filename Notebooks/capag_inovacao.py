@@ -289,7 +289,7 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header('Variáveis CLASS_CAPAG x VAB_Indústria/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Agricultura_Total.jpg')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Indústria_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
@@ -300,7 +300,7 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header('Variáveis CLASS_CAPAG x VAB_Serviço/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Agricultura_Total.jpg')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Serviço_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
@@ -311,7 +311,7 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header('Variáveis CLASS_CAPAG x VAB_Adm/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Agricultura_Total.jpg')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Adm_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
