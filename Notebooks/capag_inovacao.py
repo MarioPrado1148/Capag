@@ -127,7 +127,6 @@ if radio == 'Visão cientista de dados':
 		st.text('Arquivo com 5569 linhas e 11 colunas, disponível no formato csv.')
 		st.text('Os dados foram coletados no website da Transparência do Tesouro Nacional 1, em janeiro de 2021.')
 		st.text('Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios')
-		
 		st.markdown('2.	PIB e outros indicadores econômicos')
 		st.text('Arquivo com 50115 linhas e 43 colunas, disponível no formato xls.')
 		st.text('Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.')
@@ -162,9 +161,9 @@ if radio == 'Visão cientista de dados':
 				sns.countplot(data = df, x = "Mun_Reg_Geog_Imediata")
 				st.pyplot()
 			with col2: 
-				st.header('Análise                                                    ') 
+				st.header('Análise') 
 
-				st.markdown('Verifica-se que apenas uma pequena parte dos municípios brasileiros constitui polos. A grande maioria está no entorno dos polos.')
+				st.markdown('                                              Verifica-se que apenas uma pequena parte dos municípios brasileiros constitui polos. A grande maioria está no entorno dos polos.')
 				
 					    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
