@@ -260,7 +260,21 @@ if radio == 'Visão cientista de dados':
 			st.markdown('Verifica-se que o quantitativo de municípios que não possuem capacidade de pagamento é maior do que o quantitativo de municípios que possuem capacidade de pagamento.')
 		
 	elif select_event_cientista == 'Análise bivariada':
-		st.write('Análise bivariada')
+		select_radio_bivariada = st.sidebar.radio('Selecione as variáveis',['CLASS_CAPAG x VAB_Agricultura/Total'])
+		if select_radio_bivariada == 'CLASS_CAPAG x VAB_Agricultura/Total':
+			col1, col2 = st.columns(2)
+
+			with col1:
+				st.header('Variáveis CLASS_CAPAG x VAB_Agricultura/Total')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Agricultura_Total.jpg')
+				response = requests.get(url)
+				img6 = Image.open(BytesIO(response.content))
+				st.image(img6)
+
+			with col2: 
+				st.header('Análise') 			
+				st.markdown('')
+		
 	elif select_event_cientista == 'Matriz de correlação':
 		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix3.jpg')
 		response = requests.get(url)
