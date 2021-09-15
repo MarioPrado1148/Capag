@@ -226,13 +226,13 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Variável CLASS_CAPAG (alvo)':
 		col1, col2 = st.columns(2)
 		with col1:
-			st.markdown('Variável CLASS_CAPAG')
+			st.header('Variável CLASS_CAPAG')
 			#st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'CLASS_CAPAG'</h1>", unsafe_allow_html=True)
 			sns.countplot(x = "CLASS_CAPAG_real", data = df).set_ylabel('Quantidade')
 			st.pyplot()
 
 		with col2: 
-			st.mardown('Análise')
+			st.subheader('Análise')
 			#st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			st.markdown('O valor 1 indica que o município não possui capacidade de pagamento; o valor 0 indica o oposto')	
 			st.markdown('Verifica-se que o quantitativo de municípios que não possuem capacidade de pagamento é maior do que o quantitativo de municípios que possuem capacidade de pagamento.')
