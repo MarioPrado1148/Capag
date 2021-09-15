@@ -226,8 +226,8 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Variável CLASS_CAPAG (alvo)':
 		col1, col2 = st.columns(2)
 		with col1:
-			st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região'</h1>", unsafe_allow_html=True)
-			sns.countplot(x = "Região", data = df).set_ylabel('Quantidade')
+			st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'CLASS_CAPAG'</h1>", unsafe_allow_html=True)
+			sns.countplot(x = "CLASS_CAPAG", data = df).set_ylabel('Quantidade')
 			st.pyplot()
 
 		with col2: 
