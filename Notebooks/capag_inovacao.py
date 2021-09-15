@@ -209,7 +209,7 @@ if radio == 'Visão cientista de dados':
 			
 			col1, col2 = st.columns(2)
 			with col1:
-				st.markdown("Variável VAB_Serviço/Total')
+				st.markdown('Variável VAB_Serviço/Total')
 				fig = px.box(df, y = 'VAB_Serviço/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
@@ -219,7 +219,7 @@ if radio == 'Visão cientista de dados':
 			
 			col1, col2 = st.columns(2)
 			with col1:
-				st.markdown("Variável VAB_Adm/Total)
+				st.markdown('Variável VAB_Adm/Total')
 				fig = px.box(df, y = 'VAB_Adm/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
