@@ -177,49 +177,49 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
 		select_radio_quanti = st.sidebar.radio('Selecione a variável',['PIB percentual', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total'])
 		if select_radio_quanti == 'PIB percentual':
-			#st.write('teste')
+			
 			col1, col2 = st.columns(2)
 			with col1:
-				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Pib Percentual'</h1>", unsafe_allow_html=True)
+				st.markdown('Variável Pib Percentual')
 				fig = px.box(df, y = 'PIB_PERC')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400) 
 		
 		if select_radio_quanti == 'VAB_Agricultura/Total':
-			#st.write('teste')
+			
 			col1, col2 = st.columns(2)
 			with col1:
-				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Agricultura/Total'</h1>", unsafe_allow_html=True)
+				st.markdown("Variável VAB_Agricultura/Total")
 				fig = px.box(df, y = 'VAB_Agricultura/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
 				
 		
 		if select_radio_quanti == 'VAB_Indústria/Total':
-			#st.write('teste')
+			
 			col1, col2 = st.columns(2)
 			with col1:
-				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Indústria/Total'</h1>", unsafe_allow_html=True)
+				st.markdown("Variável VAB_Indústria/Total")
 				fig = px.box(df, y = 'VAB_Indústria/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
 				
 		
 		if select_radio_quanti == 'VAB_Serviço/Total':
-			#st.write('teste')
+			
 			col1, col2 = st.columns(2)
 			with col1:
-				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Serviço/Total'</h1>", unsafe_allow_html=True)
+				st.markdown("Variável VAB_Serviço/Total')
 				fig = px.box(df, y = 'VAB_Serviço/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
 				
 		
 		if select_radio_quanti == 'VAB_Adm/Total':
-			#st.write('teste')
+			
 			col1, col2 = st.columns(2)
 			with col1:
-				st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'VAB_Adm/Total'</h1>", unsafe_allow_html=True)
+				st.markdown("Variável VAB_Adm/Total)
 				fig = px.box(df, y = 'VAB_Adm/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
