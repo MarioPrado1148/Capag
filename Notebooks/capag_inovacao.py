@@ -227,10 +227,12 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Análise bivariada':
 		st.write('Análise bivariada')
 	elif select_event_cientista == 'Matriz de correlação':
-		df_quanti = df[['PIB_PERC', 'VAB_Indústria/Total', 'VAB_Serviço/Total', 'VAB_Adm/Total','VAB_Agricultura/Total']]
-		fig, ax = plt.subplots(1)
-		sns.heatmap(ax.df_quanti.corr())
-		st.pyplot(fig)
+		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix.jpg')
+		response = requests.get(url)
+		img = Image.open(BytesIO(response.content))
+		st.image(img)
+		st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
+		
 		
 	elif select_event_cientista == 'Dataframe completo':
 		st.dataframe(df)
