@@ -183,7 +183,10 @@ if radio == 'Visão cientista de dados':
 				st.markdown('Variável Pib Percentual')
 				fig = px.box(df, y = 'PIB_PERC')
 				fig.update_layout(height=400, width = 400)
-				st.plotly_chart(fig,height=400) 
+				st.plotly_chart(fig,height=400)
+			with col2: 
+				st.header('Análise') 
+				st.markdown('Verifica-se que esta variável possui outliers, que são valores discrepantes em relação aos demais.')
 		
 		if select_radio_quanti == 'VAB_Agricultura/Total':
 			
@@ -193,6 +196,9 @@ if radio == 'Visão cientista de dados':
 				fig = px.box(df, y = 'VAB_Agricultura/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
+			with col2: 
+				st.header('Análise') 
+				st.markdown('')
 				
 		
 		if select_radio_quanti == 'VAB_Indústria/Total':
@@ -203,6 +209,9 @@ if radio == 'Visão cientista de dados':
 				fig = px.box(df, y = 'VAB_Indústria/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
+			with col2: 
+				st.header('Análise') 
+				st.markdown('')
 				
 		
 		if select_radio_quanti == 'VAB_Serviço/Total':
@@ -213,6 +222,9 @@ if radio == 'Visão cientista de dados':
 				fig = px.box(df, y = 'VAB_Serviço/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
+			with col2: 
+				st.header('Análise') 
+				st.markdown('')
 				
 		
 		if select_radio_quanti == 'VAB_Adm/Total':
@@ -223,6 +235,9 @@ if radio == 'Visão cientista de dados':
 				fig = px.box(df, y = 'VAB_Adm/Total')
 				fig.update_layout(height=400, width = 400)
 				st.plotly_chart(fig,height=400)
+			with col2: 
+				st.header('Análise') 
+				st.markdown('')
 	elif select_event_cientista == 'Variável CLASS_CAPAG (alvo)':
 		col1, col2 = st.columns(2)
 		with col1:
