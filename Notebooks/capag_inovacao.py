@@ -230,7 +230,7 @@ if radio == 'Visão cientista de dados':
 		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix.jpg')
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
-		st.image(img)
+		#st.image(img)
 		
 		
 		
