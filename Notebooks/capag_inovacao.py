@@ -232,8 +232,7 @@ if radio == 'Visão cientista de dados':
 		img = Image.open(BytesIO(response.content))
 		st.markdown('A matriz de correlação expressa a relação entre as variáveis quantitativas.')
 		st.markdown('O valor mais alto de correlação, em módulo, refere-se à correlação entre as variáveis VAB_Adm/Total e PIB_PERC. O sinal negativo indica que quando uma aumenta, a outra diminui.')
-		st.text('Ainda que seja considerada uma correlação forte, decidimos manter ambas as variáveis no modelo.')	    
-			    
+		st.markdown('Ainda que seja considerada uma correlação forte, decidimos manter ambas as variáveis no modelo.')	    			    
 		st.image(img)
 		
 		
