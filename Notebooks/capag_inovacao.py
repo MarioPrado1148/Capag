@@ -147,7 +147,7 @@ if radio == 'Visão cientista de dados':
 
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('Verifica-se que há mais municípios na Região Nordeste,  seguida de perto pela Região Sudeste')
+				st.markdown('Verifica-se que há mais municípios na Região Nordeste, seguida de perto pela Região Sudeste.')
 		
 		elif select_radio_quali == 'Região Metropolitana':
 			col1, col2 = st.columns(2)
@@ -171,7 +171,8 @@ if radio == 'Visão cientista de dados':
 
 			with col2: 
 				st.header('Análise') 
-				st.markdown('Verifica-se que apenas uma pequena parte dos municípios brasileiros constitui Polos. A grande maioria está no entorno dos polos.')
+				st.texto('  ')
+				st.markdown('Verifica-se que apenas uma pequena parte dos municípios brasileiros constitui polos. A grande maioria está no entorno dos polos.')
 				
 					    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
