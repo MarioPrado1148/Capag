@@ -212,9 +212,10 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header("Variável VAB_Indústria/Total")
-				fig = px.box(df, y = 'VAB_Indústria/Total')
-				fig.update_layout(height=400, width = 400)
-				st.plotly_chart(fig,height=400)
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_VAB_Indústria_Total.jpg')
+				response = requests.get(url)
+				img3 = Image.open(BytesIO(response.content))
+				st.image(img3)
 			with col2: 
 				st.header('Análise') 
 				st.markdown('')
@@ -225,9 +226,10 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header('Variável VAB_Serviço/Total')
-				fig = px.box(df, y = 'VAB_Serviço/Total')
-				fig.update_layout(height=400, width = 400)
-				st.plotly_chart(fig,height=400)
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_VAB_Serviço_Total.jpg')
+				response = requests.get(url)
+				img4 = Image.open(BytesIO(response.content))
+				st.image(img4)
 			with col2: 
 				st.header('Análise') 
 				st.markdown('')
@@ -238,9 +240,10 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header('Variável VAB_Adm/Total')
-				fig = px.box(df, y = 'VAB_Adm/Total')
-				fig.update_layout(height=400, width = 400)
-				st.plotly_chart(fig,height=400)
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_VAB_Adm_Total.jpg')
+				response = requests.get(url)
+				img5 = Image.open(BytesIO(response.content))
+				st.image(img5)
 			with col2: 
 				st.header('Análise') 
 				st.markdown('')
