@@ -232,7 +232,7 @@ if radio == 'Visão cientista de dados':
 			st.pyplot()
 
 		with col2: 
-			st.subheader('Análise')
+			st.header('Análise')
 			#st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			st.markdown('O valor 1 indica que o município não possui capacidade de pagamento; o valor 0 indica o oposto')	
 			st.markdown('Verifica-se que o quantitativo de municípios que não possuem capacidade de pagamento é maior do que o quantitativo de municípios que possuem capacidade de pagamento.')
