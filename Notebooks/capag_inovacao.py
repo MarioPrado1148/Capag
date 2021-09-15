@@ -197,9 +197,11 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header("Variável VAB_Agricultura/Total")
-				fig = px.box(df, y = 'VAB_Agricultura/Total')
-				fig.update_layout(height=400, width = 400)
-				st.plotly_chart(fig,height=400)
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_VAB_Agricultura_Total.jpg')
+				response = requests.get(url)
+				img2 = Image.open(BytesIO(response.content))
+				st.image(img2)
+
 			with col2: 
 				st.header('Análise') 
 				st.markdown('')
