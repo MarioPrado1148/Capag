@@ -147,7 +147,7 @@ if radio == 'Visão cientista de dados':
 
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('Verifica-se que há maior quantidade de municípios na Região Nordeste, a qual é seguida de perto pela Região Sudeste')
+				st.markdown('Verifica-se que há mais municípios na Região Nordeste,  seguida de perto pela Região Sudeste')
 		
 		elif select_radio_quali == 'Região Metropolitana':
 			col1, col2 = st.columns(2)
@@ -159,7 +159,7 @@ if radio == 'Visão cientista de dados':
 
 			with col2:
 				st.header('Análise') 
-				st.markdown('Verifica-se que há maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
+				st.markdown('Verifica-se que a maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
 				
 		elif select_radio_quali == 'Mun_Reg_Geog_Imediata':
 			col1, col2 = st.columns(2)
