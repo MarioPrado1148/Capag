@@ -163,7 +163,7 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 				st.header('Análise') 
 
-				st.markdown('                                              Verifica-se que apenas uma pequena parte dos municípios brasileiros constitui polos. A grande maioria está no entorno dos polos.')
+				st.markdown('Verifica-se que apenas uma pequena parte dos municípios brasileiros constitui polos. A grande maioria está no entorno dos polos.')
 				
 					    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
