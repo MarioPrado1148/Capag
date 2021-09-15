@@ -141,7 +141,7 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 
 			with col1:
-			    st.header('Variável 'Região'')
+			    st.header('Variável Região')
 			    #st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região'</h1>", unsafe_allow_html=True)
 			    sns.countplot(x = "Região", data = df).set_ylabel('Quantidade')
 			    st.pyplot()
@@ -155,7 +155,7 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 
 			with col1:
-			    st.header('Variável 'Região Metropolitana'')  
+			    st.header('Variável Região Metropolitana')  
 			#st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Região Metropolitana'</h1>", unsafe_allow_html=True)
 			    sns.countplot(data = df, x = "Reg_Metropolitana")
 			    st.pyplot()
@@ -169,7 +169,7 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 
 			with col1:
-			    st.header('Variável 'Mun_Reg_Geog_Imediata'')
+			    st.header('Variável Mun_Reg_Geog_Imediata')
 			    #st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'Mun_Reg_Geog_Imediata'</h1>", unsafe_allow_html=True)
 			    sns.countplot(data = df, x = "Mun_Reg_Geog_Imediata")
 			    st.pyplot()
