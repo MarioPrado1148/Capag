@@ -181,9 +181,13 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header('Variável Pib Percentual')
-				fig = px.box(df, y = 'PIB_PERC')
-				fig.update_layout(height=400, width = 400)
-				st.plotly_chart(fig,height=400)
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_PIB_PERC.jpg')
+				response = requests.get(url)
+				img1 = Image.open(BytesIO(response.content))
+				st.image(img1)
+				#fig = px.box(df, y = 'PIB_PERC')
+				#fig.update_layout(height=400, width = 400)
+				#st.plotly_chart(fig,height=400)
 			with col2: 
 				st.header('Análise') 
 				st.markdown('Verifica-se que esta variável possui outliers, que são valores discrepantes em relação aos demais.')
@@ -242,13 +246,11 @@ if radio == 'Visão cientista de dados':
 		col1, col2 = st.columns(2)
 		with col1:
 			st.header('Variável CLASS_CAPAG')
-			#st.markdown("<h1 style='text-align: center; color: blue;'>Variável 'CLASS_CAPAG'</h1>", unsafe_allow_html=True)
 			sns.countplot(x = "CLASS_CAPAG_real", data = df).set_ylabel('Quantidade')
 			st.pyplot()
 
 		with col2: 
 			st.header('Análise')
-			#st.markdown("<h1 style='text-align: center; color: blue;'>Análise</h1>", unsafe_allow_html=True)
 			st.markdown('O valor 1 indica que o município não possui capacidade de pagamento; o valor 0 indica o oposto')	
 			st.markdown('Verifica-se que o quantitativo de municípios que não possuem capacidade de pagamento é maior do que o quantitativo de municípios que possuem capacidade de pagamento.')
 		
