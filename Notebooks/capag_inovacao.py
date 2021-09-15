@@ -231,7 +231,7 @@ if radio == 'Visão cientista de dados':
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
 		st.image(img)
-		st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
+		
 		
 		
 	elif select_event_cientista == 'Dataframe completo':
