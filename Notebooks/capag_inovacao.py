@@ -274,7 +274,8 @@ if radio == 'Visão cientista de dados':
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('')
+				st.markdown('Verifica-se que a mediana do PIB dos municípios com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D')
+				st.markdown('Há mais outliers superiores (valores muito grandes, que se destacam,para os municípios das classes A e B (representadas pelo valor 0')
 		if select_radio_bivariada == 'Capag x VAB_Agricultura/Total':
 			col1, col2 = st.columns(2)
 			with col1:
