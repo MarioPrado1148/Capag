@@ -130,6 +130,12 @@ if radio == 'Visão cientista de dados':
 		'Que informações você gostaria de visualizar?',
 		lista_eventos_cientista)
 	
+	# Imagem
+	url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/brasilia.jpg')
+	response = requests.get(url2)
+	img2 = Image.open(BytesIO(response.content))
+	st.sidebar.image(img2)
+	
 	if select_event_cientista == 'Coleta de Dados':
 		st.markdown('Foram utilizados 2 datasets neste trabalho:')
 		st.markdown('1 - Capacidade de Pagamento (CAPAG) dos Municípios')
