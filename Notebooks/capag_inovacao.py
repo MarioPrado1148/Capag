@@ -36,7 +36,7 @@ def load_data():
     return data
 
 df =load_data()
-
+df_streamlit_com_previsao_resumido = df[['Município','Capag_real','Capag_predito']]
 ########################################################################################
 # Carregamento dos dados
 #df_streamlit_com_previsao_resumido
