@@ -155,7 +155,7 @@ if radio == 'Visão cientista de dados':
 				st.markdown('Verifica-se que há mais municípios na Região Nordeste, seguida de perto pela Região Sudeste.')
 			
 			# Imagem
-			url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/analytics.jpg')
+			url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
 			response = requests.get(url2)
 			img2 = Image.open(BytesIO(response.content))
 			st.sidebar.image(img2)
