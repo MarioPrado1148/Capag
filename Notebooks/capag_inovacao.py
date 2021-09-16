@@ -249,7 +249,7 @@ if radio == 'Visão cientista de dados':
 		col1, col2 = st.columns(2)
 		with col1:
 			st.header('Variável Capag')
-			sns.countplot(x = "Capag_real", data = df).set_ylabel('Quantidade')
+			sns.countplot(x = "Capag", data = df).set_ylabel('Quantidade')
 			st.pyplot()
 
 		with col2: 
