@@ -168,7 +168,7 @@ if radio == 'Visão cientista de dados':
 					    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
 		select_radio_quanti = st.sidebar.radio('Selecione a variável',['PIB_per_capita', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total'])
-		if select_radio_quanti == 'PIB percentual':
+		if select_radio_quanti == 'PIB_per_capita':
 			
 			col1, col2 = st.columns(2)
 			with col1:
