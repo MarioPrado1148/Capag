@@ -339,16 +339,4 @@ if radio == 'Visão cientista de dados':
 	
 
 
-	
-
-			   
-#lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Quem somos nós']
-#select_event_capag = st.sidebar.selectbox('Selecione um evento.', lista_eventos_projeto_capag)
-
-#url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
-#response = requests.get(url)
-#img = Image.open(BytesIO(response.content))
-#st.sidebar.image(img, use_column_width = True)
-
-
 
