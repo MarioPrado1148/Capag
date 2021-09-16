@@ -230,8 +230,7 @@ if radio == 'Visão cientista de dados':
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pelo setor de Serviços e o total dos Valores Agregados pela Economia.')
 				st.markdown('Até 50 % dos municípios possuem VAB_Serviço/Total inferior a 30 % do total.')
 				st.markdown('Constata-se a presença de outliers, que são valores disprepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
-				
-		
+					
 		if select_radio_quanti == 'VAB_Adm/Total':
 			
 			col1, col2 = st.columns(2)
@@ -259,14 +258,14 @@ if radio == 'Visão cientista de dados':
 			st.markdown('Verifica-se que o quantitativo de municípios que não possuem capacidade de pagamento é maior do que o quantitativo de municípios que possuem capacidade de pagamento.')
 		
 	elif select_event_cientista == 'Análise bivariada':
-		select_radio_bivariada = st.sidebar.radio('Selecione as variáveis',['Capag x Pib_per_capita','Capag x VAB_Agricultura/Total',
+		select_radio_bivariada = st.sidebar.radio('Selecione as variáveis',['Capag x PIB_per_capita','Capag x VAB_Agricultura/Total',
 										   'Capag x VAB_Indústria/Total','Capag x VAB_Serviço/Total',
 										   'Capag x VAB_Adm/Total'])
-		if select_radio_bivariada == 'Capag x Pib_per_capita':
+		if select_radio_bivariada == 'Capag x PIB_per_capita':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis Capag x Pib_per_capita')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_Pib_per_capita.jpg')
+				st.header('Variáveis Capag x PIB_per_capita')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_PIB_per_capita.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
