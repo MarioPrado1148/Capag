@@ -322,7 +322,7 @@ if radio == 'Visão cientista de dados':
 
 		
 	elif select_event_cientista == 'Matriz de correlação':
-		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix.jpg')
+		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix4.jpg')
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
 		st.markdown('A matriz de correlação expressa a relação entre as variáveis quantitativas.')
