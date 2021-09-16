@@ -26,6 +26,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 pd.options.display.float_format = "{:,.2f}".format
 
 # Carregamento dos dados
+#df_streamlit_com_previsao
 data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')
 @st.cache(persist=True)
 
@@ -34,6 +35,17 @@ def load_data():
     return data
 
 df =load_data()
+
+#df_sem_target_nan
+data_url2 =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')
+@st.cache(persist=True)
+
+def load_data():
+    data=pd.read_csv(data_url2, sep = ';', index_col = 0)
+    return data
+
+df_sem_nan =load_data()
+
 
 # Página Principal
 
@@ -366,7 +378,7 @@ if radio == 'Visão cientista de dados':
 		st.sidebar.image(img2)
 	elif select_event_cientista == 'Aspectos técnicos':
 		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
-	
+	 
 
 
 
