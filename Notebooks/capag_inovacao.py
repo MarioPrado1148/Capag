@@ -41,30 +41,14 @@ df =load_data()
 # Carregamento dos dados
 #df_streamlit_com_previsao_resumido
 data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao_resumido.csv')
-@st.cache(persist=True)
+#@st.cache(persist=True)
 
 #def load_data_resumido():
  #   data=pd.read_csv(data_url_resumido, sep = ';', index_col = 0)
   #  return data
 
 #df_resumido =load_data_resumido()
-########################################################################################
-#df_sem_target_nan
-#data_url2 =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')
-#@st.cache(persist=True)
 
-#def load_data_sem_nan():
- #   data=pd.read_csv(data_url2, sep = ';', index_col = 0)
-  #  return data
-
-#df_sem_nan =load_data_sem_nan()
-#X, y = df_sem_nan.drop(['Capag'], axis = 1), df_sem_nan['Capag']
-#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = .2, random_state = 42)
-#import pickle
-#filename = 'https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Models/modelo_randomizedsearch_xgboost_capag.pkl'
-# load the model from disk
-#loaded_model = pickle.load(open(filename, 'rb'))
-#########################################################################################
 
 # Página Principal
 
