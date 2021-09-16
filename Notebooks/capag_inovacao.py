@@ -56,7 +56,7 @@ if radio == 'Visão cidadão':
 		lista_eventos_cidadao)
 	# Imagem
 	#url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/riodejaneiro.jpg')
-	url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/digital-marketing.jpg')
+	url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/digitalmarketing.jpg')
 	response = requests.get(url2)
 	img2 = Image.open(BytesIO(response.content))
 	st.sidebar.image(img2)
