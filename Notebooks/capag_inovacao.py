@@ -62,7 +62,8 @@ if radio == 'Visão cidadão':
 		
 	
 	if select_event_cidadao == 'Apresentação':
-		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
+		#url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
+		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/paraty.jpg')
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
 		st.image(img)
