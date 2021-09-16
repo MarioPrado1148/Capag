@@ -245,7 +245,7 @@ if radio == 'Visão cientista de dados':
 				st.header('Análise') 
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pelo setor de Administração, Defesa, Educação e Saúde Públicas e Seguridade Social (VAB_Adm) e o total dos Valores Agregados pela Economia.')
 				st.markdown('Até 50 % dos municípios possuem VAB_Adm/Total inferior a 30 % do total.')
-				st.markdown('Constata-se a presença de outliers, que são valores disprepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
+				st.markdown('Não se verifica a presença de outliers (valores discrepantes).')
 	elif select_event_cientista == 'Variável CLASS_CAPAG (alvo)':
 		col1, col2 = st.columns(2)
 		with col1:
