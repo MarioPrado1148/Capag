@@ -145,12 +145,6 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Análise das variáveis qualitativas':	
 		select_radio_quali = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana', 'Mun_Reg_Geog_Imediata'])
 		if select_radio_quali == 'Região':
-			
-		# Imagem
-		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/brasilia.PNG')
-		response = requests.get(url2)
-		img2 = Image.open(BytesIO(response.content))
-		st.sidebar.image(img2)
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header('Variável Região')
@@ -159,6 +153,12 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 				st.header('Análise') 			
 				st.markdown('Verifica-se que há mais municípios na Região Nordeste, seguida de perto pela Região Sudeste.')
+			
+			# Imagem
+			url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/brasilia.PNG')
+			response = requests.get(url2)
+			img2 = Image.open(BytesIO(response.content))
+			st.sidebar.image(img2)
 		
 		elif select_radio_quali == 'Região Metropolitana':
 			col1, col2 = st.columns(2)
