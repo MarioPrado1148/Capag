@@ -249,8 +249,10 @@ if radio == 'Visão cientista de dados':
 		col1, col2 = st.columns(2)
 		with col1:
 			st.header('Variável Capag')
-			sns.countplot(x = "Capag", data = df).set_ylabel('Quantidade')
-			st.pyplot()
+			url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/graf_barros_capag.jpg')
+			response = requests.get(url)
+			img7 = Image.open(BytesIO(response.content))
+			st.image(img7)
 
 		with col2: 
 			st.header('Análise')
