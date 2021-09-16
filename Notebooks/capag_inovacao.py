@@ -149,7 +149,7 @@ if radio == 'Visão cientista de dados':
 			with col1:
 				st.header('Variável Região Metropolitana')			
 				sns.countplot(data = df, x = "Reg_Metropolitana").set_ylabel('Quantidade')
-			st.pyplot()
+				st.pyplot()
 			with col2:
 				st.header('Análise') 
 				st.markdown('Verifica-se que a maior parte dos municípios brasileiros não integra Regiões Metropolitanas.')
