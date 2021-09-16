@@ -90,7 +90,7 @@ if radio == 'Visão cidadão':
 		contrair novos empréstimos com garantia da União. Esta classificação é um indicador de saúde econômica e fiscal dos municípios.')
 		st.markdown('O intuito da CAPAG é apresentar, de forma simples e transparente, se um novo endividamento representa risco de crédito para o Tesouro Nacional.\
 		Assim, um ente bem avaliado pelo Tesouro Nacional poderá acessar empréstimos com juros mais baixos, por contar com a União como seu garantidor.')
-		st.markdown('. A metodologia da CAPAG foi elaborada pelo Tesouro Nacional, com apoio do Banco Mundial e possibilita a comparação entre os entes federados, \
+		st.markdown('A metodologia da CAPAG foi elaborada pelo Tesouro Nacional, com apoio do Banco Mundial e possibilita a comparação entre os entes federados, \
 		com base em metodologia e informações conhecidas e padronizadas. Corresponde a um serviço similar ao prestado pelas agências de classificação de risco de crédito.\
 		A própria STN passou a calcular e divulgar as notas de modo regular, independentemente da existência de pedidos de aval ou garantia para operações de crédito. Enfim, trata-se de uma informação bastante útil para os que buscam melhor compreender as finanças dos entes subnacionais.')
 		st.markdown('Uma boa classificação da CAPAG é muito importante para os municípios, pois:')
