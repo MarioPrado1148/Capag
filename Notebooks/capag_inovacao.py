@@ -141,6 +141,12 @@ if radio == 'Visão cientista de dados':
 		st.text('Arquivo com 50115 linhas e 43 colunas, disponível no formato xls.')
 		st.text('Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.')
 		st.text('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
+		
+		# Imagem
+		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
+		response = requests.get(url2)
+		img2 = Image.open(BytesIO(response.content))
+		st.sidebar.image(img2)
 
 	elif select_event_cientista == 'Análise das variáveis qualitativas':	
 		select_radio_quali = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana', 'Mun_Reg_Geog_Imediata'])
@@ -352,6 +358,12 @@ if radio == 'Visão cientista de dados':
 		
 	elif select_event_cientista == 'Dataframe completo':
 		st.dataframe(df)
+		
+		#Imagem
+		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
+		response = requests.get(url2)
+		img2 = Image.open(BytesIO(response.content))
+		st.sidebar.image(img2)
 	elif select_event_cientista == 'Aspectos técnicos':
 		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
 	
