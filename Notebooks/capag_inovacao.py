@@ -256,8 +256,8 @@ if radio == 'Visão cientista de dados':
 
 		with col2: 
 			st.header('Análise')
-			st.markdown('O valor 1 indica que o município não possui capacidade de pagamento; o valor 0 indica o oposto')	
-			st.markdown('Verifica-se que o quantitativo de municípios que não possuem capacidade de pagamento é maior do que o quantitativo de municípios que possuem capacidade de pagamento.')
+			st.markdown('O valor 1 indica que o município não possui capacidade de pagamento; o valor 0 indica o oposto.')	
+			st.markdown('Verifica-se que o quantitativo de municípios que não possuem capacidade de pagamento é ligeiramente maior do que o quantitativo de municípios que possuem capacidade de pagamento.')
 		
 	elif select_event_cientista == 'Análise bivariada':
 		select_radio_bivariada = st.sidebar.radio('Selecione as variáveis',['Capag x PIB_per_capita','Capag x VAB_Agricultura/Total',
