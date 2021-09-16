@@ -124,8 +124,8 @@ if radio == 'Visão cientista de dados':
 	if select_event_cientista == 'Coleta de Dados':
 		st.markdown('Foram utilizados 2 datasets neste trabalho:')
 		st.markdown('1 - Capacidade de Pagamento (CAPAG) dos Municípios')
-		st.text('Arquivo com 5569 linhas e 11 colunas, disponível no formato csv.')
-		st.text('Os dados foram coletados no website da Transparência do Tesouro Nacional 1, em janeiro de 2021.')
+		st.text('Arquivo com 5569 linhas e 19 colunas, disponível no formato csv.')
+		st.text('Os dados foram coletados no website da Transparência do Tesouro Nacional, em 16 de setembro de 2021.')
 		st.text('Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios')
 		st.markdown('2.	PIB e outros indicadores econômicos')
 		st.text('Arquivo com 50115 linhas e 43 colunas, disponível no formato xls.')
