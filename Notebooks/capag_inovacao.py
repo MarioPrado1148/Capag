@@ -131,7 +131,7 @@ if radio == 'Visão cientista de dados':
 		lista_eventos_cientista)
 	
 	# Imagem
-	url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/brasilia.jpg')
+	url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/brasilia.PNG')
 	response = requests.get(url2)
 	img2 = Image.open(BytesIO(response.content))
 	st.sidebar.image(img2)
