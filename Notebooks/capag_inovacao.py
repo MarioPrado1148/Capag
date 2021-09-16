@@ -76,7 +76,7 @@ if radio == 'Visão cidadão':
 		lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
 		select = st.sidebar.selectbox('município', lista_municipios)
 		df = df.set_index('Município')
-		df['CLASS_CAPAG_real'] = df['CLASS_CAPAG_real'].astype('Int64')
+		df['Capag_real'] = df['Capag_real'].astype('Int64')
 		df_municipio = df[df.index==(select)]
 		st.dataframe(df_municipio)
 		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem.')
@@ -112,7 +112,7 @@ if radio == 'Visão cientista de dados':
 	lista_eventos_cientista = ['Coleta de Dados',
 				   'Análise das variáveis qualitativas',
 				   'Análise das variáveis quantitativas',
-				   'Variável CLASS_CAPAG (alvo)',
+				   'Variável Capag (alvo)',
 				   'Análise bivariada',
 				   'Matriz de correlação',
 				   'Dataframe completo',
@@ -173,16 +173,16 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header('Variável Pib Percentual')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_PIB_PERC.jpg')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Pib_per_capita.jpg')
 				response = requests.get(url)
 				img1 = Image.open(BytesIO(response.content))
 				st.image(img1)
-				#fig = px.box(df, y = 'PIB_PERC')
+				#fig = px.box(df, y = 'Pib_per_capita')
 				#fig.update_layout(height=400, width = 400)
 				#st.plotly_chart(fig,height=400)
 			with col2: 
 				st.header('Análise') 
-				st.markdown('A variável PIB_PERC expressa o Pib Per Capital, medido em reais.')
+				st.markdown('A variável Pib_per_capita expressa o Pib Per Capital, medido em reais.')
 				st.markdown('Verifica-se que quase todos os municípios possuem PIB per capita inferior a R$ 50.000,00.')
 				st.markdown('Há presença de outliers superiores, caracterizados pelos pontos acima do traço vertical superior.')
 		
@@ -248,11 +248,11 @@ if radio == 'Visão cientista de dados':
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pelo setor de Administração, Defesa, Educação e Saúde Públicas e Seguridade Social (VAB_Adm) e o total dos Valores Agregados pela Economia.')
 				st.markdown('Até 50 % dos municípios possuem VAB_Adm/Total inferior a 30 % do total.')
 				st.markdown('Não se verifica a presença de outliers (valores discrepantes).')
-	elif select_event_cientista == 'Variável CLASS_CAPAG (alvo)':
+	elif select_event_cientista == 'Variável Capag (alvo)':
 		col1, col2 = st.columns(2)
 		with col1:
-			st.header('Variável CLASS_CAPAG')
-			sns.countplot(x = "CLASS_CAPAG_real", data = df).set_ylabel('Quantidade')
+			st.header('Variável Capag')
+			sns.countplot(x = "Capag_real", data = df).set_ylabel('Quantidade')
 			st.pyplot()
 
 		with col2: 
@@ -261,58 +261,58 @@ if radio == 'Visão cientista de dados':
 			st.markdown('Verifica-se que o quantitativo de municípios que não possuem capacidade de pagamento é maior do que o quantitativo de municípios que possuem capacidade de pagamento.')
 		
 	elif select_event_cientista == 'Análise bivariada':
-		select_radio_bivariada = st.sidebar.radio('Selecione as variáveis',['CLASS_CAPAG x PIB_PERC','CLASS_CAPAG x VAB_Agricultura/Total',
-										   'CLASS_CAPAG x VAB_Indústria/Total','CLASS_CAPAG x VAB_Serviço/Total',
-										   'CLASS_CAPAG x VAB_Adm/Total'])
-		if select_radio_bivariada == 'CLASS_CAPAG x PIB_PERC':
+		select_radio_bivariada = st.sidebar.radio('Selecione as variáveis',['Capag x Pib_per_capita','Capag x VAB_Agricultura/Total',
+										   'Capag x VAB_Indústria/Total','Capag x VAB_Serviço/Total',
+										   'Capag x VAB_Adm/Total'])
+		if select_radio_bivariada == 'Capag x Pib_per_capita':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis CLASS_CAPAG x PIB_PERC')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_PIB_PERC.jpg')
+				st.header('Variáveis Capag x Pib_per_capita')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_Pib_per_capita.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
 				st.markdown('')
-		if select_radio_bivariada == 'CLASS_CAPAG x VAB_Agricultura/Total':
+		if select_radio_bivariada == 'Capag x VAB_Agricultura/Total':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis CLASS_CAPAG x VAB_Agricultura/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Agricultura_Total.jpg')
+				st.header('Variáveis Capag x VAB_Agricultura/Total')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_VAB_Agricultura_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
 				st.markdown('')
-		if select_radio_bivariada == 'CLASS_CAPAG x VAB_Indústria/Total':
+		if select_radio_bivariada == 'Capag x VAB_Indústria/Total':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis CLASS_CAPAG x VAB_Indústria/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Indústria_Total.jpg')
+				st.header('Variáveis Capag x VAB_Indústria/Total')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_VAB_Indústria_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
 				st.markdown('')
-		if select_radio_bivariada == 'CLASS_CAPAG x VAB_Serviço/Total':
+		if select_radio_bivariada == 'Capag x VAB_Serviço/Total':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis CLASS_CAPAG x VAB_Serviço/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Serviço_Total.jpg')
+				st.header('Variáveis Capag x VAB_Serviço/Total')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_VAB_Serviço_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
 				st.markdown('')
-		if select_radio_bivariada == 'CLASS_CAPAG x VAB_Adm/Total':
+		if select_radio_bivariada == 'Capag x VAB_Adm/Total':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis CLASS_CAPAG x VAB_Adm/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Adm_Total.jpg')
+				st.header('Variáveis Capag x VAB_Adm/Total')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_VAB_Adm_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
@@ -326,7 +326,7 @@ if radio == 'Visão cientista de dados':
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
 		st.markdown('A matriz de correlação expressa a relação entre as variáveis quantitativas.')
-		st.markdown('O valor mais alto de correlação, em módulo, refere-se à correlação entre as variáveis VAB_Adm/Total e PIB_PERC. O sinal negativo indica que quando uma aumenta, a outra diminui.')
+		st.markdown('O valor mais alto de correlação, em módulo, refere-se à correlação entre as variáveis VAB_Adm/Total e Pib_per_capita. O sinal negativo indica que quando uma aumenta, a outra diminui.')
 		st.markdown('Ainda que seja considerada uma correlação forte, decidimos manter ambas as variáveis no modelo.')	    			    
 		st.image(img)
 		
