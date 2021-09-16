@@ -180,7 +180,7 @@ if radio == 'Visão cientista de dados':
 				
 			with col2: 
 				st.header('Análise') 
-				st.markdown('A variável PIB_per_capita expressa o valor médio do PIB, medido em reais.')
+				st.markdown('A variável PIB_per_capita expressa o valor médio do PIB, em reais.')
 				st.markdown('Verifica-se que quase todos os municípios possuem PIB per capita inferior a R$ 50.000,00.')
 				st.markdown('Há presença de outliers superiores, caracterizados pelos pontos acima do traço vertical superior.')
 		
