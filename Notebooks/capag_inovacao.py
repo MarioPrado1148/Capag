@@ -49,7 +49,7 @@ df_sem_nan =load_data()
 X, y = df_sem_nan.drop(['Capag'], axis = 1), df_sem_nan['Capag']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = .2, random_state = 42)
 import pickle
-filename = ''https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Models/modelo_randomizedsearch_xgboost_capag.pkl'
+filename = 'https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Models/modelo_randomizedsearch_xgboost_capag.pkl'
 # load the model from disk
 loaded_model = pickle.load(open(filename, 'rb'))
 #########################################################################################
