@@ -182,7 +182,9 @@ if radio == 'Visão cientista de dados':
 				#st.plotly_chart(fig,height=400)
 			with col2: 
 				st.header('Análise') 
-				st.markdown('Verifica-se que esta variável possui outliers, que são valores discrepantes em relação aos demais.')
+				st.markdown('A variável PIB_PERC expressa o Pib Per Capital, medido em reais.')
+				st.markdown('Verifica-se que quase todos os municípios possuem PIB per capita inferior a R$ 50.000,00.')
+				st.markdown('Há presença de outliers superiores, caracterizados pelos pontos acima do traço vertical superior.')
 		
 		if select_radio_quanti == 'VAB_Agricultura/Total':
 			
