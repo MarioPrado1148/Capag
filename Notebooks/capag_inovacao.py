@@ -44,7 +44,7 @@ data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main
 @st.cache(persist=True)
 
 def load_data_resumido():
-    data_resumido=pd.read_csv(data_url_resumido, sep = ';', index_col = 0)
+    data_resumido=pd.read_csv(data_url_resumido, sep = ',', index_col = 0)
     return data_resumio
 
 df_resumido =load_data_resumido()
