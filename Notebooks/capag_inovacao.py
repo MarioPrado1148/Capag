@@ -199,6 +199,13 @@ if radio == 'Visão cientista de dados':
 				st.markdown('A variável PIB_per_capita expressa o valor médio do PIB, em reais.')
 				st.markdown('Verifica-se que quase todos os municípios possuem PIB per capita inferior a R$ 50.000,00.')
 				st.markdown('Há presença de outliers superiores, caracterizados pelos pontos acima do traço vertical superior.')
+				
+			
+			# Imagem
+			url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
+			response = requests.get(url2)
+			img2 = Image.open(BytesIO(response.content))
+			st.sidebar.image(img2)
 		
 		if select_radio_quanti == 'VAB_Agricultura/Total':
 			
@@ -280,6 +287,13 @@ if radio == 'Visão cientista de dados':
 		select_radio_bivariada = st.sidebar.radio('Selecione as variáveis',['Capag x PIB_per_capita','Capag x VAB_Agricultura/Total',
 										   'Capag x VAB_Indústria/Total','Capag x VAB_Serviço/Total',
 										   'Capag x VAB_Adm/Total'])
+		
+		# Imagem
+		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
+		response = requests.get(url2)
+		img2 = Image.open(BytesIO(response.content))
+		st.sidebar.image(img2)
+			
 		if select_radio_bivariada == 'Capag x PIB_per_capita':
 			col1, col2 = st.columns(2)
 			with col1:
