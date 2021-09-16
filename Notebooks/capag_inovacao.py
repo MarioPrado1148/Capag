@@ -173,7 +173,7 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header('Variável PIB_per_capita')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Pib_per_capita.jpg')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_PIB_per_capita.jpg')
 				response = requests.get(url)
 				img1 = Image.open(BytesIO(response.content))
 				st.image(img1)
