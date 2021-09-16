@@ -50,12 +50,12 @@ data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main
 #df_resumido =load_data_resumido()
 ########################################################################################
 #df_sem_target_nan
-data_url2 =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')
-@st.cache(persist=True)
+#data_url2 =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')
+#@st.cache(persist=True)
 
-def load_data_sem_nan():
-    data=pd.read_csv(data_url2, sep = ';', index_col = 0)
-    return data
+#def load_data_sem_nan():
+ #   data=pd.read_csv(data_url2, sep = ';', index_col = 0)
+  #  return data
 
 #df_sem_nan =load_data_sem_nan()
 #X, y = df_sem_nan.drop(['Capag'], axis = 1), df_sem_nan['Capag']
