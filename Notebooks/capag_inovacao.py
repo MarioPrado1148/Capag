@@ -28,7 +28,7 @@ pd.options.display.float_format = "{:,.2f}".format
 ########################################################################################
 # Carregamento dos dados
 #df_streamlit_com_previsao
-data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')
+data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao.csv')
 @st.cache(persist=True)
 
 def load_data():
@@ -36,18 +36,19 @@ def load_data():
     return data
 
 df =load_data()
-#df_streamlit_com_previsao_resumido = df[['Município','Capag_real','Capag_predito']]
+
+df_streamlit_com_previsao_resumido = df[['Município','Capag_real','Capag_predito']]
 ########################################################################################
 # Carregamento dos dados
 #df_streamlit_com_previsao_resumido
-#data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao_resumido.csv')
-#@st.cache(persist=True)
+data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao_resumido.csv')
+@st.cache(persist=True)
 
-#def load_data_resumido():
-  #  data_resumido=pd.read_csv(data_url_resumido, sep = ';', index_col = 0)
- #   return data_resumio
+def load_data_resumido():
+    data_resumido=pd.read_csv(data_url_resumido, sep = ';', index_col = 0)
+    return data_resumio
 
-#df_resumido =load_data_resumido()
+df_resumido =load_data_resumido()
 
 
 # Página Principal
