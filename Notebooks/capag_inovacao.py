@@ -147,8 +147,8 @@ if radio == 'Visão cientista de dados':
 		elif select_radio_quali == 'Região Metropolitana':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variável Região Metropolitana')  				
-				sns.countplot(data = df, x = "Reg_Metropolitana")
+				st.header('Variável Região Metropolitana')			
+				sns.countplot(data = df, x = "Reg_Metropolitana").set_ylabel('Quantidade')
 			st.pyplot()
 			with col2:
 				st.header('Análise') 
@@ -158,7 +158,7 @@ if radio == 'Visão cientista de dados':
 			col1, col2 = st.columns(2)
 			with col1:
 				st.header('Variável Mun_Reg_Geog_Imediata')
-				sns.countplot(data = df, x = "Mun_Reg_Geog_Imediata")
+				sns.countplot(data = df, x = "Mun_Reg_Geog_Imediata").set_ylabel('Quantidade')
 				st.pyplot()
 			with col2: 
 				st.header('Análise') 
