@@ -40,14 +40,14 @@ df =load_data()
 ########################################################################################
 # Carregamento dos dados
 #df_streamlit_com_previsao_resumido
-data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao_resumido.csv')
-@st.cache(persist=True)
+#data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao_resumido.csv')
+#@st.cache(persist=True)
 
-def load_data_resumido():
-    data=pd.read_csv(data_url_resumido, sep = ';', index_col = 0)
-    return data
+#def load_data_resumido():
+ #   data=pd.read_csv(data_url_resumido, sep = ';', index_col = 0)
+  #  return data
 
-df_resumido =load_data_resumido()
+#df_resumido =load_data_resumido()
 ########################################################################################
 #df_sem_target_nan
 data_url2 =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')
