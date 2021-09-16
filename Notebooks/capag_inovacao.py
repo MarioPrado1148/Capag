@@ -54,6 +54,12 @@ if radio == 'Visão cidadão':
 	select_event_cidadao = st.sidebar.selectbox(
 		'Que informações você gostaria de visualizar?',
 		lista_eventos_cidadao)
+	# Imagem
+	url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/riodejaneiro.jpg')
+	response = requests.get(url)
+	img = Image.open(BytesIO(response.content))
+	st.image(img)
+	
 	
 	if select_event_cidadao == 'Apresentação':
 		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
