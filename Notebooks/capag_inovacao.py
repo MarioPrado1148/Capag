@@ -167,22 +167,20 @@ if radio == 'Visão cientista de dados':
 				
 					    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
-		select_radio_quanti = st.sidebar.radio('Selecione a variável',['PIB percentual', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total'])
+		select_radio_quanti = st.sidebar.radio('Selecione a variável',['PIB_per_capita', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total'])
 		if select_radio_quanti == 'PIB percentual':
 			
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variável Pib Percentual')
+				st.header('Variável PIB_per_capita')
 				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Pib_per_capita.jpg')
 				response = requests.get(url)
 				img1 = Image.open(BytesIO(response.content))
 				st.image(img1)
-				#fig = px.box(df, y = 'Pib_per_capita')
-				#fig.update_layout(height=400, width = 400)
-				#st.plotly_chart(fig,height=400)
+				
 			with col2: 
 				st.header('Análise') 
-				st.markdown('A variável Pib_per_capita expressa o Pib Per Capital, medido em reais.')
+				st.markdown('A variável Pib_per_capita expressa o valor médio do PIB, medido em reais.')
 				st.markdown('Verifica-se que quase todos os municípios possuem PIB per capita inferior a R$ 50.000,00.')
 				st.markdown('Há presença de outliers superiores, caracterizados pelos pontos acima do traço vertical superior.')
 		
