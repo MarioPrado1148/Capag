@@ -153,13 +153,7 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 				st.header('Análise') 			
 				st.markdown('Verifica-se que há mais municípios na Região Nordeste, seguida de perto pela Região Sudeste.')
-			
-			# Imagem
-			url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
-			response = requests.get(url2)
-			img2 = Image.open(BytesIO(response.content))
-			st.sidebar.image(img2)
-		
+					
 		elif select_radio_quali == 'Região Metropolitana':
 			col1, col2 = st.columns(2)
 			with col1:
@@ -200,12 +194,6 @@ if radio == 'Visão cientista de dados':
 				st.markdown('Verifica-se que quase todos os municípios possuem PIB per capita inferior a R$ 50.000,00.')
 				st.markdown('Há presença de outliers superiores, caracterizados pelos pontos acima do traço vertical superior.')
 				
-			
-			# Imagem
-			url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
-			response = requests.get(url2)
-			img2 = Image.open(BytesIO(response.content))
-			st.sidebar.image(img2)
 		
 		if select_radio_quanti == 'VAB_Agricultura/Total':
 			
@@ -288,11 +276,6 @@ if radio == 'Visão cientista de dados':
 										   'Capag x VAB_Indústria/Total','Capag x VAB_Serviço/Total',
 										   'Capag x VAB_Adm/Total'])
 		
-		# Imagem
-		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
-		response = requests.get(url2)
-		img2 = Image.open(BytesIO(response.content))
-		st.sidebar.image(img2)
 			
 		if select_radio_bivariada == 'Capag x PIB_per_capita':
 			col1, col2 = st.columns(2)
