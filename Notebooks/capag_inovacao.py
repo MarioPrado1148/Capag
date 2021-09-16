@@ -257,7 +257,7 @@ if radio == 'Visão cientista de dados':
 		with col2: 
 			st.header('Análise')
 			st.markdown('O valor 1 indica que o município possui Capag A ou B segundo o cálculo oficial da Secretaria do Tesouro Nacional (STN); o valor 0 indica Capag C ou D.')	
-			st.markdown('Verifica-se que o quantitativo de municípios com Capag A ou B é ligeiramente maior do que o quantitativo de municípios que possuem Capag C ou D.')
+			st.markdown('Verifica-se que o quantitativo de municípios com Capag A ou B é ligeiramente maior do que o número de municípios que possuem Capag C ou D.')
 			st.markdown('Destaque-se que há 1.152 municípios para os quais não há Capag calculado pela STN, os quais não estão representados no gráfico.')
 		
 	elif select_event_cientista == 'Análise bivariada':
