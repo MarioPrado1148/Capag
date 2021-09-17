@@ -58,9 +58,9 @@ import pickle
 #modelo_treinado = load_model(model)
 #modelo_treinado = pickle.load(open('modelo_randomizedsearch_xgboost_capag.pkl', 'rb'))
 modelo_treinado = st.file_uploader('modelo_randomizedsearch_xgboost_capag.pkl')
-#X, y = df.drop(['Capag'], axis = 1), df['Capag']
-#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = .2, random_state = 42)
-
+X, y = df.drop(['Capag'], axis = 1), df['Capag']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = .2, random_state = 42)
+predicao = modelo_treinado.predict(X)
 ###############################################################################################
 # Página Principal
 
