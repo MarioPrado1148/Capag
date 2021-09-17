@@ -40,7 +40,7 @@ df =load_data()
 ########################################################################################
 # Carregamento dos dados
 #df_streamlit_com_previsao_resumido
-data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao_resumido2.csv')
+data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao_resumido3.csv')
 @st.cache(persist=True)
 
 def load_data_resumido():
