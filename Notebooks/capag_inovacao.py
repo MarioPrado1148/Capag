@@ -332,7 +332,7 @@ if radio == 'Visão cientista de dados':
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('Verifica-se que a mediana do PIB dos municípios com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D.');
+				st.markdown('Verifica-se que a mediana do PIB dos municípios com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D (representadas pelo valor 1).');
 				st.markdown('Há mais outliers superiores (valores muito grandes, que se destacam dos demais), para os municípios das classes A e B (representadas pelo valor 0).')
 		if select_radio_bivariada == 'Capag x VAB_Agricultura/Total':
 			col1, col2 = st.columns(2)
@@ -344,7 +344,7 @@ if radio == 'Visão cientista de dados':
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('Observa-se que a mediana do VAB_Agricultura/Total com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D.')
+				st.markdown('Observa-se que a mediana do VAB_Agricultura/Total com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D (representadas pelo valor 1).')
 				st.markdown('Há mais outliers superiores (valores muito grandes, que se destacam dos demais), para os municípios das classes C e D (representadas pelo valor 1).')
 		if select_radio_bivariada == 'Capag x VAB_Indústria/Total':
 			col1, col2 = st.columns(2)
@@ -368,7 +368,7 @@ if radio == 'Visão cientista de dados':
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('Observa-se que a mediana do VAB_Serviço/Total dos municípios com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D.')
+				st.markdown('Observa-se que a mediana do VAB_Serviço/Total dos municípios com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D (representadas pelo valor 1).')
 				st.markdown('Há mais outliers superiores (valores muito grandes, que se destacam dos demais), para os municípios das classes C e D (representadas pelo valor 1).')
 		if select_radio_bivariada == 'Capag x VAB_Adm/Total':
 			col1, col2 = st.columns(2)
