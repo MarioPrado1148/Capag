@@ -83,6 +83,7 @@ if radio == 'Visão cidadão':
 		st.image(img)
 		st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
 		st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
+		
 	elif select_event_cidadao == 'Objetivos':
 		texto1 = 'Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado XGBoost com o objetivo de, utilizando as informações disponíveis \
 		sobre os municípios brasileiros, estimar a capacidade de pagamento (Capag) dos municípios e compará-las com a Capag constante do site da Secretaria do Tesouro Nacional\
@@ -94,10 +95,10 @@ if radio == 'Visão cidadão':
 	elif select_event_cidadao == 'Capag - Visão detalhada':
 		# st.sidebar.checkbox("Visualizar análises por município", True, key=1)
 		lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
-		select = st.sidebar.selectbox('município', lista_municipios)
-		df = df.set_index('Município')
-		df['Capag_real'] = df['Capag_real'].astype('Int64')
-		df_municipio = df[df.index==(select)]
+		#select = st.sidebar.selectbox('município', lista_municipios)
+		#df = df.set_index('Município')
+		#df['Capag_real'] = df['Capag_real'].astype('Int64')
+		#df_municipio = df[df.index==(select)]
 		st.dataframe(df_municipio)
 		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem.')
 		st.text('Dessa forma, você conseguirá visualizar todas as variáveis')
