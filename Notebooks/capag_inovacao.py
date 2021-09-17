@@ -50,6 +50,7 @@ def load_data_resumido():
 df_resumido =load_data_resumido()
 
 ###########################################################################################
+import pickle
 def load_model(model):
     loaded_model = pickle.load(model)
     return loaded_model
