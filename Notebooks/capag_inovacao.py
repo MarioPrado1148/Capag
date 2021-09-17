@@ -54,7 +54,11 @@ def load_model(model):
     loaded_model = pickle.load(model)
     return loaded_model
 model =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Models/modelo_randomizedsearch_xgboost_capag.pkl')
-
+modelo_treinado = load_model(model)
+X, y = df.drop(['Capag'], axis = 1), df['Capag']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = .2, random_state = 42)
+#predict = 
+###############################################################################################
 # Página Principal
 
 st.title('Classificação da capacidade de pagamento dos municípios brasileiros com base em dados geoeconômicos')
