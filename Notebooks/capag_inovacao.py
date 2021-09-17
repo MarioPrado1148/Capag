@@ -105,7 +105,7 @@ if radio == 'Visão cidadão':
 		
 	elif select_event_cidadao == 'Capag - Visão resumida':
 		lista_municipios_resumido = pd.Series(list(set(df_resumido['Município']))).sort_values()
-		select = st.sidebar.selectbox('município', lista_municipios_resumido)
+		select_resumido = st.sidebar.selectbox('município', lista_municipios_resumido)
 		df_resumido = df_resumido.set_index('Município')
 		df_resumido['Capag_real'] = df_resumido['Capag_real'].astype('Int64')
 		df_municipio_resumido = df_resumido[df_resumido.index==(select)]
