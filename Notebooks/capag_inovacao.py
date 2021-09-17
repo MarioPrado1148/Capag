@@ -109,7 +109,7 @@ if radio == 'Visão cidadão':
 		df_resumido = df_resumido.set_index('Município')
 		df_resumido['Capag_real'] = df_resumido['Capag_real'].astype('Int64')
 		df_municipio_resumido = df_resumido[df_resumido.index==(select_resumido)]
-		st.dataframe(df_resumido)
+		st.dataframe(df_municipio_resumido)
 		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem.')
 		st.text('Dessa forma, você conseguirá visualizar todas as variáveis')
 		
