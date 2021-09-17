@@ -49,6 +49,11 @@ def load_data_resumido():
 
 df_resumido =load_data_resumido()
 
+###########################################################################################
+def load_model(model):
+    loaded_model = pickle.load(model)
+    return loaded_model
+model =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Models/modelo_randomizedsearch_xgboost_capag.pkl')
 
 # Página Principal
 
