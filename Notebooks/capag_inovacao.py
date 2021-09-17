@@ -70,10 +70,10 @@ if radio == 'Visão cidadão':
 		'Que informações você gostaria de visualizar?',
 		lista_eventos_cidadao)
 	# Imagem
-	url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/digitalmarketing.jpg')
-	response = requests.get(url2)
-	img2 = Image.open(BytesIO(response.content))
-	st.sidebar.image(img2)
+	#url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/digitalmarketing.jpg')
+	#response = requests.get(url2)
+	#img2 = Image.open(BytesIO(response.content))
+	#st.sidebar.image(img2)
 	
 	
 	if select_event_cidadao == 'Apresentação':
@@ -102,6 +102,17 @@ if radio == 'Visão cidadão':
 		st.dataframe(df_municipio)
 		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem.')
 		st.text('Dessa forma, você conseguirá visualizar todas as variáveis')
+		
+	elif select_event_cidadao == 'Capag - Visão resumida':
+		lista_municipios = pd.Series(list(set(df_resumido['Município']))).sort_values()
+		select = st.sidebar.selectbox('município', lista_municipios)
+		df_resumido = df_resumido.set_index('Município')
+		df_resumido['Capag_real'] = df_resumido['Capag_real'].astype('Int64')
+		df_municipio_resumido = df_resumido[df_resumido.index==(select)]
+		st.dataframe(df_municipio_resumido)
+		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem.')
+		st.text('Dessa forma, você conseguirá visualizar todas as variáveis')
+		
 	elif select_event_cidadao == 'Quem somos':
 		st.markdown('Camila Fátima Maia Marques é esposa do Breno, mãe da Malu e da Bebela, médica, analista-tributário da Receita Federal, especialista em Ciência de Dados e Big Data pela Puc Minas.')
 		st.markdown('Mario José Calvão Monnerat do Prado é esposo de Roxana, pai da Nicole, auditor-fiscal da Receita Federal, formado pela FIA/USP nos cursos de Data Mining e MBA em Analytics e Inteligência Artificial, estudante na pós-graduação em Direito Tributário e Compliance pela Universidade Católica de Brasília. Atualmente é supervisor do Laboratório de Inovação da SRRF08 da Receita Federal do Brasil.')
