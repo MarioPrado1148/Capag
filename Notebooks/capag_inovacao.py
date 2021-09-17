@@ -122,7 +122,7 @@ if radio == 'Visão cidadão':
 		df_resumido['Capag_real'] = df_resumido['Capag_real'].astype('Int64')
 		df_municipio_resumido = df_resumido[df_resumido.index==(select_resumido)]
 		st.dataframe(df_municipio_resumido)
-		st.markdown('O valor 0 representa o Capag das classes A e B; indica que o Município pode receber empréstimos com garantia da União. O valor 1 representa as classes C e D.')
+		st.markdown('O valor 0 representa a Capag das classes A e B; indica que o Município pode receber empréstimos com garantia da União. O valor 1 representa as classes C e D.')
 		
 		
 	elif select_event_cidadao == 'Quem somos':
@@ -254,7 +254,7 @@ if radio == 'Visão cientista de dados':
 				st.header('Análise') 
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pela Agricultura e o total dos Valores Agregados pela Economia.')
 				st.markdown('Até 50 % dos municípios possuem VAB_Agricultura/Total inferior a 20 %.')
-				st.markdown('Constata-se a presença de outliers, que são valores disprepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
+				st.markdown('Constata-se a presença de outliers, que são valores discrepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
 				
 		
 		if select_radio_quanti == 'VAB_Indústria/Total':
@@ -270,7 +270,7 @@ if radio == 'Visão cientista de dados':
 				st.header('Análise') 
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pela Indústria e o total dos Valores Agregados pela Economia.')
 				st.markdown('Até 50 % dos municípios possuem VAB_Indústria/Total inferior a 10 %.')
-				st.markdown('Constata-se a presença de outliers, que são valores disprepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
+				st.markdown('Constata-se a presença de outliers, que são valores discrepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
 				
 		
 		if select_radio_quanti == 'VAB_Serviço/Total':
@@ -285,7 +285,7 @@ if radio == 'Visão cientista de dados':
 				st.header('Análise') 
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pelo setor de Serviços e o total dos Valores Agregados pela Economia.')
 				st.markdown('Até 50 % dos municípios possuem VAB_Serviço/Total inferior a 30 %.')
-				st.markdown('Constata-se a presença de outliers, que são valores disprepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
+				st.markdown('Constata-se a presença de outliers, que são valores discrepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
 					
 		if select_radio_quanti == 'VAB_Adm/Total':
 			
