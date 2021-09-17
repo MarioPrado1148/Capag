@@ -140,7 +140,7 @@ if radio == 'Visão cidadão':
 		A própria STN passou a calcular e divulgar as notas de modo regular, independentemente da existência de pedidos de aval ou garantia para operações de crédito. Enfim, trata-se de uma informação bastante útil para os que buscam melhor compreender as finanças dos entes subnacionais.')
 		st.markdown('Uma boa classificação da CAPAG é muito importante para os municípios, pois:')
 		st.markdown('1) ao obter este reconhecimento por parte do Tesouro Nacional, o município obtém a garantia da União para contrair empréstimos; tendo a União como garantidor, o município pode obter melhores condições de financiamento.')
-		st.markdown('2) licitações a preços mais vantajosos: empresas privadas podem utilizar a classificação CAPAG como um dos indicadores na tomada de decisão sobre\
+		st.markdown('2) podem realizar licitações a preços mais vantajosos: empresas privadas podem utilizar a classificação CAPAG como um dos indicadores na tomada de decisão sobre\
 		participar ou não de um certame. O município, tendo uma boa capacidade de pagamento, pode atrair mais participantes para suas licitações e, consequentemente,\
 		propostas mais vantajosas economicamente para a coletividade.')
 		st.markdown('3) a boa classificação de risco facilita a atração de empreendimentos e de investimentos privados para o município, pois reflete a boa saúde econômica e\
@@ -153,7 +153,7 @@ if radio == 'Visão cidadão':
 		e financeira, o conceito 0, que o ente está apto à contratação de garantias.')
 		st.markdown('O trabalho sobre a classificação de pagamentos dos municípios brasileiros (CAPAG) foi feito, originariamente, como códigos e dissertação para o \
 		Trabalho de Conclusão de Curso de Camila, da equipe de autores desta proposta de solução, em sua pós-graduação em Ciência de Dados e Big Data.')
-		st.markdown('Para participar do Prêmio Tesouro Nacional, evoluímos o modelo e adaptamos os códigos para a plataforma streamlit, com o intuito de mais pessoas tivessem acesso \
+		st.markdown('Para participar do Prêmio Tesouro Nacional, evoluímos o modelo e adaptamos os códigos para a plataforma streamlit, com o intuito de que mais pessoas tivessem acesso \
 			    a este conhecimento tão importante sobre os municípios brasileiros.')
 
 if radio == 'Visão cientista de dados':
