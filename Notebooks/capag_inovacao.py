@@ -110,8 +110,8 @@ if radio == 'Visão cidadão':
 		df_resumido['Capag_real'] = df_resumido['Capag_real'].astype('Int64')
 		df_municipio_resumido = df_resumido[df_resumido.index==(select_resumido)]
 		st.dataframe(df_municipio_resumido)
-		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem.')
-		st.text('Dessa forma, você conseguirá visualizar todas as variáveis')
+		st.text('O valor 0 representa o Capag das classes A e B; indica que o Município pode receber empréstimos com garantia da União. O valor 1 representa as classes C e D.'
+		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem. Dessa forma, você conseguirá visualizar todas as variáveis')
 		
 	elif select_event_cidadao == 'Quem somos':
 		st.markdown('Camila Fátima Maia Marques é esposa do Breno, mãe da Malu e da Bebela, médica, analista-tributário da Receita Federal, especialista em Ciência de Dados e Big Data pela Puc Minas.')
