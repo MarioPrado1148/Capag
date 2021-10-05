@@ -394,7 +394,7 @@ if radio == 'Visão cientista de dados':
 		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
 		
 	elif select_event_cientista == 'Métricas de avaliação do modelo':
-		select_radio_metricas = st.sidebar.radio('Selecione as variáveis',['F1 score - treino', 'F1 score - teste'])
+		select_radio_metricas = st.sidebar.radio('Selecione as variáveis',['F1 score - treino', 'F1 score - teste', 'Matriz de Confusão - teste'])
 		if select_radio_metricas == 'F1 score - treino':
 			col1,col2 = st.columns(2)
 			with col1:
@@ -420,4 +420,16 @@ if radio == 'Visão cientista de dados':
 				st.markdown('Verifica-se que o modelo alcançou uma acurácia de 95,36 % para o conjunto de teste, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
 				st.markdown('A acurácia, precision e recall das bases de treino e teste estão próximas, o que mostra que não ocorreu overfitting.')
 			
+		if select_radio_metricas == 'Matriz de Confusão - teste':
+			col1,col2 = st.columns(2)
+			with col1:
+				st.header('F1 score - teste')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/acuracia_previsao_teste.PNG')
+				response = requests.get(url)
+				img1 = Image.open(BytesIO(response.content))
+				st.image(img1)
+			with col2:
+				st.header('Análise')
+				st.markdown('Verifica-se que o modelo alcançou uma acurácia de 95,36 % para o conjunto de teste, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
+				st.markdown('A acurácia, precision e recall das bases de treino e teste estão próximas, o que mostra que não ocorreu overfitting.')
 			
