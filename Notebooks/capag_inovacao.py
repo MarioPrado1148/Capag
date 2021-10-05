@@ -172,16 +172,16 @@ if radio == 'Visão cientista de dados':
 	
 	
 	if select_event_cientista == 'Coleta de Dados':
-		st.markdown('Foram utilizados 2 datasets neste trabalho:')
-		st.markdown('1  Capacidade de Pagamento (CAPAG) dos Municípios')
-		st.markdown('Os dados foram coletados no website da Transparência do Tesouro Nacional, em 16 de setembro de 2021.')
-		st.markdown('Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios')
-		st.markdown('2	PIB e outros indicadores econômicos')
-		st.markdown('Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.')
-		st.markdown('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
-		st.markdown('3  Estimativas sobre dados de população dos municípios em 2018.')
-		st.markdown('Os dados foram coletados na seção de estimativas da população do website do IBGE em 04 de outubro de 2021.')
-		st.markdown('Link: https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html?edicao=17283&t=downloads ')
+		st.markdown('Foram utilizados 3 datasets neste trabalho:')
+		#st.markdown('1  Capacidade de Pagamento (CAPAG) dos Municípios')
+		#st.markdown('Os dados foram coletados no website da Transparência do Tesouro Nacional, em 16 de setembro de 2021.')
+		#st.markdown('Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios')
+		#st.markdown('2	PIB e outros indicadores econômicos')
+		#st.markdown('Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.')
+		#st.markdown('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
+		#st.markdown('3  Estimativas sobre dados de população dos municípios em 2018.')
+		#st.markdown('Os dados foram coletados na seção de estimativas da população do website do IBGE em 04 de outubro de 2021.')
+		#st.markdown('Link: https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html?edicao=17283&t=downloads ')
 		
 		# Imagem
 		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
