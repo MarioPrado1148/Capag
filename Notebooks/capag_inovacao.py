@@ -77,8 +77,8 @@ if radio == 'Visão cidadão':
 		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
-		st.image(img)
-		st.text('Ouro Preto (MG). Carolina Munemasa. Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
+		caption = 'Ouro Preto (MG). Carolina Munemasa. Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021'
+		st.image(img, caption)
 		
 	elif select_event_cidadao == 'Objetivos':
 		texto1 = 'Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado XGBoost com o objetivo de, utilizando as informações disponíveis \
