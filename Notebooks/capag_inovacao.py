@@ -32,6 +32,7 @@ data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/
 
 def load_data():
     data=pd.read_csv(data_url, sep = ',', index_col = 0)
+    data['Capag_real'] = data['Capag_real'].astype(int64)
     return data
 
 df =st.write(load_data())
@@ -65,11 +66,10 @@ data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main
 #predicao = modelo_treinado.predict(X)
 ###############################################################################################
 # Página Principal
-
 st.title('Classificação da capacidade de pagamento dos municípios brasileiros com base em dados geoeconômicos')
-
 st.sidebar.title('Estimação da Capag com Ciências de Dados')
 
+# Menu do side bar
 lista_eventos_radio = ['Visão cidadão', 'Visão cientista de dados']
 radio = st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
 
