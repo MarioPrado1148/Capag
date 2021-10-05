@@ -391,7 +391,7 @@ if radio == 'Visão cientista de dados':
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
 		st.markdown('A matriz de correlação expressa a relação entre as variáveis quantitativas.')
-		st.markdown('O valor mais alto de correlação, em módulo, refere-se à correlação entre as variáveis VAB_Adm/Total e Pib_per_capita. O sinal negativo indica que quando uma aumenta, a outra diminui.')
+		st.markdown('O valor mais alto de correlação, em módulo, refere-se à correlação entre as variáveis Pib_per_capita e Imposto_Prod_Percapita. O sinal positivo indica que quando uma aumenta, a outra também aumenta.')
 		st.markdown('Destaque-se também a forte correlação positiva entre VAB_Indústria/Total e o Pib_per_capita, o que indica que quanto maior a participação da indústria na economia do município, maior o Pib_per_capita.')	    			    
 		st.image(img)
 		
