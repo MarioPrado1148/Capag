@@ -398,8 +398,8 @@ if radio == 'Visão cientista de dados':
 		
 		
 	elif select_event_cientista == 'Dataframe completo':
-		df = df
-		df['Capag_real'] = df['Capag_real'].astype('Int64')
+		#df = df
+		#df['Capag_real'] = df['Capag_real'].astype('Int64')
 		st.dataframe(df)
 		
 		#Imagem
