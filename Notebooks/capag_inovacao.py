@@ -430,7 +430,7 @@ if radio == 'Visão cientista de dados':
 				st.image(img1)
 			with col2:
 				st.header('Análise')
-				st.markdown('Dos 469 municípios da classe 1, 448 foram classificados pelo modelo como 1 e 21 como 0.')
+				st.markdown('Dos 1759 municípios da classe 1, 1652 foram classificados pelo modelo como 1 e 107 como 0.')
 				
 		if select_radio_metricas == 'Matriz de Confusão - teste':
 			col1,col2 = st.columns(2)
