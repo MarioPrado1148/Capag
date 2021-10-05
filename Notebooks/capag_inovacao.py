@@ -30,25 +30,25 @@ pd.options.display.float_format = "{:,.2f}".format
 data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao5.csv')
 @st.cache(persist=True)
 
-#def load_data():
- #   data=pd.read_csv(data_url, sep = ',', index_col = 0)
-  #  return data
+def load_data():
+    data=pd.read_csv(data_url, sep = ',', index_col = 0)
+    return data
 
-#df =load_data()
-df = pd.read_csv(data_url, sep = ',', index_col = 0)
+df =load_data()
+
 
 ########################################################################################
 # Carregamento dos dados
 #df_streamlit_com_previsao_resumido
 data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao_resumido6.csv')
-@st.cache(persist=True)
+#@st.cache(persist=True)
 
 #def load_data_resumido():
  #   data_resumido=pd.read_csv(data_url_resumido, sep = ',', index_col = 0)
   #  return data_resumido
 
 #df_resumido =load_data_resumido()
-df_resumido = pd.read_csv(data_url_resumido, sep = ',', index_col = 0)
+#df_resumido = pd.read_csv(data_url_resumido, sep = ',', index_col = 0)
 
 ###########################################################################################
 #import pickle
