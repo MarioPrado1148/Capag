@@ -146,7 +146,8 @@ if radio == 'Visão cientista de dados':
 				   'Variável Capag (alvo)',
 				   'Análise bivariada',
 				   'Matriz de correlação',
-				   'Dataframe completo'
+				   'Dataframe completo',
+				   'Métricas de avaliação do modelo'
 				   ]
 	select_event_cientista = st.sidebar.selectbox(
 		'Que informações você gostaria de visualizar?',
