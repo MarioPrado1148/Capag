@@ -36,7 +36,6 @@ def load_data():
 
 df =load_data()
 
-
 ########################################################################################
 # Carregamento dos dados
 #df_streamlit_com_previsao_resumido
@@ -44,8 +43,8 @@ data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main
 #@st.cache(persist=True)
 
 def load_data_resumido():
-	data_resumido=pd.read_csv(data_url_resumido, sep = ',', index_col = 0)
-	return data_resumido
+    data_resumido=pd.read_csv(data_url_resumido, sep = ',', index_col = 0)
+    return data_resumido
 
 df_resumido =load_data_resumido()
 
@@ -64,10 +63,11 @@ df_resumido =load_data_resumido()
 #predicao = modelo_treinado.predict(X)
 ###############################################################################################
 # Página Principal
+
 st.title('Classificação da capacidade de pagamento dos municípios brasileiros com base em dados geoeconômicos')
+
 st.sidebar.title('Estimação da Capag com Ciências de Dados')
 
-# Menu do side bar
 lista_eventos_radio = ['Visão cidadão', 'Visão cientista de dados']
 radio = st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
 
@@ -121,7 +121,8 @@ if radio == 'Visão cidadão':
 		df_resumido['Capag_real'] = df_resumido['Capag_real'].astype('Int64')
 		df_municipio_resumido = df_resumido[df_resumido.index==(select_resumido)]
 		st.dataframe(df_municipio_resumido)
-		st.markdown('O valor 0 representa a Capag das classes A e B; indica que o Município pode receber empréstimos com garantia da União. O valor 1 representa as classes C e D.')
+		st.markdown('O valor 0 representa a Capag das classes A e B; indica que o Município pode receber empréstimos com garantia da União.')
+		st.markdown('O valor 1 representa a Capag das classes C e D; indica que o Município não pode receber empréstimos com garantia da União.')
 		
 		
 	elif select_event_cidadao == 'Quem somos':
@@ -170,15 +171,16 @@ if radio == 'Visão cientista de dados':
 	
 	
 	if select_event_cientista == 'Coleta de Dados':
-		st.markdown('Foram utilizados 2 datasets neste trabalho:')
-		st.markdown('1 - Capacidade de Pagamento (CAPAG) dos Municípios')
-		st.text('Arquivo com 5569 linhas e 19 colunas, disponível no formato csv.')
-		st.text('Os dados foram coletados no website da Transparência do Tesouro Nacional, em 16 de setembro de 2021.')
-		st.text('Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios')
-		st.markdown('2.	PIB e outros indicadores econômicos')
-		st.text('Arquivo com 50115 linhas e 43 colunas, disponível no formato xls.')
-		st.text('Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.')
-		st.text('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
+		st.markdown('Foram utilizados 3 datasets neste trabalho:')
+		#st.markdown('1  Capacidade de Pagamento (CAPAG) dos Municípios')
+		#st.markdown('Os dados foram coletados no website da Transparência do Tesouro Nacional, em 16 de setembro de 2021.')
+		#st.markdown('Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios')
+		#st.markdown('2	PIB e outros indicadores econômicos')
+		#st.markdown('Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.')
+		#st.markdown('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
+		#st.markdown('3  Estimativas sobre dados de população dos municípios em 2018.')
+		#st.markdown('Os dados foram coletados na seção de estimativas da população do website do IBGE em 04 de outubro de 2021.')
+		#st.markdown('Link: https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html?edicao=17283&t=downloads ')
 		
 		# Imagem
 		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
@@ -384,17 +386,19 @@ if radio == 'Visão cientista de dados':
 
 		
 	elif select_event_cientista == 'Matriz de correlação':
-		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix4.jpg')
+		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix5.jpg')
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
 		st.markdown('A matriz de correlação expressa a relação entre as variáveis quantitativas.')
-		st.markdown('O valor mais alto de correlação, em módulo, refere-se à correlação entre as variáveis VAB_Adm/Total e Pib_per_capita. O sinal negativo indica que quando uma aumenta, a outra diminui.')
+		st.markdown('O valor mais alto de correlação, em módulo, refere-se à correlação entre as variáveis Pib_per_capita e Imposto_Prod_Percapita. O sinal positivo indica que quando uma aumenta, a outra também aumenta.')
 		st.markdown('Destaque-se também a forte correlação positiva entre VAB_Indústria/Total e o Pib_per_capita, o que indica que quanto maior a participação da indústria na economia do município, maior o Pib_per_capita.')	    			    
 		st.image(img)
 		
 		
 		
 	elif select_event_cientista == 'Dataframe completo':
+		#df = df
+		#df['Capag_real'] = df['Capag_real'].astype('Int64')
 		st.dataframe(df)
 		
 		#Imagem
@@ -405,4 +409,3 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Aspectos técnicos':
 		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
 	 
-
