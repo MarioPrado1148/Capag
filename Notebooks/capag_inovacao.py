@@ -28,11 +28,11 @@ pd.options.display.float_format = "{:,.2f}".format
 # Carregamento dos dados
 #df_streamlit_com_previsao
 data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao5.csv')
-@st.cache(persist=True)
+#@st.cache(persist=True)
 
 def load_data():
-    st.write(data=pd.read_csv(data_url, sep = ',', index_col = 0))
-    st.write(return data)
+    data=pd.read_csv(data_url, sep = ',', index_col = 0)
+    return data
 
 df =st.write(load_data())
 
