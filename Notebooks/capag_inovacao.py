@@ -398,7 +398,7 @@ if radio == 'Visão cientista de dados':
 		if select_radio_metricas == 'F1 score - treino':
 			col1,col2 = st.columns(2)
 		with col1:
-			st.header('Variável PIB_per_capita')
+			st.header('F1 score - treino')
 			url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/acuracia_previsao_treino.PNG')
 			response = requests.get(url)
 			img1 = Image.open(BytesIO(response.content))
@@ -407,6 +407,16 @@ if radio == 'Visão cientista de dados':
 			st.header('Análise')
 			st.markdown('Verifica-se que o modelo alcançou uma acurácia de 95 % para o conjunto de treino, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
 			
-			
+		if select_radio_metricas == 'F1 score - teste':
+			col1,col2 = st.columns(2)
+		with col1:
+			st.header('F1 score - teste')
+			url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/acuracia_previsao_teste.PNG')
+			response = requests.get(url)
+			img1 = Image.open(BytesIO(response.content))
+			st.image(img1)
+		with col2:
+			st.header('Análise')
+			st.markdown('Verifica-se que o modelo alcançou uma acurácia de 95 % para o conjunto de teste, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
 			
 			
