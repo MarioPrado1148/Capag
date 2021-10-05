@@ -34,7 +34,7 @@ def load_data():
     data=pd.read_csv(data_url, sep = ',', index_col = 0)
     return data
 
-df =st.write(load_data())
+df =load_data()
 
 
 ########################################################################################
