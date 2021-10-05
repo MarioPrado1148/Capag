@@ -85,8 +85,7 @@ if radio == 'Visão cidadão':
 		sobre os municípios brasileiros, estimar a capacidade de pagamento (Capag) dos municípios e compará-las com a Capag constante do site da Secretaria do Tesouro Nacional\
 		(STN), quando disponível.'
 		st.markdown(texto1)
-		st.markdown('Esse modelo utilizou apenas as variáveis geoeconômicas para estimar a Capag dos municípios para os quais esta não foi calculada pelo órgão classificador.')
-		st.markdown('Entende-se que é uma solução embrionária. Possuindo o órgão classificador outras variáveis úteis ao cálculo, as features utilizadas na solução proposta poderiam ser utilizadas em caráter suplementar, subsidiário na estimação.')
+		st.markdown('Entende-se que é uma solução embrionária. Possuindo o órgão classificador outras variáveis úteis ao cálculo, as variáveis utilizadas na solução proposta poderiam ser utilizadas em caráter suplementar, subsidiário na estimação.')
 		
 	elif select_event_cidadao == 'Capag - Visão detalhada':
 		# st.sidebar.checkbox("Visualizar análises por município", True, key=1)
