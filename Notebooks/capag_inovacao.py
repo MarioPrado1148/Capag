@@ -423,8 +423,8 @@ if radio == 'Visão cientista de dados':
 		if select_radio_metricas == 'Matriz de Confusão - treino':
 			col1,col2 = st.columns(2)
 			with col1:
-				st.header('Matriz de confusão - teste')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/matriz_confusao_teste.PNG')
+				st.header('Matriz de confusão - treino')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/matriz_confusao_treino.PNG')
 				response = requests.get(url)
 				img1 = Image.open(BytesIO(response.content))
 				st.image(img1)
