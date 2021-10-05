@@ -31,10 +31,10 @@ data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/
 @st.cache(persist=True)
 
 def load_data():
-    data=pd.read_csv(data_url, sep = ',', index_col = 0)
-    return data
+    st.write(data=pd.read_csv(data_url, sep = ',', index_col = 0)
+    return data)
 
-df =load_data()
+df =st.write(load_data())
 
 
 ########################################################################################
