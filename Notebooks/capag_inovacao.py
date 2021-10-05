@@ -28,7 +28,7 @@ pd.options.display.float_format = "{:,.2f}".format
 ########################################################################################
 # Carregamento dos dados
 #df_streamlit_com_previsao
-data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao.csv')
+data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao5.csv')
 @st.cache(persist=True)
 
 def load_data():
@@ -40,7 +40,7 @@ df =load_data()
 ########################################################################################
 # Carregamento dos dados
 #df_streamlit_com_previsao_resumido
-data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao_resumido.csv')
+data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao_resumido5.csv')
 @st.cache(persist=True)
 
 def load_data_resumido():
