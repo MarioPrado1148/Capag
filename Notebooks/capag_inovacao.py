@@ -48,26 +48,11 @@ def load_data_resumido():
 
 df_resumido =load_data_resumido()
 
-###########################################################################################
-#import pickle
-#def load_model(model):
-#	loaded_model = pickle.load(model)
-#	return loaded_model
-#model ='https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Models/modelo_randomizedsearch_xgboost_capag.pkl'
-#modelo_treinado = load_model(model)
-#modelo_treinado = pickle.load(open('modelo_randomizedsearch_xgboost_capag.pkl', 'rb'))
-#pickle_file = open(modelo_randomizedsearch_xgboost_capag.pkl)
-#modelo_treinado = pickle.load(pickle_file)
-#X, y = df.drop(['Capag'], axis = 1), df['Capag']
-#X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = .2, random_state = 42)
-#predicao = modelo_treinado.predict(X)
-###############################################################################################
 # Página Principal
-
 st.title('Classificação da capacidade de pagamento dos municípios brasileiros com base em dados geoeconômicos')
 
+# Menu da sidebar
 st.sidebar.title('Estimação da Capag com Ciências de Dados')
-
 lista_eventos_radio = ['Visão cidadão', 'Visão cientista de dados']
 radio = st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
 
@@ -93,8 +78,7 @@ if radio == 'Visão cidadão':
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
 		st.image(img)
-		st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
-		st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
+		st.text('Ouro Preto (MG). Carolina Munemasa. Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
 		
 	elif select_event_cidadao == 'Objetivos':
 		texto1 = 'Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado XGBoost com o objetivo de, utilizando as informações disponíveis \
