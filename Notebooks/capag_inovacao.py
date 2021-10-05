@@ -403,6 +403,9 @@ if radio == 'Visão cientista de dados':
 			response = requests.get(url)
 			img1 = Image.open(BytesIO(response.content))
 			st.image(img1)
+		with col2:
+			st.header('Análise')
+			st.markdown('Verifica-se que o modelo alcançou uma acurácia de 95 % para o conjunto de treino, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
 			
 			
 			
