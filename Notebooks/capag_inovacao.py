@@ -221,7 +221,7 @@ if radio == 'Visão cientista de dados':
 				st.header('Análise') 
 				st.markdown('A variável PIB_per_capita expressa o valor médio do PIB, em reais.')
 				st.markdown('Verifica-se que quase todos os municípios possuem PIB per capita inferior a R$ 50.000,00.')
-				st.markdown('Há presença de outliers superiores, caracterizados pelos pontos acima do traço vertical superior.')
+				st.markdown('Há presença de outliers superiores, que são valores discrepantes em relação aos demais, caracterizados pelos pontos acima do traço vertical superior.')
 				
 		
 		if select_radio_quanti == 'VAB_Agricultura/Total':
