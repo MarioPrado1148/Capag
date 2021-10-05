@@ -24,22 +24,35 @@ sns.set_style('darkgrid')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 pd.options.display.float_format = "{:,.2f}".format
 
+########################################################################################
 # Carregamento dos dados
-data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Datasets/df_streamlit_com_previsao.csv')
-@st.cache(persist=True)
+#df_streamlit_com_previsao
+data_url =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao5.csv')
+#@st.cache(persist=True)
 
 def load_data():
-    data=pd.read_csv(data_url, sep = ';', index_col = 0)
+    data=pd.read_csv(data_url, sep = ',', index_col = 0)
     return data
 
 df =load_data()
 
-# Página Principal
+########################################################################################
+# Carregamento dos dados
+#df_streamlit_com_previsao_resumido
+data_url_resumido =('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Dataset/df_streamlit_com_previsao_resumido6.csv')
+#@st.cache(persist=True)
 
+def load_data_resumido():
+    data_resumido=pd.read_csv(data_url_resumido, sep = ',', index_col = 0)
+    return data_resumido
+
+df_resumido =load_data_resumido()
+
+# Página Principal
 st.title('Classificação da capacidade de pagamento dos municípios brasileiros com base em dados geoeconômicos')
 
+# Menu da sidebar
 st.sidebar.title('Estimação da Capag com Ciências de Dados')
-
 lista_eventos_radio = ['Visão cidadão', 'Visão cientista de dados']
 radio = st.sidebar.radio('Escolha sua Visão',lista_eventos_radio)
 
@@ -53,83 +66,111 @@ if radio == 'Visão cidadão':
 	select_event_cidadao = st.sidebar.selectbox(
 		'Que informações você gostaria de visualizar?',
 		lista_eventos_cidadao)
+	# Imagem
+	#url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/digitalmarketing.jpg')
+	#response = requests.get(url2)
+	#img2 = Image.open(BytesIO(response.content))
+	#st.sidebar.image(img2)
+	
 	
 	if select_event_cidadao == 'Apresentação':
 		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
-		st.image(img)
-		st.text('Fotografia de Ouro Preto (MG). Autoria de Carolina Munemasa.')
-		st.text('Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021')
+		caption = 'Ouro Preto (MG). Carolina Munemasa. Fonte: https://unsplash.com/s/photos/ouro-preto. Consultado em 09/09/2021'
+		st.image(img, caption)
+		
 	elif select_event_cidadao == 'Objetivos':
-		texto1 = 'Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado Gradient Boosting com o objetivo de, utilizando as informações disponíveis \
+		texto1 = 'Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado XGBoost com o objetivo de, utilizando as informações geoeconômicas disponíveis \
 		sobre os municípios brasileiros, estimar a capacidade de pagamento (Capag) dos municípios e compará-las com a Capag constante do site da Secretaria do Tesouro Nacional\
 		(STN), quando disponível.'
 		st.markdown(texto1)
-		#st.markdown(f"<h2 style='text-align: justify;'><b>{texto}</b></h2>", unsafe_allow_html=True)
-		#st.markdown(f"<h5 style='text-align: justify;'>{texto1}</h5>", unsafe_allow_html=True)
-		#st.markdown(f"<p style='text-align: justify;'>{texto1}</p>", unsafe_allow_html=True)
+		st.markdown('Entende-se que é uma solução embrionária. Possuindo o órgão classificador outras variáveis úteis ao cálculo, as variáveis utilizadas na solução proposta poderiam ser utilizadas em caráter suplementar, subsidiário na estimação.')
 		
 	elif select_event_cidadao == 'Capag - Visão detalhada':
 		# st.sidebar.checkbox("Visualizar análises por município", True, key=1)
 		lista_municipios = pd.Series(list(set(df['Município']))).sort_values()
 		select = st.sidebar.selectbox('município', lista_municipios)
 		df = df.set_index('Município')
-		df['CLASS_CAPAG_real'] = df['CLASS_CAPAG_real'].astype('Int64')
+		df['Capag_real'] = df['Capag_real'].astype('Int64')
 		df_municipio = df[df.index==(select)]
 		st.dataframe(df_municipio)
-		st.text('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem.')
-		st.text('Dessa forma, você conseguirá visualizar todas as variáveis')
+		st.markdown('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem. Dessa forma, você conseguirá visualizar todas as variáveis')
+		
+	elif select_event_cidadao == 'Capag - Visão resumida':
+		lista_municipios_resumido = pd.Series(list(set(df_resumido['Município']))).sort_values()
+		select_resumido = st.sidebar.selectbox('município', lista_municipios_resumido)
+		df_resumido = df_resumido.set_index('Município')
+		df_resumido['Capag_real'] = df_resumido['Capag_real'].astype('Int64')
+		df_municipio_resumido = df_resumido[df_resumido.index==(select_resumido)]
+		st.dataframe(df_municipio_resumido)
+		st.markdown('O valor 0 representa a Capag das classes A e B; indica que o Município pode receber empréstimos com garantia da União.')
+		st.markdown('O valor 1 representa a Capag das classes C e D; indica que o Município não pode receber empréstimos com garantia da União.')
+		
+		
 	elif select_event_cidadao == 'Quem somos':
 		st.markdown('Camila Fátima Maia Marques é esposa do Breno, mãe da Malu e da Bebela, médica, analista-tributário da Receita Federal, especialista em Ciência de Dados e Big Data pela Puc Minas.')
-		st.markdown('Mario José Calvão Monnerat do Prado é esposo de Roxana, pai da Nicole, auditor-fiscal da Receita Federal, formado pela FIA/USP nos cursos de Data Mining e MBA em Analytics e Inteligência Artificial, estudante na pós-graduação em Direito Tributário e Compliance pela Universidade Católica de Brasília. Atualmente é supervisor do Laboratório de Inovação da SRRF08 da Receita Federal do Brasil')
+		st.markdown('Mario José Calvão Monnerat do Prado é esposo de Roxana, pai da Nicole, auditor-fiscal da Receita Federal, formado pela FIA/USP nos cursos de Data Mining e MBA em Analytics e Inteligência Artificial, estudante na pós-graduação em Direito Tributário e Compliance pela Universidade Católica de Brasília. Atualmente é supervisor do Laboratório de Inovação da SRRF08 da Receita Federal do Brasil.')
 		st.markdown('Reinaldo da Cruz Castro é esposo de Elízia; pai de João Pedro e Luís Felipe; auditor-fiscal da Receita Federal, especialista em Direito Tributário pelo IBET, formado em Data Mining pela FIA/USP, especialista em Big Data e Ciência de Dados pela Puc Minas e estudante de Teologia pela Uninter. Atualmente é supervisor do Laboratório de Inovação da SRRF08 da Receita Federal do Brasil.')
     		
 	elif select_event_cidadao == 'Contextualização':
 		st.markdown('A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem \
 		contrair novos empréstimos com garantia da União. Esta classificação é um indicador de saúde econômica e fiscal dos municípios.')
 		st.markdown('O intuito da CAPAG é apresentar, de forma simples e transparente, se um novo endividamento representa risco de crédito para o Tesouro Nacional.\
-		Assim, um ente bem avaliado pelo Tesouro Nacional poderá acessar empréstimos com juros mais baixos, por contar com a União como seu garantidor.\
-		Se, por algum motivo, o ente não puder honrar o pagamento da dívida, a União é quem terá que assumir o pagamento. A metodologia da CAPAG,\
-		fruto de um aprimoramento da metodologia já usada anteriormente, foi elaborada pelo Tesouro Nacional, com apoio do Banco Mundial. O cálculo da CAPAG, \
-		além de sintetizar essa situação fiscal em uma simples nota, possibilita a comparação entre os entes, com base em metodologia e informações conhecidas\
-		e padronizadas. Corresponde a um serviço similar ao prestado pelas agências de classificação de risco de crédito. A própria STN passou a calcular e divulgar\
-		as notas de modo regular, independentemente da existência de pedidos de aval ou garantia para operações de crédito. Enfim, trata-se de uma informação bastante útil\
-		para os que buscam melhor compreender as finanças dos entes subnacionais.')
-		st.markdown('Obter uma boa classificação da CAPAG é muito importante para os municípios, pois:')
+		Assim, um ente bem avaliado pelo Tesouro Nacional poderá acessar empréstimos com juros mais baixos, por contar com a União como seu garantidor.')
+		st.markdown('A metodologia da CAPAG foi elaborada pelo Tesouro Nacional, com apoio do Banco Mundial e possibilita a comparação entre os entes federados, \
+		com base em metodologia e informações conhecidas e padronizadas. Corresponde a um serviço similar ao prestado pelas agências de classificação de risco de crédito.\
+		A própria STN passou a calcular e divulgar as notas de modo regular, independentemente da existência de pedidos de aval ou garantia para operações de crédito. Enfim, trata-se de uma informação bastante útil para os que buscam melhor compreender as finanças dos entes subnacionais.')
+		st.markdown('Uma boa classificação da CAPAG é muito importante para os municípios, pois:')
 		st.markdown('1) ao obter este reconhecimento por parte do Tesouro Nacional, o município obtém a garantia da União para contrair empréstimos; tendo a União como garantidor, o município pode obter melhores condições de financiamento.')
-		st.markdown('2) licitações a preços mais vantajosos: empresas privadas podem utilizar a classificação CAPAG como um dos indicadores na tomada de decisão sobre participar ou não de um certame. O município, tendo uma boa capacidade de pagamento, pode atrair mais participantes para suas licitações e, consequentemente, propostas mais vantajosas economicamente.')
-		st.markdown('3) a boa classificação de risco facilita a atração de empreendimentos e de investimentos privados para o município, pois reflete a boa saúde econômica e fiscal do ente. A classificação CAPAG pode ser um indicador a ser considerado pelos empresários e pelos investidores na tomada de decisão sobre onde abrir negócios ou investir dinheiro.')
-		st.markdown('O objetivo da CAPAG é apresentar, de forma simples e transparente, os dados sobre a saúde financeira e fiscal dos municípios e é, conforme descrito acima, de grande interesse público e privado.')
+		st.markdown('2) podem realizar licitações a preços mais vantajosos: empresas privadas podem utilizar a classificação CAPAG como um dos indicadores na tomada de decisão sobre\
+		participar ou não de um certame. O município, tendo uma boa capacidade de pagamento, pode atrair mais participantes para suas licitações e, consequentemente,\
+		propostas mais vantajosas economicamente para a coletividade.')
+		st.markdown('3) a boa classificação de risco facilita a atração de empreendimentos e de investimentos privados para o município, pois reflete a boa saúde econômica e\
+		fiscal do ente. A classificação CAPAG pode ser um indicador a ser considerado pelos empresários e pelos investidores na tomada de decisão sobre onde abrir negócios ou \
+		investir dinheiro.')
 		st.markdown('A CAPAG pode ter os valores A, B, C e D.')
-		st.markdown('O ente que possuir classificação "A" ou "B" é elegível à contratação de garantias da União em seus financiamentos. Os demais conceitos ("C” e "D”) são um sinal de que a situação fiscal e financeira do município não lhe permite realizar operações de crédito..')
-		st.markdown('Para o algoritmo nesse estudo, as notas C e D estão representadas por "1" e as notas A e B, por "0"; destarte, o conceito 1 indica má situação fiscal e financeira, o conceito 0, que o ente está apto à contratação de garantias.')
-		st.markdown('O trabalho sobre a classificação de pagamentos dos municípios brasileiros (CAPAG) foi feito, originariamente, como códigos e dissertação para o Trabalho de Conclusão de Curso de Camila em sua pós-graduação de Big Data/Data Science.')
-		st.markdown('Para participar do Prêmio Tesouro Nacional, nós adaptamos os códigos para a plataforma streamlit, o que proporcionou que mais pessoas tivessem acesso a este conhecimento tão importante sobre os municípios brasileiros.')
+		st.markdown('O ente que possuir classificação "A" ou "B" é elegível à contratação de garantias da União em seus financiamentos. Os demais conceitos ("C” e "D”)\
+		são um sinal de que a situação fiscal e financeira do município não lhe permite realizar operações de crédito com garantia da União.')
+		st.markdown('Para o algoritmo nesse estudo, as notas C e D estão representadas por "1" e as notas A e B, por "0"; destarte, o conceito 1 indica má situação fiscal\
+		e financeira, o conceito 0, que o ente está apto à contratação de garantias.')
+		st.markdown('O trabalho sobre a classificação de pagamentos dos municípios brasileiros (CAPAG) foi feito, originariamente, como códigos e dissertação para o \
+		Trabalho de Conclusão de Curso de Camila, da equipe de autores desta proposta de solução, em sua pós-graduação em Ciência de Dados e Big Data.')
+		st.markdown('Para participar do Prêmio Tesouro Nacional, evoluímos o modelo e adaptamos os códigos para a plataforma streamlit, com o intuito de que mais pessoas tivessem acesso \
+			    a este conhecimento tão importante sobre os municípios brasileiros.')
 
 if radio == 'Visão cientista de dados':
 	lista_eventos_cientista = ['Coleta de Dados',
 				   'Análise das variáveis qualitativas',
 				   'Análise das variáveis quantitativas',
-				   'Variável CLASS_CAPAG (alvo)',
+				   'Variável Capag (alvo)',
 				   'Análise bivariada',
 				   'Matriz de correlação',
 				   'Dataframe completo',
-				   'Aspectos técnicos']
+				   'Métricas de avaliação do modelo'
+				   ]
 	select_event_cientista = st.sidebar.selectbox(
 		'Que informações você gostaria de visualizar?',
 		lista_eventos_cientista)
 	
+	
 	if select_event_cientista == 'Coleta de Dados':
-		st.markdown('Foram utilizados 2 datasets neste trabalho:')
-		st.markdown('1 - Capacidade de Pagamento (CAPAG) dos Municípios')
-		st.text('Arquivo com 5569 linhas e 11 colunas, disponível no formato csv.')
-		st.text('Os dados foram coletados no website da Transparência do Tesouro Nacional 1, em janeiro de 2021.')
-		st.text('Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios')
-		st.markdown('2.	PIB e outros indicadores econômicos')
-		st.text('Arquivo com 50115 linhas e 43 colunas, disponível no formato xls.')
-		st.text('Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.')
-		st.text('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
+		st.markdown('Foram utilizados 3 datasets neste trabalho:')
+		st.markdown('1  Capacidade de Pagamento (CAPAG) dos Municípios')
+		st.markdown('Os dados foram coletados no website da Transparência do Tesouro Nacional, em 16 de setembro de 2021.')
+		st.markdown('Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios')
+		st.markdown('2	PIB e outros indicadores econômicos')
+		st.markdown('Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.')
+		st.markdown('Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados')
+		st.markdown('3  Estimativas sobre dados de população dos municípios em 2018.')
+		st.markdown('Os dados foram coletados na seção de estimativas da população do website do IBGE em 04 de outubro de 2021.')
+		st.markdown('Link: https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html?edicao=17283&t=downloads ')
+		
+		# Imagem
+		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
+		response = requests.get(url2)
+		img2 = Image.open(BytesIO(response.content))
+		st.sidebar.image(img2)
 
 	elif select_event_cientista == 'Análise das variáveis qualitativas':	
 		select_radio_quali = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana', 'Mun_Reg_Geog_Imediata'])
@@ -142,7 +183,7 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 				st.header('Análise') 			
 				st.markdown('Verifica-se que há mais municípios na Região Nordeste, seguida de perto pela Região Sudeste.')
-		
+					
 		elif select_radio_quali == 'Região Metropolitana':
 			col1, col2 = st.columns(2)
 			with col1:
@@ -166,24 +207,23 @@ if radio == 'Visão cientista de dados':
 				
 					    
 	elif select_event_cientista == 'Análise das variáveis quantitativas':
-		select_radio_quanti = st.sidebar.radio('Selecione a variável',['PIB percentual', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total'])
-		if select_radio_quanti == 'PIB percentual':
+		select_radio_quanti = st.sidebar.radio('Selecione a variável',['PIB_per_capita', 'VAB_Agricultura/Total','VAB_Indústria/Total','VAB_Serviço/Total','VAB_Adm/Total'])
+		if select_radio_quanti == 'PIB_per_capita':
 			
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variável Pib Percentual')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_PIB_PERC.jpg')
+				st.header('Variável PIB_per_capita')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_PIB_per_capita.jpg')
 				response = requests.get(url)
 				img1 = Image.open(BytesIO(response.content))
 				st.image(img1)
-				#fig = px.box(df, y = 'PIB_PERC')
-				#fig.update_layout(height=400, width = 400)
-				#st.plotly_chart(fig,height=400)
+				
 			with col2: 
 				st.header('Análise') 
-				st.markdown('A variável PIB_PERC expressa o Pib Per Capital, medido em reais.')
+				st.markdown('A variável PIB_per_capita expressa o valor médio do PIB, em reais.')
 				st.markdown('Verifica-se que quase todos os municípios possuem PIB per capita inferior a R$ 50.000,00.')
-				st.markdown('Há presença de outliers superiores, caracterizados pelos pontos acima do traço vertical superior.')
+				st.markdown('Há presença de outliers superiores, que são valores discrepantes em relação aos demais, caracterizados pelos pontos acima do traço vertical superior.')
+				
 		
 		if select_radio_quanti == 'VAB_Agricultura/Total':
 			
@@ -198,8 +238,8 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 				st.header('Análise') 
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pela Agricultura e o total dos Valores Agregados pela Economia.')
-				st.markdown('Até 50 % dos municípios possuem VAB_Agricultura/Total inferior a 20 % do total.')
-				st.markdown('Constata-se a presença de outliers, que são valores disprepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
+				st.markdown('Até 50 % dos municípios possuem VAB_Agricultura/Total inferior a 20 %.')
+				st.markdown('Constata-se a presença de outliers, que são valores discrepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
 				
 		
 		if select_radio_quanti == 'VAB_Indústria/Total':
@@ -214,8 +254,8 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 				st.header('Análise') 
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pela Indústria e o total dos Valores Agregados pela Economia.')
-				st.markdown('Até 50 % dos municípios possuem VAB_Indústria/Total inferior a 10 % do total.')
-				st.markdown('Constata-se a presença de outliers, que são valores disprepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
+				st.markdown('Até 50 % dos municípios possuem VAB_Indústria/Total inferior a 10 %.')
+				st.markdown('Constata-se a presença de outliers, que são valores discrepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
 				
 		
 		if select_radio_quanti == 'VAB_Serviço/Total':
@@ -229,10 +269,9 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 				st.header('Análise') 
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pelo setor de Serviços e o total dos Valores Agregados pela Economia.')
-				st.markdown('Até 50 % dos municípios possuem VAB_Serviço/Total inferior a 30 % do total.')
-				st.markdown('Constata-se a presença de outliers, que são valores disprepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
-				
-		
+				st.markdown('Até 50 % dos municípios possuem VAB_Serviço/Total inferior a 30 %.')
+				st.markdown('Constata-se a presença de outliers, que são valores discrepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superior.')
+					
 		if select_radio_quanti == 'VAB_Adm/Total':
 			
 			col1, col2 = st.columns(2)
@@ -245,107 +284,163 @@ if radio == 'Visão cientista de dados':
 			with col2: 
 				st.header('Análise') 
 				st.markdown('Esta variável expressa a razão entre o Valor Agregado pelo setor de Administração, Defesa, Educação e Saúde Públicas e Seguridade Social (VAB_Adm) e o total dos Valores Agregados pela Economia.')
-				st.markdown('Até 50 % dos municípios possuem VAB_Adm/Total inferior a 30 % do total.')
+				st.markdown('Até 50 % dos municípios possuem VAB_Adm/Total inferior a 30 %.')
 				st.markdown('Não se verifica a presença de outliers (valores discrepantes).')
-	elif select_event_cientista == 'Variável CLASS_CAPAG (alvo)':
+	elif select_event_cientista == 'Variável Capag (alvo)':
 		col1, col2 = st.columns(2)
 		with col1:
-			st.header('Variável CLASS_CAPAG')
-			sns.countplot(x = "CLASS_CAPAG_real", data = df).set_ylabel('Quantidade')
-			st.pyplot()
+			st.header('Variável Capag')
+			url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/graf_barros_capag.jpg')
+			response = requests.get(url)
+			img7 = Image.open(BytesIO(response.content))
+			st.image(img7)
 
 		with col2: 
 			st.header('Análise')
-			st.markdown('O valor 1 indica que o município não possui capacidade de pagamento; o valor 0 indica o oposto')	
-			st.markdown('Verifica-se que o quantitativo de municípios que não possuem capacidade de pagamento é maior do que o quantitativo de municípios que possuem capacidade de pagamento.')
+			st.markdown('O valor 0 indica que o município possui Capag A ou B segundo o cálculo oficial da Secretaria do Tesouro Nacional (STN); o valor 1 indica Capag C ou D.')	
+			st.markdown('Verifica-se que o quantitativo de municípios com Capag A ou B é ligeiramente menor do que o número de municípios que possuem Capag C ou D.')
+			st.markdown('Destaque-se que há 1.152 municípios para os quais não há Capag calculado pela STN, os quais não estão representados no gráfico.')
 		
 	elif select_event_cientista == 'Análise bivariada':
-		select_radio_bivariada = st.sidebar.radio('Selecione as variáveis',['CLASS_CAPAG x PIB_PERC','CLASS_CAPAG x VAB_Agricultura/Total',
-										   'CLASS_CAPAG x VAB_Indústria/Total','CLASS_CAPAG x VAB_Serviço/Total',
-										   'CLASS_CAPAG x VAB_Adm/Total'])
-		if select_radio_bivariada == 'CLASS_CAPAG x PIB_PERC':
+		select_radio_bivariada = st.sidebar.radio('Selecione as variáveis',['Capag x PIB_per_capita','Capag x VAB_Agricultura/Total',
+										   'Capag x VAB_Indústria/Total','Capag x VAB_Serviço/Total',
+										   'Capag x VAB_Adm/Total'])
+		
+			
+		if select_radio_bivariada == 'Capag x PIB_per_capita':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis CLASS_CAPAG x PIB_PERC')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_PIB_PERC.jpg')
+				st.header('Variáveis Capag x PIB_per_capita')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_PIB__per_capita.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('')
-		if select_radio_bivariada == 'CLASS_CAPAG x VAB_Agricultura/Total':
+				st.markdown('Verifica-se que a mediana do PIB dos municípios com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D (representadas pelo valor 1).');
+				st.markdown('Há mais outliers superiores (valores muito grandes, que se destacam dos demais), para os municípios das classes A e B.')
+		if select_radio_bivariada == 'Capag x VAB_Agricultura/Total':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis CLASS_CAPAG x VAB_Agricultura/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Agricultura_Total.jpg')
+				st.header('Variáveis Capag x VAB_Agricultura/Total')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_VAB_Agricultura_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('')
-		if select_radio_bivariada == 'CLASS_CAPAG x VAB_Indústria/Total':
+				st.markdown('Observa-se que a mediana do VAB_Agricultura/Total com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D (representadas pelo valor 1).')
+				st.markdown('Há mais outliers superiores (valores muito grandes, que se destacam dos demais), para os municípios das classes C e D')
+		if select_radio_bivariada == 'Capag x VAB_Indústria/Total':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis CLASS_CAPAG x VAB_Indústria/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Indústria_Total.jpg')
+				st.header('Variáveis Capag x VAB_Indústria/Total')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_VAB_Indústria_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('')
-		if select_radio_bivariada == 'CLASS_CAPAG x VAB_Serviço/Total':
+				st.markdown('Observa-se que a mediana do VAB_Indústria/Total dos municípios com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D (representadas pelo valor 1).')
+				st.markdown('Há mais outliers superiores (valores muito grandes, que se destacam dos demais), para os municípios das classes C e D.')
+		if select_radio_bivariada == 'Capag x VAB_Serviço/Total':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis CLASS_CAPAG x VAB_Serviço/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Serviço_Total.jpg')
+				st.header('Variáveis Capag x VAB_Serviço/Total')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_VAB_Serviço_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('')
-		if select_radio_bivariada == 'CLASS_CAPAG x VAB_Adm/Total':
+				st.markdown('Observa-se que a mediana do VAB_Serviço/Total dos municípios com Capag classes A e B (representadas pelo valor 0) é superior à mediana dos municípios com Capag  nas classe C e D (representadas pelo valor 1).')
+				st.markdown('Há mais outliers superiores (valores muito grandes, que se destacam dos demais), para os municípios das classes C e D.')
+		if select_radio_bivariada == 'Capag x VAB_Adm/Total':
 			col1, col2 = st.columns(2)
 			with col1:
-				st.header('Variáveis CLASS_CAPAG x VAB_Adm/Total')
-				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_CLASS_CAPAG_X_VAB_Adm_Total.jpg')
+				st.header('Variáveis Capag x VAB_Adm/Total')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_Capag_X_VAB_Adm_Total.jpg')
 				response = requests.get(url)
 				img6 = Image.open(BytesIO(response.content))
 				st.image(img6)
 			with col2: 
 				st.header('Análise') 			
-				st.markdown('')		
+				st.markdown('Observa-se que a mediana do VAB_Adm/Total dos municípios com Capag classes C e D (representadas pelo valor 1) é superior à mediana dos municípios com Capag  nas classe A e B  (representadas pelo valor 0).')
+				st.markdown('Há mais outliers superiores (valores muito grandes, que se destacam dos demais), para os municípios das classes C e D.')
 
 		
 	elif select_event_cientista == 'Matriz de correlação':
-		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix3.jpg')
+		url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/corr_matrix5.jpg')
 		response = requests.get(url)
 		img = Image.open(BytesIO(response.content))
 		st.markdown('A matriz de correlação expressa a relação entre as variáveis quantitativas.')
-		st.markdown('O valor mais alto de correlação, em módulo, refere-se à correlação entre as variáveis VAB_Adm/Total e PIB_PERC. O sinal negativo indica que quando uma aumenta, a outra diminui.')
-		st.markdown('Ainda que seja considerada uma correlação forte, decidimos manter ambas as variáveis no modelo.')	    			    
+		st.markdown('O valor mais alto de correlação, em módulo, refere-se à correlação entre as variáveis Pib_per_capita e Imposto_Prod_Percapita. O sinal positivo indica que quando uma aumenta, a outra também aumenta.')
+		st.markdown('Destaque-se também a forte correlação positiva entre VAB_Indústria/Total e o Pib_per_capita, o que indica que quanto maior a participação da indústria na economia do município, maior o Pib_per_capita.')	    			    
 		st.image(img)
 		
-		
-		
+				
 	elif select_event_cientista == 'Dataframe completo':
+		df = df
+		df['Capag_real'] = df['Capag_real'].astype('Int64')
 		st.dataframe(df)
+		
+		#Imagem
+		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
+		response = requests.get(url2)
+		img2 = Image.open(BytesIO(response.content))
+		st.sidebar.image(img2)
+		
 	elif select_event_cientista == 'Aspectos técnicos':
 		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
-	
-
-
-	
-
-			   
-#lista_eventos_projeto_capag = ['Apresentação','Contextualização','Objetivos','Coleta de Dados','Quem somos nós']
-#select_event_capag = st.sidebar.selectbox('Selecione um evento.', lista_eventos_projeto_capag)
-
-#url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/carolina-munemasa-FYBJgygqCzM-unsplash_Ouro_Preto.jpg')
-#response = requests.get(url)
-#img = Image.open(BytesIO(response.content))
-#st.sidebar.image(img, use_column_width = True)
-
+		
+	elif select_event_cientista == 'Métricas de avaliação do modelo':
+		select_radio_metricas = st.sidebar.radio('Selecione as variáveis',['F1 score - treino', 'F1 score - teste',  'Matriz de Confusão - treino', 'Matriz de Confusão - teste'])
+		if select_radio_metricas == 'F1 score - treino':
+			col1,col2 = st.columns(2)
+			with col1:
+				st.header('F1 score - treino')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/acuracia_previsao_treino.PNG')
+				response = requests.get(url)
+				img1 = Image.open(BytesIO(response.content))
+				st.image(img1)
+			with col2:
+				st.header('Análise')
+				st.markdown('Verifica-se que o modelo alcançou uma acurácia de 94,59 % para o conjunto de treino, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
+			
+		if select_radio_metricas == 'F1 score - teste':
+			col1,col2 = st.columns(2)
+			with col1:
+				st.header('F1 score - teste')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/acuracia_previsao_teste.PNG')
+				response = requests.get(url)
+				img1 = Image.open(BytesIO(response.content))
+				st.image(img1)
+			with col2:
+				st.header('Análise')
+				st.markdown('Verifica-se que o modelo alcançou uma acurácia de 95,36 % para o conjunto de teste, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
+				st.markdown('A acurácia, precision e recall das bases de treino e teste estão próximas, o que mostra que não ocorreu overfitting.')
+			
+		if select_radio_metricas == 'Matriz de Confusão - treino':
+			col1,col2 = st.columns(2)
+			with col1:
+				st.header('Matriz de confusão - treino')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/matriz_confusao_treino.PNG')
+				response = requests.get(url)
+				img1 = Image.open(BytesIO(response.content))
+				st.image(img1)
+			with col2:
+				st.header('Análise')
+				st.markdown('Dos 1759 municípios da classe 1, 1652 foram classificados pelo modelo como 1 e 107 como 0.')
+				
+		if select_radio_metricas == 'Matriz de Confusão - teste':
+			col1,col2 = st.columns(2)
+			with col1:
+				st.header('Matriz de confusão - teste')
+				url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/matriz_confusao_teste.PNG')
+				response = requests.get(url)
+				img1 = Image.open(BytesIO(response.content))
+				st.image(img1)
+			with col2:
+				st.header('Análise')
+				st.markdown('Dos 469 municípios da classe 1, 448 foram classificados pelo modelo como 1 e 21 como 0.')
+			
