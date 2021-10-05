@@ -405,7 +405,7 @@ if radio == 'Visão cientista de dados':
 				st.image(img1)
 			with col2:
 				st.header('Análise')
-				st.markdown('Verifica-se que o modelo alcançou uma acurácia de 95 % para o conjunto de treino, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
+				st.markdown('Verifica-se que o modelo alcançou uma acurácia de 94,59 % para o conjunto de treino, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
 			
 		if select_radio_metricas == 'F1 score - teste':
 			col1,col2 = st.columns(2)
@@ -417,6 +417,6 @@ if radio == 'Visão cientista de dados':
 				st.image(img1)
 			with col2:
 				st.header('Análise')
-				st.markdown('Verifica-se que o modelo alcançou uma acurácia de 95 % para o conjunto de teste, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
+				st.markdown('Verifica-se que o modelo alcançou uma acurácia de 95,36 % para o conjunto de teste, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
 			
 			
