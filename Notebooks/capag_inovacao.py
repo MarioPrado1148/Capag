@@ -378,8 +378,7 @@ if radio == 'Visão cientista de dados':
 		st.markdown('Destaque-se também a forte correlação positiva entre VAB_Indústria/Total e o Pib_per_capita, o que indica que quanto maior a participação da indústria na economia do município, maior o Pib_per_capita.')	    			    
 		st.image(img)
 		
-		
-		
+				
 	elif select_event_cientista == 'Dataframe completo':
 		df = df
 		df['Capag_real'] = df['Capag_real'].astype('Int64')
@@ -390,6 +389,11 @@ if radio == 'Visão cientista de dados':
 		response = requests.get(url2)
 		img2 = Image.open(BytesIO(response.content))
 		st.sidebar.image(img2)
+		
 	elif select_event_cientista == 'Aspectos técnicos':
 		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
+		
+	elif select_event_cientista == 'Métricas de Avaliação do Modelo':
+		select_radio_metricas = st.sidebar.radio('Selecione as variáveis',['F1 score - treino', 'F1 score - teste'])
+		
 	 
