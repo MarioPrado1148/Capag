@@ -399,24 +399,11 @@ if radio == 'Visão cientista de dados':
 			col1,col2 = st.columns(2)
 		with col1:
 			st.header('Variável PIB_per_capita')
-			url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_PIB_per_capita.jpg')
+			url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/acuracia_previsao_treino.png')
 			response = requests.get(url)
 			img1 = Image.open(BytesIO(response.content))
 			st.image(img1)
 			
-			#if select_radio_quanti == 'VAB_Indústria/Total':
 			
-			#col1, col2 = st.columns(2)
-			#with col1:
-			#	st.header("Variável VAB_Indústria/Total")
-			#	url = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/boxplot_VAB_Indústria_Total.jpg')
-			#	response = requests.get(url)
-			#	img3 = Image.open(BytesIO(response.content))
-			#	st.image(img3)
-			#with col2: 
-			#	st.header('Análise') 
-			#	st.markdown('Esta variável expressa a razão entre o Valor Agregado pela Indústria e o total dos Valores Agregados pela Economia.')
-			#	st.markdown('Até 50 % dos municípios possuem VAB_Indústria/Total inferior a 10 %.')
-			#	st.markdown('Constata-se a presença de outliers, que são valores discrepantes em relação aos demais, representados pelos pontos que estão acima do traço horizontal superi
-		
-	 
+			
+			
