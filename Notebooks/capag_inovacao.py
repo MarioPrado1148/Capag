@@ -395,7 +395,7 @@ if radio == 'Visão cientista de dados':
 		
 	elif select_event_cientista == 'Métricas de avaliação do modelo':
 		select_radio_metricas = st.sidebar.radio('Selecione as variáveis',['F1 score - treino', 'F1 score - teste'])
-		    if select_radio_metricas = 'F1 score - treino':
+		if select_radio_metricas = 'F1 score - treino':
 			col1 = st.columns(1)
 			with col1:
 				st.header('Variável PIB_per_capita')
