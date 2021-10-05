@@ -430,6 +430,5 @@ if radio == 'Visão cientista de dados':
 				st.image(img1)
 			with col2:
 				st.header('Análise')
-				st.markdown('Verifica-se que o modelo alcançou uma acurácia de 95,36 % para o conjunto de teste, o que é considerado um ótimo índice de acerto. O percentual de acerto em ambas as classes foi bem equilibrado')
-				st.markdown('A acurácia, precision e recall das bases de treino e teste estão próximas, o que mostra que não ocorreu overfitting.')
+				st.markdown('Dos 469 municípios da classe 1, 448 foram classificados pelo modelo como 1 e 21 como 0.')
 			
