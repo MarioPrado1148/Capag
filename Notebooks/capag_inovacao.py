@@ -393,7 +393,7 @@ if radio == 'Visão cientista de dados':
 	elif select_event_cientista == 'Aspectos técnicos':
 		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
 		
-	elif select_event_cientista == 'Métricas de Avaliação do Modelo':
+	elif select_event_cientista == 'Métricas de avaliação do modelo':
 		select_radio_metricas = st.sidebar.radio('Selecione as variáveis',['F1 score - treino', 'F1 score - teste'])
 		
 	 
