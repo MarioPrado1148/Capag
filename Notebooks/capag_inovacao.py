@@ -122,7 +122,8 @@ if radio == 'Visão cidadão':
 		df_resumido['Capag_real'] = df_resumido['Capag_real'].astype('Int64')
 		df_municipio_resumido = df_resumido[df_resumido.index==(select_resumido)]
 		st.dataframe(df_municipio_resumido)
-		st.markdown('O valor 0 representa a Capag das classes A e B; indica que o Município pode receber empréstimos com garantia da União. O valor 1 representa as classes C e D.')
+		st.markdown('O valor 0 representa a Capag das classes A e B; indica que o Município pode receber empréstimos com garantia da União.')
+		st.markdown('O valor 1 representa a Capag das classes C e D; indica que o Município não pode receber empréstimos com garantia da União.')
 		
 		
 	elif select_event_cidadao == 'Quem somos':
