@@ -170,7 +170,8 @@ if radio == 'Visão cientista de dados':
 		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
 		response = requests.get(url2)
 		img2 = Image.open(BytesIO(response.content))
-		st.sidebar.image(img2)
+		caption = 'Fonte: https://www.pexels.com/photo/close-up-of-computer-screen-325111/'
+		st.sidebar.image(img2, caption)
 
 	elif select_event_cientista == 'Análise das variáveis qualitativas':	
 		select_radio_quali = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana', 'Mun_Reg_Geog_Imediata'])
