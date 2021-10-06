@@ -170,7 +170,8 @@ if radio == 'Visão cientista de dados':
 		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
 		response = requests.get(url2)
 		img2 = Image.open(BytesIO(response.content))
-		st.sidebar.image(img2)
+		caption = 'Fonte: https://www.pexels.com/photo/close-up-of-computer-screen-325111/'
+		st.sidebar.image(img2, caption)
 
 	elif select_event_cientista == 'Análise das variáveis qualitativas':	
 		select_radio_quali = st.sidebar.radio('Selecione a variável',['Região','Região Metropolitana', 'Mun_Reg_Geog_Imediata'])
@@ -388,7 +389,8 @@ if radio == 'Visão cientista de dados':
 		url2 = ('https://raw.githubusercontent.com/MarioPrado1148/Capag/main/Images/programa.jpg')
 		response = requests.get(url2)
 		img2 = Image.open(BytesIO(response.content))
-		st.sidebar.image(img2)
+		caption = 'Fonte: https://www.pexels.com/photo/close-up-of-computer-screen-325111/'
+		st.sidebar.image(img2, caption)
 		
 	elif select_event_cientista == 'Aspectos técnicos':
 		st.markdown('Este trabalho teve por objetivo prever a capacidade de pagamento dos municípios brasileiros (Capag), utilizando variáveis disponíveis sob a forma de dados abertos.')
@@ -443,4 +445,3 @@ if radio == 'Visão cientista de dados':
 			with col2:
 				st.header('Análise')
 				st.markdown('Dos 469 municípios da classe 1, 448 foram classificados pelo modelo como 1 e 21 como 0.')
-			
