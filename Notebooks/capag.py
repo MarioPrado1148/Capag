@@ -443,4 +443,3 @@ if radio == 'Visão cientista de dados':
 			with col2:
 				st.header('Análise')
 				st.markdown('Dos 469 municípios da classe 1, 448 foram classificados pelo modelo como 1 e 21 como 0.')
-			
