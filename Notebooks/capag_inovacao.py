@@ -96,6 +96,10 @@ if radio == 'Visão cidadão':
 		df_municipio = df[df.index==(select)]
 		st.dataframe(df_municipio)
 		st.markdown('Posicione o ponteiro do mouse sobre o dataframe para acessar a barra de rolagem. Dessa forma, você conseguirá visualizar todas as variáveis')
+		st.markdown('O valor 0 representa a Capag das classes A e B; indica que o Município pode receber empréstimos com garantia da União.')
+		st.markdown('O valor 1 representa a Capag das classes C e D; indica que o Município não pode receber empréstimos com garantia da União.')
+		st.markdown('Os casos em que o valor da variável Capag_real consta como <NA> referem-se a municípios cuja Capag não foi calculada e informada pela STN.')
+		
 		
 	elif select_event_cidadao == 'Capag - Visão resumida':
 		lista_municipios_resumido = pd.Series(list(set(df_resumido['Município']))).sort_values()
