@@ -106,7 +106,7 @@ if radio == 'Visão cidadão':
 		st.dataframe(df_municipio_resumido)
 		st.markdown('O valor 0 representa a Capag das classes A e B; indica que o Município pode receber empréstimos com garantia da União.')
 		st.markdown('O valor 1 representa a Capag das classes C e D; indica que o Município não pode receber empréstimos com garantia da União.')
-		st.markdown('Os casos em que o valor da variável 'Capag_real' consta como <NA> referem-se a municípios cuja Capag não foi calculada e informada pela STN.')
+		st.markdown('Os casos em que o valor da variável Capag_real consta como <NA> referem-se a municípios cuja Capag não foi calculada e informada pela STN.')
 		
 		
 	elif select_event_cidadao == 'Quem somos':
