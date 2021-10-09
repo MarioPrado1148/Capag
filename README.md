@@ -12,4 +12,19 @@ Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado XGBoo
 Entende-se que é uma solução embrionária. Possuindo o órgão classificador outras variáveis úteis ao cálculo, as variáveis utilizadas na solução proposta poderiam ser utilizadas em caráter suplementar, subsidiário na estimação.
 
 # Organização das pastas deste Repositório Github
+## Dataset
+Contém os datasets importados para o notebook 01.
+
+## Images
+Contém imagens utilizadas no aplicativo streamlit
+
+## Models
+Contém nosso melhor modelo treinado
+
+## Notebooks
+Os notebooks cujo nome inicia-se por algarismos foram feitos no jupyter notebook.
+O notebook Capag_Inovação contém o código necessário para o funcionamento de nosso aplicativo no Streamlit, que criamos para permitir aos usuários a compreensão de todo o trabalho que fizemos para prever a Capag.
+O endereço do aplicativo streamlit é https://share.streamlit.io/marioprado1148/capag/main/Notebooks/capag_inovacao.py
+O notebook Capag contém o mesmo conteúdo que o notebook Capag_Inovação. É um notebook reserva, que poderá ser utilizado caso ocorram problemas com o notebook principal.
+Existe também um aplicativo reserva do Streamlit, disponível no endereço abaixo, que é igual ao aplicativo que inscrevemos no Prêmio Tesouro Nacional.
 
