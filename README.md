@@ -1,19 +1,19 @@
 # Algoritmo de classificação da capacidade de pagamento dos municípios brasileiros (Capag) com base em dados geoeconômicos.
 
 # Contextualização
-A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem contrair novos empréstimos com garantia da União. Esta classificação é um indicador de saúde econômica e fiscal dos municípios.
-O intuito da CAPAG é apresentar, de forma simples e transparente, se um novo endividamento representa risco de crédito para o Tesouro Nacional. Assim, um ente bem avaliado pelo Tesouro Nacional poderá acessar empréstimos com juros mais baixos, por contar com a União como seu garantidor.
-A CAPAG pode ter os valores A, B, C e D.
-O ente que possuir classificação "A" ou "B" é elegível à contratação de garantias da União em seus financiamentos. Os demais conceitos ("C” e "D”) são um sinal de que a situação fiscal e financeira do município não lhe permite realizar operações de crédito com garantia da União.
-Para o algoritmo nesse estudo, as notas C e D estão representadas por "1" e as notas A e B, por "0"; destarte, o conceito 1 indica má situação fiscal e financeira, o conceito 0, que o ente está apto à contratação de garantias.
+A análise da capacidade de pagamento (Classificação CAPAG) apura a situação fiscal dos entes subnacionais que querem contrair novos empréstimos com garantia da União. Esta classificação é um indicador de saúde econômica e fiscal dos municípios.  
+O intuito da CAPAG é apresentar, de forma simples e transparente, se um novo endividamento representa risco de crédito para o Tesouro Nacional. Assim, um ente bem avaliado pelo Tesouro Nacional poderá acessar empréstimos com juros mais baixos, por contar com a União como seu garantidor.  
+A CAPAG pode ter os valores A, B, C e D.  
+O ente que possuir classificação "A" ou "B" é elegível à contratação de garantias da União em seus financiamentos. Os demais conceitos ("C” e "D”) são um sinal de que a situação fiscal e financeira do município não lhe permite realizar operações de crédito com garantia da União.  
+Para o algoritmo nesse estudo, as notas C e D estão representadas por "1" e as notas A e B, por "0"; destarte, o conceito 1 indica má situação fiscal e financeira, o conceito 0, que o ente está apto à contratação de garantias.  
 
 # Objetivos
-Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado XGBoost com o objetivo de, utilizando as informações geoeconômicas disponíveis sobre os municípios brasileiros, estimar a capacidade de pagamento (Capag) dos municípios e compará-las com a Capag constante do site da Secretaria do Tesouro Nacional (STN), quando disponível.
+Neste trabalho, utilizamos um modelo de aprendizado de máquina denominado XGBoost com o objetivo de, utilizando as informações geoeconômicas disponíveis sobre os municípios brasileiros, estimar a capacidade de pagamento (Capag) dos municípios e compará-las com a Capag constante do site da Secretaria do Tesouro Nacional (STN), quando disponível.  
 Entende-se que é uma solução embrionária. Possuindo o órgão classificador outras variáveis úteis ao cálculo, as variáveis utilizadas na solução proposta poderiam ser utilizadas em caráter suplementar, subsidiário na estimação.
 
 # Organização das pastas deste Repositório Github
 ## Dataset
-Os três arquivos cujo nome inicia com 'base' são os datasets que foram importados como origem dos dados para o jupyter notebook.
+Os três arquivos cujo nome inicia com 'base' são os datasets que foram importados como origem dos dados para o jupyter notebook.  
 Os outros arquivos foram criados posteriormente, em etapas diversas do projeto de ciências de dados.
 
 ## Images
@@ -35,13 +35,13 @@ Os dois arquivos cujo nome inicia-se com 'df_streamlit' são utilizados como ori
 Foram utilizados 3 datasets neste trabalho:
 
 ## 1 Capacidade de Pagamento (CAPAG) dos Municípios
-Os dados foram coletados no website da Transparência do Tesouro Nacional, em 16 de setembro de 2021.
+Os dados foram coletados no website da Transparência do Tesouro Nacional, em 16 de setembro de 2021.  
 Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios
 
 ## 2 PIB e outros indicadores econômicos
-Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.
+Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.  
 Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados
 
 ## 3 Estimativas sobre dados de população dos municípios em 2018.
-Os dados foram coletados na seção de estimativas da população do website do IBGE em 04 de outubro de 2021.
+Os dados foram coletados na seção de estimativas da população do website do IBGE em 04 de outubro de 2021.  
 Link: https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html?edicao=17283&t=downloads
