@@ -14,6 +14,9 @@ Entende-se que é uma solução embrionária. Possuindo o órgão classificador 
 # Organização das pastas deste Repositório Github
 ## Dataset
 Os três arquivos cujo nome inicia com 'base' são os datasets que foram importados como origem dos dados para o jupyter notebook.  
+O arquivo 'base_POP2018_20210331_copia' contém dados sobre a população estimada para o ano 2018. Alguns municípios possuíam um número em evidência à direita do valor da população, o qual fazia remissão a uma tabela abaixo da tabela principal, onde constavam populações determinadas judicialmente para alguns municípios.  
+Como este trabalho é didático, sem implicações econômicas, e para manter a coerência dos dados, nós utilizamos somente o valor estimado da população, sem fazer referência aos valores determinados judicialmente para alguns municípios.  
+Neste mesmo arquivo, criamos a coluna IBGE7 antes de importar para o notebook do jupyter. Esta coluna é a concatenação entrea as colunas 'COD.UF.' e 'COD.MUNIC.'. Procedemos desta forma para que fosse possível, posteriormente, juntar esta tabela com as outras duas tabelas objeto do presente trabalho.  
 Os outros arquivos foram criados posteriormente, em etapas diversas do projeto de ciências de dados.
 
 ## Images
