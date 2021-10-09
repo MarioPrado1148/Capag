@@ -28,7 +28,7 @@ O notebook Capag_Inovação contém o código necessário para o funcionamento d
 O endereço do aplicativo streamlit é https://share.streamlit.io/marioprado1148/capag/main/Notebooks/capag_inovacao.py
 O notebook Capag contém o mesmo conteúdo que o notebook Capag_Inovação. É um notebook reserva, que poderá ser utilizado caso ocorram problemas com o notebook principal.
 Existe também um aplicativo reserva do Streamlit, disponível no endereço abaixo, que é igual ao aplicativo que inscrevemos no Prêmio Tesouro Nacional.
-https://share.streamlit.io/marioprado1148/capag/main/Notebooks/capag.py
+https://share.streamlit.io/marioprado1148/capag/main/Notebooks/capag.py  
 Os dois arquivos cujo nome inicia-se com 'df_streamlit' são utilizados como origem de dados para o aplicativo Streamlit.
 
 # Bases de dados utilizadas
