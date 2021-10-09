@@ -28,3 +28,17 @@ O endereço do aplicativo streamlit é https://share.streamlit.io/marioprado1148
 O notebook Capag contém o mesmo conteúdo que o notebook Capag_Inovação. É um notebook reserva, que poderá ser utilizado caso ocorram problemas com o notebook principal.
 Existe também um aplicativo reserva do Streamlit, disponível no endereço abaixo, que é igual ao aplicativo que inscrevemos no Prêmio Tesouro Nacional.
 
+# Bases de dados utilizadas
+Foram utilizados 3 datasets neste trabalho:
+
+## 1 Capacidade de Pagamento (CAPAG) dos Municípios
+Os dados foram coletados no website da Transparência do Tesouro Nacional, em 16 de setembro de 2021.
+Link: http://www.tesourotransparente.gov.br/ckan/dataset/capag-municipios
+
+## 2 PIB e outros indicadores econômicos
+Os dados foram coletados na sessão de estatísticas econômicas do website do IBGE, em janeiro de 2021.
+Link: https://www.ibge.gov.br/estatisticas/economicas/contas-nacionais/9088-produto-interno-bruto-dos-municipios.html?=&t=resultados
+
+## 3 Estimativas sobre dados de população dos municípios em 2018.
+Os dados foram coletados na seção de estimativas da população do website do IBGE em 04 de outubro de 2021.
+Link: https://www.ibge.gov.br/estatisticas/sociais/populacao/9103-estimativas-de-populacao.html?edicao=17283&t=downloads
