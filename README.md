@@ -20,7 +20,7 @@ Neste mesmo arquivo, criamos a coluna IBGE7 antes de importar para o notebook do
 Os outros arquivos foram criados posteriormente, em etapas diversas do projeto de ciências de dados.
 
 ## Images
-Contém imagens utilizadas no aplicativo streamlit.
+Contém imagens e gráficos utilizados no aplicativo streamlit.
 
 ## Models
 Contém nosso melhor modelo treinado.
