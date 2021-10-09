@@ -16,10 +16,10 @@ Entende-se que é uma solução embrionária. Possuindo o órgão classificador 
 Contém os datasets importados para o notebook 01.
 
 ## Images
-Contém imagens utilizadas no aplicativo streamlit
+Contém imagens utilizadas no aplicativo streamlit.
 
 ## Models
-Contém nosso melhor modelo treinado
+Contém nosso melhor modelo treinado.
 
 ## Notebooks
 Os notebooks cujo nome inicia-se por algarismos foram feitos no jupyter notebook.
