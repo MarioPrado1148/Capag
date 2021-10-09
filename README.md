@@ -13,7 +13,8 @@ Entende-se que é uma solução embrionária. Possuindo o órgão classificador 
 
 # Organização das pastas deste Repositório Github
 ## Dataset
-Contém os datasets importados para o notebook 01.
+Os três arquivos cujo nome inicia com 'base' são os datasets que foram importados como origem dos dados para o jupyter notebook.
+Os outros arquivos foram criados posteriormente, em etapas diversas do projeto de ciências de dados.
 
 ## Images
 Contém imagens utilizadas no aplicativo streamlit.
