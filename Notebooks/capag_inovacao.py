@@ -135,7 +135,7 @@ if radio == 'Visão cidadão':
 		st.markdown('Para o algoritmo nesse estudo, as notas C e D estão representadas por "1" e as notas A e B, por "0"; destarte, o conceito 1 indica má situação fiscal\
 		e financeira, o conceito 0, que o ente está apto à contratação de garantias.')
 		st.markdown('O trabalho sobre a classificação de pagamentos dos municípios brasileiros (CAPAG) foi feito, originariamente, como códigos e dissertação para o \
-		Trabalho de Conclusão de Curso de Camila, da equipe de autores desta proposta de solução, em sua pós-graduação em Ciência de Dados e Big Data.')
+		Trabalho de Conclusão de Curso de de uma integrante da equipe de autores desta proposta de solução, em sua pós-graduação em Ciência de Dados e Big Data.')
 		st.markdown('Para participar do Prêmio Tesouro Nacional, evoluímos o modelo e adaptamos os códigos para a plataforma streamlit, com o intuito de que mais pessoas tivessem acesso \
 			    a este conhecimento tão importante sobre os municípios brasileiros.')
 
