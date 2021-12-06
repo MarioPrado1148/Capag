@@ -61,7 +61,8 @@ if radio == 'Visão cidadão':
 				 'Contextualização',
 				 'Objetivos',
 				 'Capag - Visão resumida',
-				 'Capag - Visão detalhada'
+				 'Capag - Visão detalhada',
+				  'Quem somos'
 				 ]
 	select_event_cidadao = st.sidebar.selectbox(
 		'Que informações você gostaria de visualizar?',
